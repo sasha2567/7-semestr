@@ -12,10 +12,10 @@ class Adminadd extends CI_Controller {
 
 	public function add()
 	{
-		if(isset($_POST))
+		if(isset($_POST) && isset($_POST['recipe_add_btn']))
 		{
 			$description = $_POST['recipe_description'];
-			$ingredients = $_POST['recipe_ingridients'];
+			$ingredients = $_POST['recipe_ingredients'];
 			$recipe = $_POST['recipe_recipe'];
 			$data = array(
 	            'description' => $description,

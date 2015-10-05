@@ -13,7 +13,7 @@ require_once 'menu.php';
 <br />
 <ul>
 <?php foreach ($recipes as $item):?>
-        <li><?=$item['description']?>:<?=$item['ingredients']?>:<?=$item['recipe']?></li>
+        <li><?php echo anchor('adminredact/show/'.$item['recipe_id'], '\''.$item['description'].':'.$item['ingredients'].':'.$item['recipe'].'\'');?></li>
 <?php endforeach; ?>
 </ul>
 </body>

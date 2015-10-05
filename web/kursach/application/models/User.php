@@ -1,9 +1,9 @@
 <?php if (!defined('BASEPATH')) exit('No direct script access allowed');
 
-class Recipe extends CI_Model {
+class User extends CI_Model {
     
-    var $table = 'recipe';
-    var $key_id = 'recipe_id';
+    var $table = 'user';
+    var $key_id = 'user_id';
 
     function __construct(){
         parent::__construct();
@@ -35,7 +35,7 @@ class Recipe extends CI_Model {
     }
 
     /**
-     * get info about 
+     * get info about good
      */
     function get($id){
         $this->db->where($this->key_id, $id);
@@ -44,7 +44,7 @@ class Recipe extends CI_Model {
     }
 
     /**
-     * get list of 
+     * get list of goods
      */
     function getlist(){
         $query = $this->db->get($this->table);

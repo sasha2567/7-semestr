@@ -4,11 +4,6 @@
 	<title>Страница добавления рецептов</title>
 </head>
 <body>
-Панель администрирования сайта http://justcooking.16mb.com
-<?php
-require_once 'menu.php';
-?>
-Все 
 <?php
 $attributes = array(
     'class' => 'recipe_add', 
@@ -20,12 +15,12 @@ echo form_open('adminadd/add', $attributes);
 <input type="text" name="recipe_description" />
 <br />
 <label>Ингридиенты</label>
-<input type="text" name="recipe_ingredients" />
+<input type="text" name="recipe_ingridients" />
 <br />
 <label>Рецепт</label>
 <textarea rows="10" cols="80" name="recipe_recipe"></textarea>
 <br />
-<input type="submit" name="recipe_add_btn" value="Отправить рецепт" />
+<input type="submit" name="recipe_descriptin" value="Отправить рецепт" />
 <?php form_close();?>
 </body>
 </html>
