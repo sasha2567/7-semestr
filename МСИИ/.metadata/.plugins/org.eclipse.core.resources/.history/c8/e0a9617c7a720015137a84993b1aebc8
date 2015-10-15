@@ -1,0 +1,41 @@
+;;;; 2015-10-12 10:53:47
+;;;; This is your lisp file. May it serve you well.
+
+(defun lab1_func_list(x y z)
+  (let* ((l1 (list x y z)))
+    (when (NUMBERP (second l1))
+      (when (or (EQUAL (rem (second l1) 7) 0) (EQUAL (rem (second l1) 5) 0)) 
+        (setf res l1)
+        (setf (SECOND res) 35)
+        res
+      )
+    )
+    (and
+      (append 
+        (list (first l1)) (cddr l1)
+      )
+    )
+  ) 
+)
+
+(defun lab2_atom_from_list(x y)
+  (let* ((l2 x))
+    (setf z 0)
+    (setf k 0)
+    (loop 
+     (when (atom (nth z l2))
+        (setf k (+ k 1))
+      )
+      (setf z (+ z 1))
+      (when (= k y)
+        (return (nth (setf a (+ k (- z k 1))) l2))
+      )
+    )  
+  )
+)
+
+(defun lab2_atom_from_list_rec(x y k)
+  (if (atom (car l2))
+    ()
+  )
+)
