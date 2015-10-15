@@ -131,7 +131,7 @@ namespace ITlab1
             double summ = 0;
             int k = 0;
             for (k = 0; k < length_leter; k++)
-            {
+            { 
                 summ += freq[k];
                 if (summ > 0.5)
                 {
