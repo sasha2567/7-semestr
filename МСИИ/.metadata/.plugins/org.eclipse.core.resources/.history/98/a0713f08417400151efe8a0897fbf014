@@ -40,11 +40,4 @@
   )
 )
 
-
-(defun lrtrace(n k)
-  (trace lab2_atom_from_list_rec)
-  (lab2_atom_from_list_rec n k)
-  (untrace lab2_atom_from_list_rec)
-)
-
 ;(LAB2_ATOM_FROM_LIST_REC (list 1 2 3 (list 4 5) 6 7) 2)

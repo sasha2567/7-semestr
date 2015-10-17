@@ -59,7 +59,7 @@ namespace ITlab1
             }
             Console.WriteLine(s);
             Console.WriteLine("Количество символов в первичном алфавите 33");
-            Console.WriteLine("Количество символов в сообщении {0}, число различных символов в сообщении{1}",s.Length,length_leter);
+            Console.WriteLine("Количество символов в сообщении {0}, число различных символов в сообщении {1}",s.Length,length_leter);
             Console.WriteLine("Исходная таблица");
             for(int i=0; i<length_leter; i++)
             {
@@ -140,6 +140,65 @@ namespace ITlab1
                 }
             }
             Console.WriteLine("Сумма вероятностей в первой группе {0:0.000}",summ);
+            Console.WriteLine("----------------");
+            double[,] arifm = new double[18,2];
+            Console.WriteLine("Арифметический код");
+            double niz = 0.0;
+            for (k = 0; k < length_leter; k++)
+            {
+                arifm[k, 0] = niz;
+                arifm[k, 1] = freq[k] + niz;
+                niz += freq[k];
+            }
+            for (int i = 0; i < length_leter; i++)
+            {
+                Console.WriteLine("буква {0} | нижняя граница {1:0.000} | верхняя граница {2:0.000}", leters[i], arifm[i, 0], arifm[i, 1]);
+            }
+            Console.WriteLine("----------------");
+            Console.WriteLine("Кодирование арифметическим кодом");
+            double[,] arifm_code = new double[19, 2];
+            
+            int length_leter2 = 0;
+            char[] leters2 = new char[18];
+            int[] col2 = new int[18];
+            for (int i = 0; i < s.Length; i++)
+            {
+                int flag = 0;
+                for (int j = 0; j < length_leter2; j++)
+                    if (s[i] == leters2[j])
+                    {
+                        col2[j]++;
+                        flag = 1;
+                        break;
+                    }
+                if (flag == 0)
+                {
+                    leters2[length_leter2] = s[i];
+                    col2[length_leter2] = 1;
+                    length_leter2++;
+                }
+            }
+            double[] freq2 = new double[18];
+            for (int i = 0; i < length_leter; i++)
+            {
+                freq2[i] = (double)col2[i] / s.Length;
+            }
+
+            arifm_code[0, 0] = 0;
+            arifm_code[0, 1] = 1;
+            int count = 1;
+            for (int i = 0; i < length_leter2; i++)
+            {
+                arifm_code[count, 0] = arifm_code[count - 1, 0] + (arifm_code[count - 1, 1] - arifm_code[count - 1, 0]) * arifm[i, 0];
+                arifm_code[count, 1] = arifm_code[count - 1, 0] + (arifm_code[count - 1, 1] - arifm_code[count - 1, 0]) * arifm[i, 1];
+                count++;
+            }
+            Console.WriteLine("буква {0} | нижняя граница {1:0.000} | верхняя граница {2:0.000}", ' ', arifm_code[0, 0], arifm_code[0, 1]);
+            for (int i = 0; i < length_leter2; i++)
+            {
+                Console.WriteLine("буква {0} | нижняя граница {1:0.000} | верхняя граница {2:0.000}", leters2[i], arifm_code[i + 1, 0], arifm_code[i + 1, 1]);
+            }
+            Console.WriteLine("----------------");
             Console.Read();
         }
     }
