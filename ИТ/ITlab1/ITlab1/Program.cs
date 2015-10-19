@@ -63,7 +63,7 @@ namespace ITlab1
             Console.WriteLine("Исходная таблица");
             for(int i=0; i<length_leter; i++)
             {
-                Console.WriteLine("leter {0} | freq {1}", leters[i], col[i]);
+                Console.WriteLine("буква {0} | кол-во {1}", leters[i], col[i]);
             }
             Console.WriteLine("----------------");
             
@@ -82,11 +82,12 @@ namespace ITlab1
             Console.WriteLine("Таблица частот");
             for (int i = 0; i < length_leter; i++)
             {
-                Console.WriteLine("leter {0} | freq {1:0.000}", leters[i], freq[i]);
+                Console.WriteLine("буква {0} | частота {1:0.000}", leters[i], freq[i]);
             }
             Console.WriteLine("----------------");
-            I = sum * length_leter;
+            I = sum * s.Length;
             double H = sum / Math.Log(33,2);
+            Console.WriteLine("Максимальная энтропия {0}", Math.Log(33, 2));
             Console.WriteLine("Количество информации = {0:0.000}\nЭнтропия - {1:0.000}\nИзбыточность = {2:0.000}", I, sum, 1 - H);
             Console.WriteLine("----------------");
 
@@ -124,7 +125,7 @@ namespace ITlab1
             Console.WriteLine("Отсортированная таблица");
             for (int i = 0; i < length_leter; i++)
             {
-                Console.WriteLine("leter {0} | freq {1:0.000}", leters[i], freq[i]);
+                Console.WriteLine("буква {0} | частота {1:0.000}", leters[i], freq[i]);
             }
             Console.WriteLine("----------------");
 
@@ -187,19 +188,31 @@ namespace ITlab1
             arifm_code[0, 0] = 0;
             arifm_code[0, 1] = 1;
             int count = 1;
-            for (int i = 0; i < length_leter2; i++)
+            for (int i = 0; i < 10; i++)
             {
                 arifm_code[count, 0] = arifm_code[count - 1, 0] + (arifm_code[count - 1, 1] - arifm_code[count - 1, 0]) * arifm[i, 0];
                 arifm_code[count, 1] = arifm_code[count - 1, 0] + (arifm_code[count - 1, 1] - arifm_code[count - 1, 0]) * arifm[i, 1];
                 count++;
             }
             Console.WriteLine("буква {0} | нижняя граница {1:0.000} | верхняя граница {2:0.000}", ' ', arifm_code[0, 0], arifm_code[0, 1]);
-            for (int i = 0; i < length_leter2; i++)
+            for (int i = 0; i < 10; i++)
             {
-                Console.WriteLine("буква {0} | нижняя граница {1:0.000} | верхняя граница {2:0.000}", leters2[i], arifm_code[i + 1, 0], arifm_code[i + 1, 1]);
+                Console.WriteLine("буква {0} | нижняя граница {1:0.000000000000} | верхняя граница {2:0.000000000000}", leters2[i], arifm_code[i + 1, 0], arifm_code[i + 1, 1]);
             }
             Console.WriteLine("----------------");
+            Console.WriteLine("Вероятности появления в закодированной строке");
+            string codde = "0000000001000100001100100001010011000011";
+            int p1=0, p0=0;
+            for (int i = 0; i < codde.Length; i++)
+                if (codde[i] == '1')
+                    p1++;
+                else
+                    p0++;
+            Console.WriteLine("'0' {0}/" + codde.Length + " | '1' {1}/" + codde.Length, p0, p1);
+            Console.WriteLine("----------------");
             Console.Read();
+
+
         }
     }
 }
