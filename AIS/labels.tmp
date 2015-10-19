@@ -1,25 +1,24 @@
 <ASSEMBLER_INFO>
  <VERSION>2.1.42</VERSION>
  <DEVICE>ATmega16</DEVICE>
- <WORKING_DIR>E:\AIS</WORKING_DIR>
+ <WORKING_DIR>E:\7semestr\AIS</WORKING_DIR>
  <INCLUDE_PATH>
   <DIR>C:\Program Files (x86)\Atmel\AVR Tools\AvrAssembler2\Appnotes</DIR>
  </INCLUDE_PATH>
- <SOURCE_FILE>E:\AIS\main.asm</SOURCE_FILE>
+ <SOURCE_FILE>E:\7semestr\AIS\lab2.asm</SOURCE_FILE>
  <INCLUDED_FILES>
   <FILE>C:\Program Files (x86)\Atmel\AVR Tools\AvrAssembler2\Appnotes\m16def.inc</FILE>
  </INCLUDED_FILES>
  <OBJECT_FILES>
-  <FILE>E:\AIS\lab1.obj</FILE>
+  <FILE>E:\7semestr\AIS\lab2.obj</FILE>
  </OBJECT_FILES>
  <HEX_FILES>
-  <FILE>E:\AIS\lab1.hex</FILE>
+  <FILE>E:\7semestr\AIS\lab2.hex</FILE>
  </HEX_FILES>
  <OUTPUT_FILES>
-  <FILE>E:\AIS\lab1.map</FILE>
+  <FILE>E:\7semestr\AIS\lab2.map</FILE>
  </OUTPUT_FILES>
  <LABELS>
-  <init><FILE>E:\AIS\main.asm</FILE><LINE>6</LINE></init>
-  <m1><FILE>E:\AIS\main.asm</FILE><LINE>10</LINE></m1>
+  <qwq><FILE>E:\7semestr\AIS\lab2.asm</FILE><LINE>31</LINE></qwq>
  </LABELS>
 </ASSEMBLER_INFO>
