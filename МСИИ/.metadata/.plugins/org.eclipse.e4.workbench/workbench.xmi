@@ -187,7 +187,7 @@
         <tags>EditorStack</tags>
         <tags>active</tags>
         <children xsi:type="basic:Part" xmi:id="_fGzZ8HC4EeWq38Pwp-9pHA" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="main.lisp" iconURI="platform:/plugin/de.defmacro.dandelion/images/lisp_file.gif" closeable="true">
-          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;de.defmacro.dandelion.editor&quot; name=&quot;main.lisp&quot; partName=&quot;main.lisp&quot; title=&quot;main.lisp&quot; tooltip=&quot;lab1lis/main.lisp&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/lab1lis/main.lisp&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;839&quot; selectionTopPixel=&quot;0&quot;/>&#xD;&#xA;&lt;/editor>"/>
+          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;de.defmacro.dandelion.editor&quot; name=&quot;main.lisp&quot; partName=&quot;main.lisp&quot; title=&quot;main.lisp&quot; tooltip=&quot;lab1lis/main.lisp&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/lab1lis/main.lisp&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;571&quot; selectionTopPixel=&quot;260&quot;/>&#xD;&#xA;&lt;/editor>"/>
           <tags>Editor</tags>
           <tags>de.defmacro.dandelion.editor</tags>
           <tags>removeOnHide</tags>
@@ -327,7 +327,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_RKaXYHCTEeWKT6PFMzpWcg" elementId="org.eclipse.ui.workbench.file">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_eMKFkHSoEeW9PdqU-QRFtA" elementId="print" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" enabled="false" command="_QVx1inCTEeWKT6PFMzpWcg"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_IjfXIHfhEeWmHeAfK-Q-Xg" elementId="print" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" enabled="false" command="_QVx1inCTEeWKT6PFMzpWcg"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_RKaXYXCTEeWKT6PFMzpWcg" elementId="additions" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -348,7 +348,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_RKcMkHCTEeWKT6PFMzpWcg" elementId="org.eclipse.ui.workbench.navigate">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_eMT2kXSoEeW9PdqU-QRFtA" elementId="org.eclipse.ui.window.pinEditor" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" type="Check" command="_QVlBIHCTEeWKT6PFMzpWcg"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_IjpIIHfhEeWmHeAfK-Q-Xg" elementId="org.eclipse.ui.window.pinEditor" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" type="Check" command="_QVlBIHCTEeWKT6PFMzpWcg"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_RKcMkXCTEeWKT6PFMzpWcg" elementId="group.editor" toBeRendered="false">
         <tags>toolbarSeparator</tags>
