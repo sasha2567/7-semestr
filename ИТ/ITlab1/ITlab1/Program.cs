@@ -36,10 +36,10 @@ namespace ITlab1
 
         static void Main(string[] args)
         {
-            string s="Поменьше говори - больше услышишь";
+            string s = "TO BE OR NOT TO BE OR TO BE OR NOT";
             int length_leter = 0;
-            char[] leters = new char[18];
-            int[] col = new int[18];
+            char[] leters = new char[34];
+            int[] col = new int[34];
             for(int i=0; i<s.Length; i++)
             {
                 int flag = 0;
@@ -58,7 +58,7 @@ namespace ITlab1
                 }
             }
             Console.WriteLine(s);
-            Console.WriteLine("Количество символов в первичном алфавите 33");
+            Console.WriteLine("Количество символов в первичном алфавите 26");
             Console.WriteLine("Количество символов в сообщении {0}, число различных символов в сообщении {1}",s.Length,length_leter);
             Console.WriteLine("Исходная таблица");
             for(int i=0; i<length_leter; i++)
@@ -68,7 +68,7 @@ namespace ITlab1
             Console.WriteLine("----------------");
             
             double I;
-            double[] freq = new double[18];
+            double[] freq = new double[34];
             for (int i = 0; i < length_leter; i++)
             {
                 freq[i] = (double)col[i] / s.Length;
@@ -86,14 +86,14 @@ namespace ITlab1
             }
             Console.WriteLine("----------------");
             I = sum * s.Length;
-            double H = sum / Math.Log(33,2);
+            double H = sum / Math.Log(26,2);
             Console.WriteLine("Максимальная энтропия {0}", Math.Log(33, 2));
             Console.WriteLine("Количество информации = {0:0.000}\nЭнтропия - {1:0.000}\nИзбыточность = {2:0.000}", I, sum, 1 - H);
             Console.WriteLine("----------------");
 
             Console.WriteLine("Таблица кодов ДК");
-            string[] codeDK = new string[18];
-            for(int i=0; i<18; i++)
+            string[] codeDK = new string[34];
+            for (int i = 0; i < length_leter; i++)
             {
                 codeDK[i] = Code(i);
                 codeDK[i] = Reverse(codeDK[i]);
@@ -142,7 +142,7 @@ namespace ITlab1
             }
             Console.WriteLine("Сумма вероятностей в первой группе {0:0.000}",summ);
             Console.WriteLine("----------------");
-            double[,] arifm = new double[18,2];
+            double[,] arifm = new double[34,2];
             Console.WriteLine("Арифметический код");
             double niz = 0.0;
             for (k = 0; k < length_leter; k++)
@@ -157,11 +157,11 @@ namespace ITlab1
             }
             Console.WriteLine("----------------");
             Console.WriteLine("Кодирование арифметическим кодом");
-            double[,] arifm_code = new double[19, 2];
+            double[,] arifm_code = new double[35, 2];
             
             int length_leter2 = 0;
-            char[] leters2 = new char[18];
-            int[] col2 = new int[18];
+            char[] leters2 = new char[34];
+            int[] col2 = new int[34];
             for (int i = 0; i < s.Length; i++)
             {
                 int flag = 0;
@@ -179,7 +179,7 @@ namespace ITlab1
                     length_leter2++;
                 }
             }
-            double[] freq2 = new double[18];
+            double[] freq2 = new double[34];
             for (int i = 0; i < length_leter; i++)
             {
                 freq2[i] = (double)col2[i] / s.Length;
@@ -188,7 +188,7 @@ namespace ITlab1
             arifm_code[0, 0] = 0;
             arifm_code[0, 1] = 1;
             int count = 1;
-            for (int i = 0; i < 10; i++)
+            for (int i = 0; i < 8; i++)
             {
                 arifm_code[count, 0] = arifm_code[count - 1, 0] + (arifm_code[count - 1, 1] - arifm_code[count - 1, 0]) * arifm[i, 0];
                 arifm_code[count, 1] = arifm_code[count - 1, 0] + (arifm_code[count - 1, 1] - arifm_code[count - 1, 0]) * arifm[i, 1];

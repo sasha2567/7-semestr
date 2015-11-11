@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HuffmanTest
 {
-    class LZ77
+    class LZW
     {
         public static List<int> Compress(string uncompressed)
         {

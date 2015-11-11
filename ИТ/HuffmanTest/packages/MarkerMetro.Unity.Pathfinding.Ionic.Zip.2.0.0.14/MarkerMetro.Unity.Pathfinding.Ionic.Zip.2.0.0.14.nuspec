@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>MarkerMetro.Unity.Pathfinding.Ionic.Zip</id>
+    <version>2.0.0.14</version>
+    <title>MarkerMetro.Unity.Pathfinding.Ionic.Zip</title>
+    <authors>MarkerMetro</authors>
+    <owners>MarkerMetro</owners>
+    <licenseUrl>https://raw.githubusercontent.com/MarkerMetro/MarkerMetro.Unity.Pathfinding.Ionic.Zip/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/MarkerMetro/MarkerMetro.Unity.Pathfinding.Ionic.Zip</projectUrl>
+    <iconUrl>http://www.markermetro.com/wp-content/uploads/2015/01/mm-boxlogo-128px.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Pathfinding.Ionic.Zip Windows Store and Windows Phone Unity Plugin</description>
+    <copyright>Copyright Marker Metro © 2015</copyright>
+  </metadata>
+</package>
