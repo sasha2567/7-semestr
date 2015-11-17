@@ -68,23 +68,18 @@ namespace IAD
 
         public void DrawPlot(Pen pen, float[] y)
         {
-            float[] x = new float[y.Length];
-            for (int i = 0; i < x.Length; i++)
-                x[i] = i;
-            DrawPlot(pen, x, y);
+            List<PointF> res = new List<PointF>(y.Length);
+            for (int i = 0; i < y.Length; i++)
+                res.Add(new PointF(i, y[i]));
+            DrawPlot(pen, res);
         }
-        public void DrawPlot(Pen pen, float[] x, float[] y)
+        public void DrawPlot(Pen pen, List<PointF> inmass)
         {
-            if (x.Length != y.Length)
-            {
-                MessageBox.Show("Ошибка! Размеры множеств X и Y не совпадают.");
-                return;
-            }
-            for (int i = 1; i < x.Length; i++)
+            for (int i = 1; i < inmass.Count; i++)
             {
                 graphics.DrawLine(pen,
-                    new PointF(center.X + x[i - 1] * scale.X, center.Y - y[i - 1] * scale.Y),
-                    new PointF(center.X + x[i] * scale.X, center.Y - y[i] * scale.Y));
+                    new PointF(center.X + inmass[i - 1].X * scale.X, center.Y - inmass[i - 1].Y * scale.Y),
+                    new PointF(center.X + inmass[i].X * scale.X, center.Y - inmass[i].Y * scale.Y));
             }
         }
     }

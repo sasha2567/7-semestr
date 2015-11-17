@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,26 +9,31 @@ namespace IAD
 {
     public class MA
     {
-        public float[] Solve(float[] inmassY, int q, int steps)
+        public List<PointF> Solve(List<PointF> inmass, int q, int steps)
         {
-            float[] result = new float[inmassY.Length + steps];
-            for (int i = 0; i < inmassY.Length; i++)
+            List<PointF> result = new List<PointF>(inmass.Count + steps);
+            List<PointF> res = new List<PointF>(steps + 1);
+            res.Add(new PointF(inmass[inmass.Count - 1].X, inmass[inmass.Count - 1].Y));
+            for (int i = 0; i < inmass.Count; i++)
             {
-                result[i] = inmassY[i];
+                result.Add(inmass[i]);
             }
-            for (int i = inmassY.Length; i < inmassY.Length + steps; i++)
+            float step = 0;
+            for (int i = 1; i < inmass.Count; i++)
+                step += inmass[i].X - inmass[i - 1].X;
+            step /= inmass.Count - 1;
+            for (int i = inmass.Count; i < inmass.Count + steps; i++)
             {
                 List<float> sum = new List<float>();
                 for (int j = 0; j <= q; j++)
                 {
-                    sum.Add(result[i - j - 1]);
+                    sum.Add(result[i - j - 1].Y);
                 }
-                result[i] = sum.Average();
+                result.Add(new PointF(result[i - 1].X + step,sum.Average()));
             }
-            float[] res = new float[steps];
-            for (int i = 0; i < steps; i++)
+            for (int i = 1; i < steps + 1; i++)
             {
-                res[i] = result[i + inmassY.Length];
+                res.Add(new PointF(res[i - 1].X + step, result[i + inmass.Count - 1].Y));
             }
             return res;
         }

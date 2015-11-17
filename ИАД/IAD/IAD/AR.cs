@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Drawing;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -13,6 +14,8 @@ namespace IAD
         public float paramB;
         public float paramC;
         public float regression;
+        public float coefA;
+        public float coefB;
 
         public AR()
         {
@@ -22,116 +25,92 @@ namespace IAD
             regression = 0;
         }
 
-        public float[] GetTrend(float[] inmassX,float[] inmassY)
+        public List<PointF> GetTrend(List<PointF> inmass)
         {
             float A1 = 0;
             float B1 = 0;
             float C1 = 0;
             float D1 = 0;
-            if(inmassX.Length != inmassY.Length)
+            for (int i = 0; i < inmass.Count; i++)
             {
-                MessageBox.Show("Ошибка! Размеры множеств X и Y не совпадают.");
-                return null;
+                A1 += inmass[i].X;
+                B1 += inmass[i].Y;
+                C1 += inmass[i].X * inmass[i].X;
+                D1 += inmass[i].X * inmass[i].Y;
             }
-            for (int i = 0; i < inmassX.Length; i++)
-            {
-                A1 += inmassX[i];
-                B1 += inmassY[i];
-                C1 += inmassX[i] * inmassX[i];
-                D1 += inmassX[i] * inmassY[i];
-            }
-            float determinant = inmassX.Length * C1 - A1 * A1;
+            float determinant = inmass.Count * C1 - A1 * A1;
             if(determinant != 0)
             {
                 paramB = (B1 * C1 - A1 * D1) / determinant;
-                paramC = (inmassX.Length * D1 - A1 * B1) / determinant;
+                paramC = (inmass.Count * D1 - A1 * B1) / determinant;
             }
             else
             {
                 MessageBox.Show("Определитель матрицы равен 0.");
                 return null;
             }
-            float[] result = new float[inmassX.Length];
-            for (int i = 0; i < inmassX.Length; i++)
+            List<PointF> result = new List<PointF>();
+            for (int i = 0; i < inmass.Count; i++)
             {
-                result[i] = paramC * inmassX[i] + paramB;
+                result.Add(new PointF(inmass[i].X, paramC * inmass[i].X + paramB));
             }
             return result;
         }
 
-        public float GetRegression(float[] inmassX, float[] inmassY)
+        public float GetRegression(List<PointF> inmass)
         {
             float Sx,Sy,meanX,meanY;
             Sx = Sy = meanX = meanY = 0;
-            if (inmassX.Length != inmassY.Length)
+            for (int i = 0; i < inmass.Count; i++)
             {
-                MessageBox.Show("Ошибка! Размеры множеств X и Y не совпадают.");
-                return 0;
+                meanX += inmass[i].X;
+                meanY += inmass[i].Y;
             }
-            for (int i = 0; i < inmassX.Length; i++)
+            meanX /= inmass.Count;
+            meanY /= inmass.Count;
+            for (int i = 0; i < inmass.Count; i++)
             {
-                meanX += inmassX[i];
-                meanY += inmassY[i];
+                Sx += (inmass[i].X - meanX) * (inmass[i].X - meanX);
+                Sy += (inmass[i].Y - meanY) * (inmass[i].Y - meanY);
             }
-            meanX /= inmassX.Length;
-            meanY /= inmassY.Length;
-            for (int i = 0; i < inmassX.Length; i++)
-            {
-                Sx += (inmassX[i] - meanX) * (inmassX[i] - meanX);
-                Sy += (inmassY[i] - meanY) * (inmassY[i] - meanY);
-            }
-            Sx /= inmassX.Length;
-            Sy /= inmassY.Length;
+            Sx /= inmass.Count;
+            Sy /= inmass.Count;
             Sx = (float)Math.Sqrt(Sx);
             Sy = (float)Math.Sqrt(Sy);
             float tmp = 0;
-            for (int i = 0; i < inmassX.Length; i++)
+            for (int i = 0; i < inmass.Count; i++)
             {
-                tmp += ((inmassX[i] - meanX) / Sx) * ((inmassY[i] - meanY) / Sy);
+                tmp += ((inmass[i].X - meanX) / Sx) * ((inmass[i].Y - meanY) / Sy);
             }
-            regression = tmp / (inmassX.Length - 1);
+            regression = tmp / (inmass.Count - 1);
             return regression;
         }
 
 
-        public float[] Forecast(float[] inmassX, float[] inmassY,int steps)
+        public List<PointF> Forecast(List<PointF> inmass, int steps)
         {
-            if (inmassX.Length != inmassY.Length)
-            {
-                MessageBox.Show("Ошибка! Размеры множеств X и Y не совпадают.");
-                return null;
-            }
             if (steps > 0)
             {
-                float[] resultx = new float[inmassX.Length + steps];
-                float[] resulty = new float[inmassY.Length + steps];
-                
-                for (int i = 0; i < inmassX.Length; i++)
-                {
-                    resultx[i] = inmassX[i];
-                    resulty[i] = inmassY[i];
-                }
+                List<PointF> result = new List<PointF>(steps + 1);
+                result.Add(new PointF(inmass[inmass.Count - 1].X, inmass[inmass.Count - 1].Y));
                 float step = 0;
-                for (int i = 1; i < inmassX.Length; i++)
-                    step += inmassX[i] - inmassX[i - 1];
-                step /= inmassX.Length;
-                for (int i = inmassX.Length; i < resultx.Length; i++)
-                {
-                    resultx[i] = resultx[i - 1] + step;
-                }
-                float coefA, coefB;
+                for (int i = 1; i < inmass.Count; i++)
+                    step += inmass[i].X - inmass[i - 1].X;
+                step /= inmass.Count - 1;
                 coefA = paramC * (1 - regression);
                 coefB = paramB * (1 - regression);
-                for (int i = 0; i < steps; i++)
+                for (int i = 1; i <= steps; i++)
                 {
-                    if (i == 0)
-                        resulty[inmassY.Length + i] = regression * inmassY[inmassY.Length - 1] + coefB + inmassX[inmassX.Length - 1] * coefA;
+                    if (i == 1)
+                        result.Add(new PointF(result[i - 1].X + step,
+                            regression * inmass[inmass.Count - 1].Y + coefB + inmass[inmass.Count - 1].X * coefA));
                     else
-                        resulty[inmassY.Length + i] = regression * resulty[inmassY.Length + i] + coefB + resultx[inmassX.Length + i] * coefA;
+                        result.Add(new PointF(result[i - 1].X + step,
+                            regression * result[i - 1].Y + coefB + result[i - 1].X * coefA));
                 }
-                return resulty;
+                return result;
             }
-            return inmassY;
+            return inmass;
         }
     }
 }
