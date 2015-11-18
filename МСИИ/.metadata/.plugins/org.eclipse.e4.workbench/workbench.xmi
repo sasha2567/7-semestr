@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="ASCII"?>
 <application:Application xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:advanced="http://www.eclipse.org/ui/2010/UIModel/application/ui/advanced" xmlns:application="http://www.eclipse.org/ui/2010/UIModel/application" xmlns:basic="http://www.eclipse.org/ui/2010/UIModel/application/ui/basic" xmlns:menu="http://www.eclipse.org/ui/2010/UIModel/application/ui/menu" xmi:id="_QUxI0XCTEeWKT6PFMzpWcg" elementId="org.eclipse.e4.legacy.ide.application" contributorURI="platform:/plugin/org.eclipse.platform" selectedElement="_QUxI0nCTEeWKT6PFMzpWcg" bindingContexts="_QUxI1HCTEeWKT6PFMzpWcg">
-  <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;workbench>&#xD;&#xA;&lt;mruList>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;de.defmacro.dandelion.editor&quot; name=&quot;main.lisp&quot; tooltip=&quot;lab1lis/main.lisp&quot;>&#xD;&#xA;&lt;persistable path=&quot;/lab1lis/main.lisp&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;/mruList>&#xD;&#xA;&lt;/workbench>"/>
+  <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;workbench>&#xD;&#xA;&lt;mruList>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;de.defmacro.dandelion.editor&quot; name=&quot;tests.lisp&quot; tooltip=&quot;lab1lis/tests.lisp&quot;>&#xD;&#xA;&lt;persistable path=&quot;/lab1lis/tests.lisp&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;de.defmacro.dandelion.editor&quot; name=&quot;defpackage.lisp&quot; tooltip=&quot;lab1lis/defpackage.lisp&quot;>&#xD;&#xA;&lt;persistable path=&quot;/lab1lis/defpackage.lisp&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;de.defmacro.dandelion.editor&quot; name=&quot;main.lisp&quot; tooltip=&quot;lab1lis/main.lisp&quot;>&#xD;&#xA;&lt;persistable path=&quot;/lab1lis/main.lisp&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;/mruList>&#xD;&#xA;&lt;/workbench>"/>
   <tags>activeSchemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
   <tags>ModelMigrationProcessor.001</tags>
   <children xsi:type="basic:TrimmedWindow" xmi:id="_QUxI0nCTEeWKT6PFMzpWcg" elementId="IDEWindow" contributorURI="platform:/plugin/org.eclipse.platform" selectedElement="_RIKUonCTEeWKT6PFMzpWcg" label="%trimmedwindow.label.eclipseSDK" x="0" y="0" width="1024" height="768">
@@ -130,17 +130,18 @@
               <tags>newtablook</tags>
               <children xsi:type="advanced:Placeholder" xmi:id="_aL9Qk3C4EeWq38Pwp-9pHA" elementId="org.eclipse.ui.views.ResourceNavigator" ref="_ReRHgXCTEeWKT6PFMzpWcg"/>
             </children>
-            <children xsi:type="basic:PartSashContainer" xmi:id="_aL9QlHC4EeWq38Pwp-9pHA" containerData="8000" selectedElement="_aL9QlXC4EeWq38Pwp-9pHA">
-              <children xsi:type="basic:PartSashContainer" xmi:id="_aL9QlXC4EeWq38Pwp-9pHA" containerData="5547" selectedElement="_aL9QlnC4EeWq38Pwp-9pHA" horizontal="true">
+            <children xsi:type="basic:PartSashContainer" xmi:id="_aL9QlHC4EeWq38Pwp-9pHA" containerData="8000" selectedElement="_aL9QmXC4EeWq38Pwp-9pHA">
+              <children xsi:type="basic:PartSashContainer" xmi:id="_aL9QlXC4EeWq38Pwp-9pHA" containerData="4662" selectedElement="_aL9QlnC4EeWq38Pwp-9pHA" horizontal="true">
                 <children xsi:type="advanced:Placeholder" xmi:id="_aL9QlnC4EeWq38Pwp-9pHA" elementId="org.eclipse.ui.editorss" containerData="8000" ref="_Rd8-cHCTEeWKT6PFMzpWcg"/>
                 <children xsi:type="basic:PartStack" xmi:id="_aL9Ql3C4EeWq38Pwp-9pHA" elementId="right" containerData="2000" selectedElement="_aL9QmHC4EeWq38Pwp-9pHA">
                   <tags>newtablook</tags>
                   <children xsi:type="advanced:Placeholder" xmi:id="_aL9QmHC4EeWq38Pwp-9pHA" elementId="org.eclipse.ui.views.ContentOutline" ref="_ReVY8HCTEeWKT6PFMzpWcg"/>
                 </children>
               </children>
-              <children xsi:type="basic:PartStack" xmi:id="_aL9QmXC4EeWq38Pwp-9pHA" elementId="bottom" containerData="4453" selectedElement="_n8V3QHC4EeWq38Pwp-9pHA">
+              <children xsi:type="basic:PartStack" xmi:id="_aL9QmXC4EeWq38Pwp-9pHA" elementId="bottom" containerData="5338" selectedElement="_n8V3QHC4EeWq38Pwp-9pHA">
                 <tags>newtablook</tags>
                 <tags>org.eclipse.e4.secondaryDataStack</tags>
+                <tags>active</tags>
                 <children xsi:type="advanced:Placeholder" xmi:id="_aL9QmnC4EeWq38Pwp-9pHA" elementId="org.eclipse.ui.views.ProblemView" ref="_ReRukHCTEeWKT6PFMzpWcg"/>
                 <children xsi:type="advanced:Placeholder" xmi:id="_aL9Qm3C4EeWq38Pwp-9pHA" elementId="de.defmacro.dandelion.views.listenerView" toBeRendered="false" ref="_aL5mMHC4EeWq38Pwp-9pHA"/>
                 <children xsi:type="advanced:Placeholder" xmi:id="_aL9QnHC4EeWq38Pwp-9pHA" elementId="de.defmacro.dandelion.views.aproposView" toBeRendered="false" ref="_aL6NQHC4EeWq38Pwp-9pHA"/>
@@ -185,14 +186,11 @@
         <tags>newtablook</tags>
         <tags>org.eclipse.e4.primaryDataStack</tags>
         <tags>EditorStack</tags>
-        <tags>active</tags>
         <children xsi:type="basic:Part" xmi:id="_fGzZ8HC4EeWq38Pwp-9pHA" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="main.lisp" iconURI="platform:/plugin/de.defmacro.dandelion/images/lisp_file.gif" closeable="true">
-          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;de.defmacro.dandelion.editor&quot; name=&quot;main.lisp&quot; partName=&quot;main.lisp&quot; title=&quot;main.lisp&quot; tooltip=&quot;lab1lis/main.lisp&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/lab1lis/main.lisp&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;571&quot; selectionTopPixel=&quot;260&quot;/>&#xD;&#xA;&lt;/editor>"/>
+          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;de.defmacro.dandelion.editor&quot; name=&quot;main.lisp&quot; partName=&quot;main.lisp&quot; title=&quot;main.lisp&quot; tooltip=&quot;lab1lis/main.lisp&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/lab1lis/main.lisp&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;2362&quot; selectionTopPixel=&quot;2010&quot;/>&#xD;&#xA;&lt;/editor>"/>
           <tags>Editor</tags>
           <tags>de.defmacro.dandelion.editor</tags>
           <tags>removeOnHide</tags>
-          <tags>active</tags>
-          <tags>activeOnClose</tags>
         </children>
       </children>
     </sharedElements>
@@ -314,6 +312,8 @@
       <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;view host=&quot;localhost&quot; name=&quot;CLISP&quot; port=&quot;31404&quot; version=&quot;2.49.2&quot;/>"/>
       <tags>View</tags>
       <tags>categoryTag:Lisp</tags>
+      <tags>active</tags>
+      <tags>activeOnClose</tags>
       <menus xmi:id="_n9E3EHC4EeWq38Pwp-9pHA" elementId="de.defmacro.dandelion.views.listenerView">
         <tags>ViewMenu</tags>
         <tags>menuContribution:menu</tags>
@@ -327,7 +327,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_RKaXYHCTEeWKT6PFMzpWcg" elementId="org.eclipse.ui.workbench.file">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_IjfXIHfhEeWmHeAfK-Q-Xg" elementId="print" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" enabled="false" command="_QVx1inCTEeWKT6PFMzpWcg"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_5aPOII3bEeWtsa9UxOUqFQ" elementId="print" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" enabled="false" command="_QVx1inCTEeWKT6PFMzpWcg"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_RKaXYXCTEeWKT6PFMzpWcg" elementId="additions" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -348,7 +348,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_RKcMkHCTEeWKT6PFMzpWcg" elementId="org.eclipse.ui.workbench.navigate">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_IjpIIHfhEeWmHeAfK-Q-Xg" elementId="org.eclipse.ui.window.pinEditor" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" type="Check" command="_QVlBIHCTEeWKT6PFMzpWcg"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_5aa0UY3bEeWtsa9UxOUqFQ" elementId="org.eclipse.ui.window.pinEditor" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" type="Check" command="_QVlBIHCTEeWKT6PFMzpWcg"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_RKcMkXCTEeWKT6PFMzpWcg" elementId="group.editor" toBeRendered="false">
         <tags>toolbarSeparator</tags>

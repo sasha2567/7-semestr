@@ -97,16 +97,13 @@ namespace IAD
                 for (int i = 1; i < inmass.Count; i++)
                     step += inmass[i].X - inmass[i - 1].X;
                 step /= inmass.Count - 1;
-                coefA = paramC * (1 - regression);
-                coefB = paramB * (1 - regression);
+                coefA = (inmass[inmass.Count - 2].Y - inmass[inmass.Count - 1].Y) / 
+                    (inmass[inmass.Count - 3].Y - inmass[inmass.Count - 2].Y);
+                coefB = inmass[inmass.Count - 1].Y - coefA * inmass[inmass.Count - 2].Y;
                 for (int i = 1; i <= steps; i++)
                 {
-                    if (i == 1)
                         result.Add(new PointF(result[i - 1].X + step,
-                            regression * inmass[inmass.Count - 1].Y + coefB + inmass[inmass.Count - 1].X * coefA));
-                    else
-                        result.Add(new PointF(result[i - 1].X + step,
-                            regression * result[i - 1].Y + coefB + result[i - 1].X * coefA));
+                            coefB + coefA * result[i - 1].Y));
                 }
                 return result;
             }

@@ -18,7 +18,7 @@ namespace IAD
         AR AutoR = new AR();
         MA MovA = new MA();
         int Model = 0;
-        int lenghtData = 35;
+        int lenghtData = 32;
         int steps;
         List<PointF> data = new List<PointF>();
         List<PointF> result = new List<PointF>();
@@ -38,41 +38,38 @@ namespace IAD
             {
                 data.Add(new PointF(i + 1, rand.Next(-5 + i, 15 + i)));
             }*/
-            data.Add(new PointF(1,0));
-            data.Add(new PointF(2,-0.2f));
-            data.Add(new PointF(3,0.3f));
-            data.Add(new PointF(4,-0.7f));
-            data.Add(new PointF(5,-1.6f));
-            data.Add(new PointF(6,-0.9f));
-            data.Add(new PointF(7,-0.6f));
-            data.Add(new PointF(8,-1.6f));
-            data.Add(new PointF(9,-0.5f));
-            data.Add(new PointF(10,-1.8f));
-            data.Add(new PointF(11,-1.8f));
-            data.Add(new PointF(12,-0.2f));
-            data.Add(new PointF(13,0.4f));
-            data.Add(new PointF(14,1));
-            data.Add(new PointF(15,1.5f));
-            data.Add(new PointF(16,2.1f));
-            data.Add(new PointF(17,3.8f));
-            data.Add(new PointF(18,6.6f));
-            data.Add(new PointF(19,7.2f));
-            data.Add(new PointF(20,18.8f));
-            data.Add(new PointF(21,16.4f));
-            data.Add(new PointF(22,15.4f));
-            data.Add(new PointF(23,17.3f));
-            data.Add(new PointF(24,17.8f));
-            data.Add(new PointF(25,19.4f));
-            data.Add(new PointF(26,21.3f));
-            data.Add(new PointF(27,21.1f));
-            data.Add(new PointF(28,23.4f));
-            data.Add(new PointF(29,25.6f));
-            data.Add(new PointF(30,28.4f));
-            data.Add(new PointF(31,30.3f));
-            data.Add(new PointF(32,30.2f));
-            data.Add(new PointF(33,36.7f));
-            data.Add(new PointF(34,33));
-            data.Add(new PointF(35,30.1f));
+            data.Add(new PointF(1,15.465f));
+            data.Add(new PointF(2,13.334f));
+            data.Add(new PointF(3,15.844f));
+            data.Add(new PointF(4,16.450f));
+            data.Add(new PointF(5,11.009f));
+            data.Add(new PointF(6,13.078f));
+            data.Add(new PointF(7,18.911f));
+            data.Add(new PointF(8,23.522f));
+            data.Add(new PointF(9 ,21.600f));
+            data.Add(new PointF(10,22.061f)); 
+            data.Add(new PointF(11,14.657f)); 
+            data.Add(new PointF(12,27.738f)); 
+            data.Add(new PointF(13,12.334f)); 
+            data.Add(new PointF(14,11.957f)); 
+            data.Add(new PointF(15,19.651f)); 
+            data.Add(new PointF(16,20.038f)); 
+            data.Add(new PointF(17,8.834f));
+            data.Add(new PointF(18,19.716f));
+            data.Add(new PointF(19,21.467f));
+            data.Add(new PointF(20,20.501f));
+            data.Add(new PointF(21,22.210f));
+            data.Add(new PointF(22,18.591f));
+            data.Add(new PointF(23,30.516f));
+            data.Add(new PointF(24,13.264f));
+            data.Add(new PointF(25,14.636f));
+            data.Add(new PointF(26,15.340f));
+            data.Add(new PointF(27,18.886f));
+            data.Add(new PointF(28,13.743f));
+            data.Add(new PointF(29,20.858f));
+            data.Add(new PointF(30,22.713f));
+            data.Add(new PointF(31,35.458f));
+            data.Add(new PointF(32,24.220f));
         }
 
         void CreateConfidenceLimits(int length)
@@ -111,7 +108,7 @@ namespace IAD
                 upBorder.Add(new PointF(result[k + 1].X, result[k + 1].Y + Sy * Student[lenghtData - 1]));
                 bottomBorder.Add(new PointF(result[k + 1].X, result[k + 1].Y - Sy * Student[lenghtData - 1]));
             }
-            pen = new Pen(Color.Blue, 2);
+            pen = new Pen(Color.Blue, 1);
             pen.DashStyle = DashStyle.Dash;
             graphBuilder.DrawPlot(pen, upBorder);
             graphBuilder.DrawPlot(pen, bottomBorder);

@@ -467,7 +467,7 @@
         <dia:string>#№типа документа#</dia:string>
       </dia:attribute>
       <dia:attribute name="key">
-        <dia:boolean val="false"/>
+        <dia:boolean val="true"/>
       </dia:attribute>
       <dia:attribute name="weak_key">
         <dia:boolean val="false"/>
@@ -561,7 +561,7 @@
         <dia:string>#№типа заявления#</dia:string>
       </dia:attribute>
       <dia:attribute name="key">
-        <dia:boolean val="false"/>
+        <dia:boolean val="true"/>
       </dia:attribute>
       <dia:attribute name="weak_key">
         <dia:boolean val="false"/>
@@ -584,7 +584,7 @@
         <dia:point val="7.655,3.35"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="7.48235,3.24223;8.17265,4.70777"/>
+        <dia:rectangle val="7.5935,3.2885;8.0615,4.6615"/>
       </dia:attribute>
       <dia:attribute name="conn_endpoints">
         <dia:point val="7.655,3.35"/>
@@ -592,24 +592,6 @@
       </dia:attribute>
       <dia:attribute name="numcp">
         <dia:int val="1"/>
-      </dia:attribute>
-      <dia:attribute name="start_arrow">
-        <dia:enum val="28"/>
-      </dia:attribute>
-      <dia:attribute name="start_arrow_length">
-        <dia:real val="0.5"/>
-      </dia:attribute>
-      <dia:attribute name="start_arrow_width">
-        <dia:real val="0.5"/>
-      </dia:attribute>
-      <dia:attribute name="end_arrow">
-        <dia:enum val="1"/>
-      </dia:attribute>
-      <dia:attribute name="end_arrow_length">
-        <dia:real val="0.5"/>
-      </dia:attribute>
-      <dia:attribute name="end_arrow_width">
-        <dia:real val="0.5"/>
       </dia:attribute>
       <dia:connections>
         <dia:connection handle="0" to="O8" connection="4"/>
@@ -621,7 +603,7 @@
         <dia:point val="9.1875,2.65"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="9.10716,2.57225;11.2828,4.67775"/>
+        <dia:rectangle val="9.1168,2.5793;11.2732,4.6707"/>
       </dia:attribute>
       <dia:attribute name="conn_endpoints">
         <dia:point val="9.1875,2.65"/>
@@ -629,24 +611,6 @@
       </dia:attribute>
       <dia:attribute name="numcp">
         <dia:int val="1"/>
-      </dia:attribute>
-      <dia:attribute name="start_arrow">
-        <dia:enum val="28"/>
-      </dia:attribute>
-      <dia:attribute name="start_arrow_length">
-        <dia:real val="0.5"/>
-      </dia:attribute>
-      <dia:attribute name="start_arrow_width">
-        <dia:real val="0.5"/>
-      </dia:attribute>
-      <dia:attribute name="end_arrow">
-        <dia:enum val="1"/>
-      </dia:attribute>
-      <dia:attribute name="end_arrow_length">
-        <dia:real val="0.5"/>
-      </dia:attribute>
-      <dia:attribute name="end_arrow_width">
-        <dia:real val="0.5"/>
       </dia:attribute>
       <dia:connections>
         <dia:connection handle="0" to="O9" connection="6"/>
@@ -658,7 +622,7 @@
         <dia:point val="16.4025,3.3"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="16.3025,3.23;19.2025,4.72"/>
+        <dia:rectangle val="16.3354,3.23292;19.1696,4.71708"/>
       </dia:attribute>
       <dia:attribute name="conn_endpoints">
         <dia:point val="16.4025,3.3"/>
@@ -666,24 +630,6 @@
       </dia:attribute>
       <dia:attribute name="numcp">
         <dia:int val="1"/>
-      </dia:attribute>
-      <dia:attribute name="start_arrow">
-        <dia:enum val="28"/>
-      </dia:attribute>
-      <dia:attribute name="start_arrow_length">
-        <dia:real val="0.5"/>
-      </dia:attribute>
-      <dia:attribute name="start_arrow_width">
-        <dia:real val="0.5"/>
-      </dia:attribute>
-      <dia:attribute name="end_arrow">
-        <dia:enum val="1"/>
-      </dia:attribute>
-      <dia:attribute name="end_arrow_length">
-        <dia:real val="0.5"/>
-      </dia:attribute>
-      <dia:attribute name="end_arrow_width">
-        <dia:real val="0.5"/>
       </dia:attribute>
       <dia:connections>
         <dia:connection handle="0" to="O10" connection="6"/>
@@ -695,7 +641,7 @@
         <dia:point val="20.3386,1.5364"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="18.9897,1.43249;20.4514,4.75391"/>
+        <dia:rectangle val="19.0376,1.47147;20.4035,4.71492"/>
       </dia:attribute>
       <dia:attribute name="conn_endpoints">
         <dia:point val="20.3386,1.5364"/>
@@ -703,24 +649,6 @@
       </dia:attribute>
       <dia:attribute name="numcp">
         <dia:int val="1"/>
-      </dia:attribute>
-      <dia:attribute name="start_arrow">
-        <dia:enum val="28"/>
-      </dia:attribute>
-      <dia:attribute name="start_arrow_length">
-        <dia:real val="0.5"/>
-      </dia:attribute>
-      <dia:attribute name="start_arrow_width">
-        <dia:real val="0.5"/>
-      </dia:attribute>
-      <dia:attribute name="end_arrow">
-        <dia:enum val="1"/>
-      </dia:attribute>
-      <dia:attribute name="end_arrow_length">
-        <dia:real val="0.5"/>
-      </dia:attribute>
-      <dia:attribute name="end_arrow_width">
-        <dia:real val="0.5"/>
       </dia:attribute>
       <dia:connections>
         <dia:connection handle="0" to="O11" connection="5"/>
@@ -826,7 +754,7 @@
         <dia:point val="27.1175,3.75"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="25.8831,3.67664;27.2019,4.82336"/>
+        <dia:rectangle val="25.897,3.67946;27.188,4.82054"/>
       </dia:attribute>
       <dia:attribute name="conn_endpoints">
         <dia:point val="27.1175,3.75"/>
@@ -834,24 +762,6 @@
       </dia:attribute>
       <dia:attribute name="numcp">
         <dia:int val="1"/>
-      </dia:attribute>
-      <dia:attribute name="start_arrow">
-        <dia:enum val="28"/>
-      </dia:attribute>
-      <dia:attribute name="start_arrow_length">
-        <dia:real val="0.5"/>
-      </dia:attribute>
-      <dia:attribute name="start_arrow_width">
-        <dia:real val="0.5"/>
-      </dia:attribute>
-      <dia:attribute name="end_arrow">
-        <dia:enum val="1"/>
-      </dia:attribute>
-      <dia:attribute name="end_arrow_length">
-        <dia:real val="0.5"/>
-      </dia:attribute>
-      <dia:attribute name="end_arrow_width">
-        <dia:real val="0.5"/>
       </dia:attribute>
       <dia:connections>
         <dia:connection handle="0" to="O16" connection="6"/>
@@ -863,7 +773,7 @@
         <dia:point val="32.0025,6.4"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="28.6761,5.4526;32.1114,6.5974"/>
+        <dia:rectangle val="28.725,5.58995;32.0625,6.46005"/>
       </dia:attribute>
       <dia:attribute name="conn_endpoints">
         <dia:point val="32.0025,6.4"/>
@@ -871,24 +781,6 @@
       </dia:attribute>
       <dia:attribute name="numcp">
         <dia:int val="1"/>
-      </dia:attribute>
-      <dia:attribute name="start_arrow">
-        <dia:enum val="28"/>
-      </dia:attribute>
-      <dia:attribute name="start_arrow_length">
-        <dia:real val="0.5"/>
-      </dia:attribute>
-      <dia:attribute name="start_arrow_width">
-        <dia:real val="0.5"/>
-      </dia:attribute>
-      <dia:attribute name="end_arrow">
-        <dia:enum val="1"/>
-      </dia:attribute>
-      <dia:attribute name="end_arrow_length">
-        <dia:real val="0.5"/>
-      </dia:attribute>
-      <dia:attribute name="end_arrow_width">
-        <dia:real val="0.5"/>
       </dia:attribute>
       <dia:connections>
         <dia:connection handle="0" to="O17" connection="1"/>
@@ -900,7 +792,7 @@
         <dia:point val="33.16,2.55"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="33.0555,2.4291;37.6145,4.3209"/>
+        <dia:rectangle val="33.0955,2.48552;37.5745,4.26448"/>
       </dia:attribute>
       <dia:attribute name="conn_endpoints">
         <dia:point val="33.16,2.55"/>
@@ -908,24 +800,6 @@
       </dia:attribute>
       <dia:attribute name="numcp">
         <dia:int val="1"/>
-      </dia:attribute>
-      <dia:attribute name="start_arrow">
-        <dia:enum val="28"/>
-      </dia:attribute>
-      <dia:attribute name="start_arrow_length">
-        <dia:real val="0.5"/>
-      </dia:attribute>
-      <dia:attribute name="start_arrow_width">
-        <dia:real val="0.5"/>
-      </dia:attribute>
-      <dia:attribute name="end_arrow">
-        <dia:enum val="1"/>
-      </dia:attribute>
-      <dia:attribute name="end_arrow_length">
-        <dia:real val="0.5"/>
-      </dia:attribute>
-      <dia:attribute name="end_arrow_width">
-        <dia:real val="0.5"/>
       </dia:attribute>
       <dia:connections>
         <dia:connection handle="0" to="O21" connection="6"/>
@@ -1008,7 +882,7 @@
         <dia:string>#№типа договора#</dia:string>
       </dia:attribute>
       <dia:attribute name="key">
-        <dia:boolean val="false"/>
+        <dia:boolean val="true"/>
       </dia:attribute>
       <dia:attribute name="weak_key">
         <dia:boolean val="false"/>
@@ -1031,7 +905,7 @@
         <dia:point val="38.1322,2.4364"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="37.3768,2.33097;38.2654,4.30543"/>
+        <dia:rectangle val="37.4462,2.37261;38.196,4.26379"/>
       </dia:attribute>
       <dia:attribute name="conn_endpoints">
         <dia:point val="38.1322,2.4364"/>
@@ -1039,24 +913,6 @@
       </dia:attribute>
       <dia:attribute name="numcp">
         <dia:int val="1"/>
-      </dia:attribute>
-      <dia:attribute name="start_arrow">
-        <dia:enum val="28"/>
-      </dia:attribute>
-      <dia:attribute name="start_arrow_length">
-        <dia:real val="0.5"/>
-      </dia:attribute>
-      <dia:attribute name="start_arrow_width">
-        <dia:real val="0.5"/>
-      </dia:attribute>
-      <dia:attribute name="end_arrow">
-        <dia:enum val="1"/>
-      </dia:attribute>
-      <dia:attribute name="end_arrow_length">
-        <dia:real val="0.5"/>
-      </dia:attribute>
-      <dia:attribute name="end_arrow_width">
-        <dia:real val="0.5"/>
       </dia:attribute>
       <dia:connections>
         <dia:connection handle="0" to="O22" connection="5"/>
@@ -1115,7 +971,7 @@
         <dia:point val="46.9014,6.9136"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="44.5413,4.82592;46.9851,6.98768"/>
+        <dia:rectangle val="44.5544,4.82942;46.972,6.98418"/>
       </dia:attribute>
       <dia:attribute name="conn_endpoints">
         <dia:point val="46.9014,6.9136"/>
@@ -1123,24 +979,6 @@
       </dia:attribute>
       <dia:attribute name="numcp">
         <dia:int val="1"/>
-      </dia:attribute>
-      <dia:attribute name="start_arrow">
-        <dia:enum val="28"/>
-      </dia:attribute>
-      <dia:attribute name="start_arrow_length">
-        <dia:real val="0.5"/>
-      </dia:attribute>
-      <dia:attribute name="start_arrow_width">
-        <dia:real val="0.5"/>
-      </dia:attribute>
-      <dia:attribute name="end_arrow">
-        <dia:enum val="1"/>
-      </dia:attribute>
-      <dia:attribute name="end_arrow_length">
-        <dia:real val="0.5"/>
-      </dia:attribute>
-      <dia:attribute name="end_arrow_width">
-        <dia:real val="0.5"/>
       </dia:attribute>
       <dia:connections>
         <dia:connection handle="0" to="O24" connection="0"/>
@@ -1176,7 +1014,7 @@
         <dia:string>#№закона#</dia:string>
       </dia:attribute>
       <dia:attribute name="key">
-        <dia:boolean val="false"/>
+        <dia:boolean val="true"/>
       </dia:attribute>
       <dia:attribute name="weak_key">
         <dia:boolean val="false"/>
@@ -1199,7 +1037,7 @@
         <dia:point val="46.1376,2.9364"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="44.5335,2.86674;46.2291,4.06966"/>
+        <dia:rectangle val="44.5553,2.86674;46.2072,4.06966"/>
       </dia:attribute>
       <dia:attribute name="conn_endpoints">
         <dia:point val="46.1376,2.9364"/>
@@ -1207,24 +1045,6 @@
       </dia:attribute>
       <dia:attribute name="numcp">
         <dia:int val="1"/>
-      </dia:attribute>
-      <dia:attribute name="start_arrow">
-        <dia:enum val="28"/>
-      </dia:attribute>
-      <dia:attribute name="start_arrow_length">
-        <dia:real val="0.5"/>
-      </dia:attribute>
-      <dia:attribute name="start_arrow_width">
-        <dia:real val="0.5"/>
-      </dia:attribute>
-      <dia:attribute name="end_arrow">
-        <dia:enum val="1"/>
-      </dia:attribute>
-      <dia:attribute name="end_arrow_length">
-        <dia:real val="0.5"/>
-      </dia:attribute>
-      <dia:attribute name="end_arrow_width">
-        <dia:real val="0.5"/>
       </dia:attribute>
       <dia:connections>
         <dia:connection handle="0" to="O26" connection="5"/>
@@ -1263,7 +1083,7 @@
         <dia:boolean val="false"/>
       </dia:attribute>
       <dia:attribute name="weak_key">
-        <dia:boolean val="false"/>
+        <dia:boolean val="true"/>
       </dia:attribute>
       <dia:attribute name="derived">
         <dia:boolean val="false"/>
@@ -1310,7 +1130,7 @@
         <dia:boolean val="false"/>
       </dia:attribute>
       <dia:attribute name="weak_key">
-        <dia:boolean val="false"/>
+        <dia:boolean val="true"/>
       </dia:attribute>
       <dia:attribute name="derived">
         <dia:boolean val="false"/>
@@ -1330,7 +1150,7 @@
         <dia:point val="19.5814,18.0736"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="19.5043,16.869;20.727,18.1546"/>
+        <dia:rectangle val="19.5107,16.8793;20.7207,18.1443"/>
       </dia:attribute>
       <dia:attribute name="conn_endpoints">
         <dia:point val="19.5814,18.0736"/>
@@ -1338,24 +1158,6 @@
       </dia:attribute>
       <dia:attribute name="numcp">
         <dia:int val="1"/>
-      </dia:attribute>
-      <dia:attribute name="start_arrow">
-        <dia:enum val="28"/>
-      </dia:attribute>
-      <dia:attribute name="start_arrow_length">
-        <dia:real val="0.5"/>
-      </dia:attribute>
-      <dia:attribute name="start_arrow_width">
-        <dia:real val="0.5"/>
-      </dia:attribute>
-      <dia:attribute name="end_arrow">
-        <dia:enum val="1"/>
-      </dia:attribute>
-      <dia:attribute name="end_arrow_length">
-        <dia:real val="0.5"/>
-      </dia:attribute>
-      <dia:attribute name="end_arrow_width">
-        <dia:real val="0.5"/>
       </dia:attribute>
       <dia:connections>
         <dia:connection handle="0" to="O28" connection="2"/>
@@ -1367,7 +1169,7 @@
         <dia:point val="27.7709,17.5736"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="25.4072,16.7776;27.8786,17.746"/>
+        <dia:rectangle val="25.4535,16.8885;27.8324,17.6351"/>
       </dia:attribute>
       <dia:attribute name="conn_endpoints">
         <dia:point val="27.7709,17.5736"/>
@@ -1375,24 +1177,6 @@
       </dia:attribute>
       <dia:attribute name="numcp">
         <dia:int val="1"/>
-      </dia:attribute>
-      <dia:attribute name="start_arrow">
-        <dia:enum val="28"/>
-      </dia:attribute>
-      <dia:attribute name="start_arrow_length">
-        <dia:real val="0.5"/>
-      </dia:attribute>
-      <dia:attribute name="start_arrow_width">
-        <dia:real val="0.5"/>
-      </dia:attribute>
-      <dia:attribute name="end_arrow">
-        <dia:enum val="1"/>
-      </dia:attribute>
-      <dia:attribute name="end_arrow_length">
-        <dia:real val="0.5"/>
-      </dia:attribute>
-      <dia:attribute name="end_arrow_width">
-        <dia:real val="0.5"/>
       </dia:attribute>
       <dia:connections>
         <dia:connection handle="0" to="O29" connection="0"/>
@@ -1428,7 +1212,7 @@
         <dia:string>#№заявления#</dia:string>
       </dia:attribute>
       <dia:attribute name="key">
-        <dia:boolean val="false"/>
+        <dia:boolean val="true"/>
       </dia:attribute>
       <dia:attribute name="weak_key">
         <dia:boolean val="false"/>
@@ -1451,7 +1235,7 @@
         <dia:point val="27.45,15.95"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="25.4033,15.6479;27.5617,16.3521"/>
+        <dia:rectangle val="25.4625,15.8975;27.5025,16.1025"/>
       </dia:attribute>
       <dia:attribute name="conn_endpoints">
         <dia:point val="27.45,15.95"/>
@@ -1459,24 +1243,6 @@
       </dia:attribute>
       <dia:attribute name="numcp">
         <dia:int val="1"/>
-      </dia:attribute>
-      <dia:attribute name="start_arrow">
-        <dia:enum val="28"/>
-      </dia:attribute>
-      <dia:attribute name="start_arrow_length">
-        <dia:real val="0.5"/>
-      </dia:attribute>
-      <dia:attribute name="start_arrow_width">
-        <dia:real val="0.5"/>
-      </dia:attribute>
-      <dia:attribute name="end_arrow">
-        <dia:enum val="1"/>
-      </dia:attribute>
-      <dia:attribute name="end_arrow_length">
-        <dia:real val="0.5"/>
-      </dia:attribute>
-      <dia:attribute name="end_arrow_width">
-        <dia:real val="0.5"/>
       </dia:attribute>
       <dia:connections>
         <dia:connection handle="0" to="O32" connection="3"/>
@@ -1535,7 +1301,7 @@
         <dia:point val="20.0125,13.55"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="19.9004,13.4461;20.7621,15.2539"/>
+        <dia:rectangle val="19.9475,13.485;20.715,15.215"/>
       </dia:attribute>
       <dia:attribute name="conn_endpoints">
         <dia:point val="20.0125,13.55"/>
@@ -1543,24 +1309,6 @@
       </dia:attribute>
       <dia:attribute name="numcp">
         <dia:int val="1"/>
-      </dia:attribute>
-      <dia:attribute name="start_arrow">
-        <dia:enum val="28"/>
-      </dia:attribute>
-      <dia:attribute name="start_arrow_length">
-        <dia:real val="0.5"/>
-      </dia:attribute>
-      <dia:attribute name="start_arrow_width">
-        <dia:real val="0.5"/>
-      </dia:attribute>
-      <dia:attribute name="end_arrow">
-        <dia:enum val="1"/>
-      </dia:attribute>
-      <dia:attribute name="end_arrow_length">
-        <dia:real val="0.5"/>
-      </dia:attribute>
-      <dia:attribute name="end_arrow_width">
-        <dia:real val="0.5"/>
       </dia:attribute>
       <dia:connections>
         <dia:connection handle="0" to="O34" connection="6"/>
@@ -1619,7 +1367,7 @@
         <dia:point val="26.9,13.8"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="25.4349,13.722;26.9801,15.228"/>
+        <dia:rectangle val="25.4443,13.7293;26.9707,15.2207"/>
       </dia:attribute>
       <dia:attribute name="conn_endpoints">
         <dia:point val="26.9,13.8"/>
@@ -1627,24 +1375,6 @@
       </dia:attribute>
       <dia:attribute name="numcp">
         <dia:int val="1"/>
-      </dia:attribute>
-      <dia:attribute name="start_arrow">
-        <dia:enum val="28"/>
-      </dia:attribute>
-      <dia:attribute name="start_arrow_length">
-        <dia:real val="0.5"/>
-      </dia:attribute>
-      <dia:attribute name="start_arrow_width">
-        <dia:real val="0.5"/>
-      </dia:attribute>
-      <dia:attribute name="end_arrow">
-        <dia:enum val="1"/>
-      </dia:attribute>
-      <dia:attribute name="end_arrow_length">
-        <dia:real val="0.5"/>
-      </dia:attribute>
-      <dia:attribute name="end_arrow_width">
-        <dia:real val="0.5"/>
       </dia:attribute>
       <dia:connections>
         <dia:connection handle="0" to="O36" connection="3"/>
@@ -1683,7 +1413,7 @@
         <dia:boolean val="false"/>
       </dia:attribute>
       <dia:attribute name="weak_key">
-        <dia:boolean val="false"/>
+        <dia:boolean val="true"/>
       </dia:attribute>
       <dia:attribute name="derived">
         <dia:boolean val="false"/>
@@ -1730,7 +1460,7 @@
         <dia:boolean val="false"/>
       </dia:attribute>
       <dia:attribute name="weak_key">
-        <dia:boolean val="false"/>
+        <dia:boolean val="true"/>
       </dia:attribute>
       <dia:attribute name="derived">
         <dia:boolean val="false"/>
@@ -1750,7 +1480,7 @@
         <dia:point val="37.8528,23.2736"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="37.741,22.8815;41.2618,23.5921"/>
+        <dia:rectangle val="37.8017,23.1489;41.2011,23.3247"/>
       </dia:attribute>
       <dia:attribute name="conn_endpoints">
         <dia:point val="37.8528,23.2736"/>
@@ -1758,24 +1488,6 @@
       </dia:attribute>
       <dia:attribute name="numcp">
         <dia:int val="1"/>
-      </dia:attribute>
-      <dia:attribute name="start_arrow">
-        <dia:enum val="28"/>
-      </dia:attribute>
-      <dia:attribute name="start_arrow_length">
-        <dia:real val="0.5"/>
-      </dia:attribute>
-      <dia:attribute name="start_arrow_width">
-        <dia:real val="0.5"/>
-      </dia:attribute>
-      <dia:attribute name="end_arrow">
-        <dia:enum val="1"/>
-      </dia:attribute>
-      <dia:attribute name="end_arrow_length">
-        <dia:real val="0.5"/>
-      </dia:attribute>
-      <dia:attribute name="end_arrow_width">
-        <dia:real val="0.5"/>
       </dia:attribute>
       <dia:connections>
         <dia:connection handle="0" to="O39" connection="2"/>
@@ -1787,7 +1499,7 @@
         <dia:point val="37.5383,20.6964"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="37.4285,20.4768;41.2597,21.6196"/>
+        <dia:rectangle val="37.4796,20.6378;41.2086,21.4586"/>
       </dia:attribute>
       <dia:attribute name="conn_endpoints">
         <dia:point val="37.5383,20.6964"/>
@@ -1795,24 +1507,6 @@
       </dia:attribute>
       <dia:attribute name="numcp">
         <dia:int val="1"/>
-      </dia:attribute>
-      <dia:attribute name="start_arrow">
-        <dia:enum val="28"/>
-      </dia:attribute>
-      <dia:attribute name="start_arrow_length">
-        <dia:real val="0.5"/>
-      </dia:attribute>
-      <dia:attribute name="start_arrow_width">
-        <dia:real val="0.5"/>
-      </dia:attribute>
-      <dia:attribute name="end_arrow">
-        <dia:enum val="1"/>
-      </dia:attribute>
-      <dia:attribute name="end_arrow_length">
-        <dia:real val="0.5"/>
-      </dia:attribute>
-      <dia:attribute name="end_arrow_width">
-        <dia:real val="0.5"/>
       </dia:attribute>
       <dia:connections>
         <dia:connection handle="0" to="O38" connection="7"/>
@@ -1851,7 +1545,7 @@
         <dia:boolean val="false"/>
       </dia:attribute>
       <dia:attribute name="weak_key">
-        <dia:boolean val="false"/>
+        <dia:boolean val="true"/>
       </dia:attribute>
       <dia:attribute name="derived">
         <dia:boolean val="false"/>
@@ -1871,7 +1565,7 @@
         <dia:point val="47.545,20.71"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="45.1379,20.5511;47.6521,21.5589"/>
+        <dia:rectangle val="45.1827,20.6477;47.6073,21.4623"/>
       </dia:attribute>
       <dia:attribute name="conn_endpoints">
         <dia:point val="47.545,20.71"/>
@@ -1879,24 +1573,6 @@
       </dia:attribute>
       <dia:attribute name="numcp">
         <dia:int val="1"/>
-      </dia:attribute>
-      <dia:attribute name="start_arrow">
-        <dia:enum val="28"/>
-      </dia:attribute>
-      <dia:attribute name="start_arrow_length">
-        <dia:real val="0.5"/>
-      </dia:attribute>
-      <dia:attribute name="start_arrow_width">
-        <dia:real val="0.5"/>
-      </dia:attribute>
-      <dia:attribute name="end_arrow">
-        <dia:enum val="1"/>
-      </dia:attribute>
-      <dia:attribute name="end_arrow_length">
-        <dia:real val="0.5"/>
-      </dia:attribute>
-      <dia:attribute name="end_arrow_width">
-        <dia:real val="0.5"/>
       </dia:attribute>
       <dia:connections>
         <dia:connection handle="0" to="O42" connection="3"/>
@@ -1932,7 +1608,7 @@
         <dia:string>#№договора#</dia:string>
       </dia:attribute>
       <dia:attribute name="key">
-        <dia:boolean val="false"/>
+        <dia:boolean val="true"/>
       </dia:attribute>
       <dia:attribute name="weak_key">
         <dia:boolean val="false"/>
@@ -1955,7 +1631,7 @@
         <dia:point val="47.45,22.35"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="45.1332,21.9817;47.5618,22.6683"/>
+        <dia:rectangle val="45.1939,22.2489;47.5011,22.4011"/>
       </dia:attribute>
       <dia:attribute name="conn_endpoints">
         <dia:point val="47.45,22.35"/>
@@ -1963,24 +1639,6 @@
       </dia:attribute>
       <dia:attribute name="numcp">
         <dia:int val="1"/>
-      </dia:attribute>
-      <dia:attribute name="start_arrow">
-        <dia:enum val="28"/>
-      </dia:attribute>
-      <dia:attribute name="start_arrow_length">
-        <dia:real val="0.5"/>
-      </dia:attribute>
-      <dia:attribute name="start_arrow_width">
-        <dia:real val="0.5"/>
-      </dia:attribute>
-      <dia:attribute name="end_arrow">
-        <dia:enum val="1"/>
-      </dia:attribute>
-      <dia:attribute name="end_arrow_length">
-        <dia:real val="0.5"/>
-      </dia:attribute>
-      <dia:attribute name="end_arrow_width">
-        <dia:real val="0.5"/>
       </dia:attribute>
       <dia:connections>
         <dia:connection handle="0" to="O44" connection="3"/>
@@ -2039,7 +1697,7 @@
         <dia:point val="47.7209,23.7236"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="45.1356,22.9901;47.8302,23.9335"/>
+        <dia:rectangle val="45.1857,23.1407;47.7802,23.7829"/>
       </dia:attribute>
       <dia:attribute name="conn_endpoints">
         <dia:point val="47.7209,23.7236"/>
@@ -2047,24 +1705,6 @@
       </dia:attribute>
       <dia:attribute name="numcp">
         <dia:int val="1"/>
-      </dia:attribute>
-      <dia:attribute name="start_arrow">
-        <dia:enum val="28"/>
-      </dia:attribute>
-      <dia:attribute name="start_arrow_length">
-        <dia:real val="0.5"/>
-      </dia:attribute>
-      <dia:attribute name="start_arrow_width">
-        <dia:real val="0.5"/>
-      </dia:attribute>
-      <dia:attribute name="end_arrow">
-        <dia:enum val="1"/>
-      </dia:attribute>
-      <dia:attribute name="end_arrow_length">
-        <dia:real val="0.5"/>
-      </dia:attribute>
-      <dia:attribute name="end_arrow_width">
-        <dia:real val="0.5"/>
       </dia:attribute>
       <dia:connections>
         <dia:connection handle="0" to="O46" connection="0"/>
@@ -2103,7 +1743,7 @@
         <dia:boolean val="false"/>
       </dia:attribute>
       <dia:attribute name="weak_key">
-        <dia:boolean val="false"/>
+        <dia:boolean val="true"/>
       </dia:attribute>
       <dia:attribute name="derived">
         <dia:boolean val="false"/>
@@ -2150,7 +1790,7 @@
         <dia:boolean val="false"/>
       </dia:attribute>
       <dia:attribute name="weak_key">
-        <dia:boolean val="false"/>
+        <dia:boolean val="true"/>
       </dia:attribute>
       <dia:attribute name="derived">
         <dia:boolean val="false"/>
@@ -2194,7 +1834,7 @@
         <dia:string>#№документа#</dia:string>
       </dia:attribute>
       <dia:attribute name="key">
-        <dia:boolean val="false"/>
+        <dia:boolean val="true"/>
       </dia:attribute>
       <dia:attribute name="weak_key">
         <dia:boolean val="false"/>
@@ -2264,7 +1904,7 @@
         <dia:point val="14.1325,25.91"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="14.0454,25.8397;17.1871,28.3703"/>
+        <dia:rectangle val="14.0622,25.8397;17.1703,28.3703"/>
       </dia:attribute>
       <dia:attribute name="conn_endpoints">
         <dia:point val="14.1325,25.91"/>
@@ -2272,24 +1912,6 @@
       </dia:attribute>
       <dia:attribute name="numcp">
         <dia:int val="1"/>
-      </dia:attribute>
-      <dia:attribute name="start_arrow">
-        <dia:enum val="28"/>
-      </dia:attribute>
-      <dia:attribute name="start_arrow_length">
-        <dia:real val="0.5"/>
-      </dia:attribute>
-      <dia:attribute name="start_arrow_width">
-        <dia:real val="0.5"/>
-      </dia:attribute>
-      <dia:attribute name="end_arrow">
-        <dia:enum val="1"/>
-      </dia:attribute>
-      <dia:attribute name="end_arrow_length">
-        <dia:real val="0.5"/>
-      </dia:attribute>
-      <dia:attribute name="end_arrow_width">
-        <dia:real val="0.5"/>
       </dia:attribute>
       <dia:connections>
         <dia:connection handle="0" to="O48" connection="6"/>
@@ -2301,7 +1923,7 @@
         <dia:point val="13.8597,30.2236"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="13.7479,29.7903;17.2117,30.5333"/>
+        <dia:rectangle val="13.8078,30.0481;17.1519,30.2755"/>
       </dia:attribute>
       <dia:attribute name="conn_endpoints">
         <dia:point val="13.8597,30.2236"/>
@@ -2309,24 +1931,6 @@
       </dia:attribute>
       <dia:attribute name="numcp">
         <dia:int val="1"/>
-      </dia:attribute>
-      <dia:attribute name="start_arrow">
-        <dia:enum val="28"/>
-      </dia:attribute>
-      <dia:attribute name="start_arrow_length">
-        <dia:real val="0.5"/>
-      </dia:attribute>
-      <dia:attribute name="start_arrow_width">
-        <dia:real val="0.5"/>
-      </dia:attribute>
-      <dia:attribute name="end_arrow">
-        <dia:enum val="1"/>
-      </dia:attribute>
-      <dia:attribute name="end_arrow_length">
-        <dia:real val="0.5"/>
-      </dia:attribute>
-      <dia:attribute name="end_arrow_width">
-        <dia:real val="0.5"/>
       </dia:attribute>
       <dia:connections>
         <dia:connection handle="0" to="O49" connection="2"/>
@@ -2338,7 +1942,7 @@
         <dia:point val="25.0067,30.3136"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="21.4684,29.804;25.1183,30.6096"/>
+        <dia:rectangle val="21.527,30.047;25.0597,30.3666"/>
       </dia:attribute>
       <dia:attribute name="conn_endpoints">
         <dia:point val="25.0067,30.3136"/>
@@ -2346,24 +1950,6 @@
       </dia:attribute>
       <dia:attribute name="numcp">
         <dia:int val="1"/>
-      </dia:attribute>
-      <dia:attribute name="start_arrow">
-        <dia:enum val="28"/>
-      </dia:attribute>
-      <dia:attribute name="start_arrow_length">
-        <dia:real val="0.5"/>
-      </dia:attribute>
-      <dia:attribute name="start_arrow_width">
-        <dia:real val="0.5"/>
-      </dia:attribute>
-      <dia:attribute name="end_arrow">
-        <dia:enum val="1"/>
-      </dia:attribute>
-      <dia:attribute name="end_arrow_length">
-        <dia:real val="0.5"/>
-      </dia:attribute>
-      <dia:attribute name="end_arrow_width">
-        <dia:real val="0.5"/>
       </dia:attribute>
       <dia:connections>
         <dia:connection handle="0" to="O51" connection="0"/>
@@ -2375,7 +1961,7 @@
         <dia:point val="24.445,28.61"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="21.4705,28.3968;24.5545,29.4132"/>
+        <dia:rectangle val="21.5209,28.5509;24.5041,29.2591"/>
       </dia:attribute>
       <dia:attribute name="conn_endpoints">
         <dia:point val="24.445,28.61"/>
@@ -2383,24 +1969,6 @@
       </dia:attribute>
       <dia:attribute name="numcp">
         <dia:int val="1"/>
-      </dia:attribute>
-      <dia:attribute name="start_arrow">
-        <dia:enum val="28"/>
-      </dia:attribute>
-      <dia:attribute name="start_arrow_length">
-        <dia:real val="0.5"/>
-      </dia:attribute>
-      <dia:attribute name="start_arrow_width">
-        <dia:real val="0.5"/>
-      </dia:attribute>
-      <dia:attribute name="end_arrow">
-        <dia:enum val="1"/>
-      </dia:attribute>
-      <dia:attribute name="end_arrow_length">
-        <dia:real val="0.5"/>
-      </dia:attribute>
-      <dia:attribute name="end_arrow_width">
-        <dia:real val="0.5"/>
       </dia:attribute>
       <dia:connections>
         <dia:connection handle="0" to="O50" connection="3"/>
@@ -2506,7 +2074,7 @@
         <dia:point val="37.51,6"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="37.1791,5.8882;37.8709,11.3718"/>
+        <dia:rectangle val="37.46,5.95;37.59,11.31"/>
       </dia:attribute>
       <dia:attribute name="orth_points">
         <dia:point val="37.51,6"/>
@@ -2522,24 +2090,6 @@
       <dia:attribute name="autorouting">
         <dia:boolean val="true"/>
       </dia:attribute>
-      <dia:attribute name="start_arrow">
-        <dia:enum val="28"/>
-      </dia:attribute>
-      <dia:attribute name="start_arrow_length">
-        <dia:real val="0.5"/>
-      </dia:attribute>
-      <dia:attribute name="start_arrow_width">
-        <dia:real val="0.5"/>
-      </dia:attribute>
-      <dia:attribute name="end_arrow">
-        <dia:enum val="1"/>
-      </dia:attribute>
-      <dia:attribute name="end_arrow_length">
-        <dia:real val="0.5"/>
-      </dia:attribute>
-      <dia:attribute name="end_arrow_width">
-        <dia:real val="0.5"/>
-      </dia:attribute>
       <dia:connections>
         <dia:connection handle="0" to="O6" connection="6"/>
         <dia:connection handle="1" to="O57" connection="2"/>
@@ -2550,7 +2100,7 @@
         <dia:point val="37.54,15.694"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="37.2091,15.5822;43.5284,21.5118"/>
+        <dia:rectangle val="37.49,15.644;43.5284,21.5118"/>
       </dia:attribute>
       <dia:attribute name="orth_points">
         <dia:point val="37.54,15.694"/>
@@ -2565,15 +2115,6 @@
       </dia:attribute>
       <dia:attribute name="autorouting">
         <dia:boolean val="true"/>
-      </dia:attribute>
-      <dia:attribute name="start_arrow">
-        <dia:enum val="28"/>
-      </dia:attribute>
-      <dia:attribute name="start_arrow_length">
-        <dia:real val="0.5"/>
-      </dia:attribute>
-      <dia:attribute name="start_arrow_width">
-        <dia:real val="0.5"/>
       </dia:attribute>
       <dia:attribute name="end_arrow">
         <dia:enum val="1"/>
@@ -2594,7 +2135,7 @@
         <dia:point val="42.9625,5.8"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="42.6316,5.6882;44.2759,9.5618"/>
+        <dia:rectangle val="42.9125,5.75;43.995,9.5"/>
       </dia:attribute>
       <dia:attribute name="orth_points">
         <dia:point val="42.9625,5.8"/>
@@ -2610,24 +2151,6 @@
       <dia:attribute name="autorouting">
         <dia:boolean val="true"/>
       </dia:attribute>
-      <dia:attribute name="start_arrow">
-        <dia:enum val="28"/>
-      </dia:attribute>
-      <dia:attribute name="start_arrow_length">
-        <dia:real val="0.5"/>
-      </dia:attribute>
-      <dia:attribute name="start_arrow_width">
-        <dia:real val="0.5"/>
-      </dia:attribute>
-      <dia:attribute name="end_arrow">
-        <dia:enum val="1"/>
-      </dia:attribute>
-      <dia:attribute name="end_arrow_length">
-        <dia:real val="0.5"/>
-      </dia:attribute>
-      <dia:attribute name="end_arrow_width">
-        <dia:real val="0.5"/>
-      </dia:attribute>
       <dia:connections>
         <dia:connection handle="0" to="O7" connection="6"/>
         <dia:connection handle="1" to="O56" connection="2"/>
@@ -2638,7 +2161,7 @@
         <dia:point val="43.945,13.884"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="43.6141,13.7722;45.5759,21.5118"/>
+        <dia:rectangle val="43.895,13.834;45.5759,21.5118"/>
       </dia:attribute>
       <dia:attribute name="orth_points">
         <dia:point val="43.945,13.884"/>
@@ -2652,16 +2175,7 @@
         <dia:enum val="1"/>
       </dia:attribute>
       <dia:attribute name="autorouting">
-        <dia:boolean val="true"/>
-      </dia:attribute>
-      <dia:attribute name="start_arrow">
-        <dia:enum val="28"/>
-      </dia:attribute>
-      <dia:attribute name="start_arrow_length">
-        <dia:real val="0.5"/>
-      </dia:attribute>
-      <dia:attribute name="start_arrow_width">
-        <dia:real val="0.5"/>
+        <dia:boolean val="false"/>
       </dia:attribute>
       <dia:attribute name="end_arrow">
         <dia:enum val="1"/>
@@ -2729,7 +2243,7 @@
         <dia:point val="11.2025,6.4"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="10.0092,6.2882;11.5334,10.0718"/>
+        <dia:rectangle val="10.2901,6.35;11.2525,10.01"/>
       </dia:attribute>
       <dia:attribute name="orth_points">
         <dia:point val="11.2025,6.4"/>
@@ -2745,24 +2259,6 @@
       <dia:attribute name="autorouting">
         <dia:boolean val="true"/>
       </dia:attribute>
-      <dia:attribute name="start_arrow">
-        <dia:enum val="28"/>
-      </dia:attribute>
-      <dia:attribute name="start_arrow_length">
-        <dia:real val="0.5"/>
-      </dia:attribute>
-      <dia:attribute name="start_arrow_width">
-        <dia:real val="0.5"/>
-      </dia:attribute>
-      <dia:attribute name="end_arrow">
-        <dia:enum val="1"/>
-      </dia:attribute>
-      <dia:attribute name="end_arrow_length">
-        <dia:real val="0.5"/>
-      </dia:attribute>
-      <dia:attribute name="end_arrow_width">
-        <dia:real val="0.5"/>
-      </dia:attribute>
       <dia:connections>
         <dia:connection handle="0" to="O3" connection="6"/>
         <dia:connection handle="1" to="O62" connection="2"/>
@@ -2773,7 +2269,7 @@
         <dia:point val="6.6451,12.177"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="5.1501,11.8461;17.2118,29.5309"/>
+        <dia:rectangle val="5.1501,12.127;17.2118,29.5309"/>
       </dia:attribute>
       <dia:attribute name="orth_points">
         <dia:point val="6.6451,12.177"/>
@@ -2788,15 +2284,6 @@
       </dia:attribute>
       <dia:attribute name="autorouting">
         <dia:boolean val="false"/>
-      </dia:attribute>
-      <dia:attribute name="start_arrow">
-        <dia:enum val="28"/>
-      </dia:attribute>
-      <dia:attribute name="start_arrow_length">
-        <dia:real val="0.5"/>
-      </dia:attribute>
-      <dia:attribute name="start_arrow_width">
-        <dia:real val="0.5"/>
       </dia:attribute>
       <dia:attribute name="end_arrow">
         <dia:enum val="1"/>
@@ -2864,7 +2351,7 @@
         <dia:point val="19.1025,6.45"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="15.8783,6.3382;19.4334,8.2409"/>
+        <dia:rectangle val="15.9401,6.4;19.1525,7.96"/>
       </dia:attribute>
       <dia:attribute name="orth_points">
         <dia:point val="19.1025,6.45"/>
@@ -2878,24 +2365,6 @@
       <dia:attribute name="autorouting">
         <dia:boolean val="true"/>
       </dia:attribute>
-      <dia:attribute name="start_arrow">
-        <dia:enum val="28"/>
-      </dia:attribute>
-      <dia:attribute name="start_arrow_length">
-        <dia:real val="0.5"/>
-      </dia:attribute>
-      <dia:attribute name="start_arrow_width">
-        <dia:real val="0.5"/>
-      </dia:attribute>
-      <dia:attribute name="end_arrow">
-        <dia:enum val="1"/>
-      </dia:attribute>
-      <dia:attribute name="end_arrow_length">
-        <dia:real val="0.5"/>
-      </dia:attribute>
-      <dia:attribute name="end_arrow_width">
-        <dia:real val="0.5"/>
-      </dia:attribute>
       <dia:connections>
         <dia:connection handle="0" to="O4" connection="6"/>
         <dia:connection handle="1" to="O65" connection="2"/>
@@ -2906,7 +2375,7 @@
         <dia:point val="15.9901,12.344"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="15.8783,12.0131;20.7618,16.3809"/>
+        <dia:rectangle val="15.9401,12.294;20.7618,16.3809"/>
       </dia:attribute>
       <dia:attribute name="orth_points">
         <dia:point val="15.9901,12.344"/>
@@ -2921,15 +2390,6 @@
       </dia:attribute>
       <dia:attribute name="autorouting">
         <dia:boolean val="false"/>
-      </dia:attribute>
-      <dia:attribute name="start_arrow">
-        <dia:enum val="28"/>
-      </dia:attribute>
-      <dia:attribute name="start_arrow_length">
-        <dia:real val="0.5"/>
-      </dia:attribute>
-      <dia:attribute name="start_arrow_width">
-        <dia:real val="0.5"/>
       </dia:attribute>
       <dia:attribute name="end_arrow">
         <dia:enum val="1"/>
@@ -2997,7 +2457,7 @@
         <dia:point val="25.9675,6.55"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="25.4092,6.4382;26.2984,8.4718"/>
+        <dia:rectangle val="25.6901,6.5;26.0175,8.41"/>
       </dia:attribute>
       <dia:attribute name="orth_points">
         <dia:point val="25.9675,6.55"/>
@@ -3011,25 +2471,7 @@
         <dia:enum val="1"/>
       </dia:attribute>
       <dia:attribute name="autorouting">
-        <dia:boolean val="true"/>
-      </dia:attribute>
-      <dia:attribute name="start_arrow">
-        <dia:enum val="28"/>
-      </dia:attribute>
-      <dia:attribute name="start_arrow_length">
-        <dia:real val="0.5"/>
-      </dia:attribute>
-      <dia:attribute name="start_arrow_width">
-        <dia:real val="0.5"/>
-      </dia:attribute>
-      <dia:attribute name="end_arrow">
-        <dia:enum val="1"/>
-      </dia:attribute>
-      <dia:attribute name="end_arrow_length">
-        <dia:real val="0.5"/>
-      </dia:attribute>
-      <dia:attribute name="end_arrow_width">
-        <dia:real val="0.5"/>
+        <dia:boolean val="false"/>
       </dia:attribute>
       <dia:connections>
         <dia:connection handle="0" to="O5" connection="6"/>
@@ -3041,7 +2483,7 @@
         <dia:point val="25.7401,12.794"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="22.7516,12.6822;26.071,15.2618"/>
+        <dia:rectangle val="22.7516,12.744;25.7901,15.2618"/>
       </dia:attribute>
       <dia:attribute name="orth_points">
         <dia:point val="25.7401,12.794"/>
@@ -3056,15 +2498,6 @@
       </dia:attribute>
       <dia:attribute name="autorouting">
         <dia:boolean val="true"/>
-      </dia:attribute>
-      <dia:attribute name="start_arrow">
-        <dia:enum val="28"/>
-      </dia:attribute>
-      <dia:attribute name="start_arrow_length">
-        <dia:real val="0.5"/>
-      </dia:attribute>
-      <dia:attribute name="start_arrow_width">
-        <dia:real val="0.5"/>
       </dia:attribute>
       <dia:attribute name="end_arrow">
         <dia:enum val="1"/>
@@ -3132,7 +2565,7 @@
         <dia:point val="23.0825,16.95"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="22.7516,16.8382;24.821,19.5218"/>
+        <dia:rectangle val="23.0325,16.9;24.5401,19.46"/>
       </dia:attribute>
       <dia:attribute name="orth_points">
         <dia:point val="23.0825,16.95"/>
@@ -3146,25 +2579,7 @@
         <dia:enum val="1"/>
       </dia:attribute>
       <dia:attribute name="autorouting">
-        <dia:boolean val="true"/>
-      </dia:attribute>
-      <dia:attribute name="start_arrow">
-        <dia:enum val="28"/>
-      </dia:attribute>
-      <dia:attribute name="start_arrow_length">
-        <dia:real val="0.5"/>
-      </dia:attribute>
-      <dia:attribute name="start_arrow_width">
-        <dia:real val="0.5"/>
-      </dia:attribute>
-      <dia:attribute name="end_arrow">
-        <dia:enum val="1"/>
-      </dia:attribute>
-      <dia:attribute name="end_arrow_length">
-        <dia:real val="0.5"/>
-      </dia:attribute>
-      <dia:attribute name="end_arrow_width">
-        <dia:real val="0.5"/>
+        <dia:boolean val="false"/>
       </dia:attribute>
       <dia:connections>
         <dia:connection handle="0" to="O0" connection="6"/>
@@ -3176,7 +2591,7 @@
         <dia:point val="28.1851,21.627"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="28.0733,21.2961;41.2618,22.6309"/>
+        <dia:rectangle val="28.1351,21.577;41.2618,22.6309"/>
       </dia:attribute>
       <dia:attribute name="orth_points">
         <dia:point val="28.1851,21.627"/>
@@ -3191,15 +2606,6 @@
       </dia:attribute>
       <dia:attribute name="autorouting">
         <dia:boolean val="true"/>
-      </dia:attribute>
-      <dia:attribute name="start_arrow">
-        <dia:enum val="28"/>
-      </dia:attribute>
-      <dia:attribute name="start_arrow_length">
-        <dia:real val="0.5"/>
-      </dia:attribute>
-      <dia:attribute name="start_arrow_width">
-        <dia:real val="0.5"/>
       </dia:attribute>
       <dia:attribute name="end_arrow">
         <dia:enum val="1"/>
@@ -3267,7 +2673,7 @@
         <dia:point val="43.1975,23.2"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="29.5542,23.0882;43.5284,27.4"/>
+        <dia:rectangle val="29.8351,23.15;43.2475,27.4"/>
       </dia:attribute>
       <dia:attribute name="orth_points">
         <dia:point val="43.1975,23.2"/>
@@ -3283,24 +2689,6 @@
       <dia:attribute name="autorouting">
         <dia:boolean val="false"/>
       </dia:attribute>
-      <dia:attribute name="start_arrow">
-        <dia:enum val="28"/>
-      </dia:attribute>
-      <dia:attribute name="start_arrow_length">
-        <dia:real val="0.5"/>
-      </dia:attribute>
-      <dia:attribute name="start_arrow_width">
-        <dia:real val="0.5"/>
-      </dia:attribute>
-      <dia:attribute name="end_arrow">
-        <dia:enum val="1"/>
-      </dia:attribute>
-      <dia:attribute name="end_arrow_length">
-        <dia:real val="0.5"/>
-      </dia:attribute>
-      <dia:attribute name="end_arrow_width">
-        <dia:real val="0.5"/>
-      </dia:attribute>
       <dia:connections>
         <dia:connection handle="0" to="O1" connection="6"/>
         <dia:connection handle="1" to="O74" connection="4"/>
@@ -3311,7 +2699,7 @@
         <dia:point val="22.4951,25.477"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="19.0091,25.3652;22.826,28.4118"/>
+        <dia:rectangle val="19.0091,25.427;22.5451,28.4118"/>
       </dia:attribute>
       <dia:attribute name="orth_points">
         <dia:point val="22.4951,25.477"/>
@@ -3325,16 +2713,7 @@
         <dia:enum val="1"/>
       </dia:attribute>
       <dia:attribute name="autorouting">
-        <dia:boolean val="true"/>
-      </dia:attribute>
-      <dia:attribute name="start_arrow">
-        <dia:enum val="28"/>
-      </dia:attribute>
-      <dia:attribute name="start_arrow_length">
-        <dia:real val="0.5"/>
-      </dia:attribute>
-      <dia:attribute name="start_arrow_width">
-        <dia:real val="0.5"/>
+        <dia:boolean val="false"/>
       </dia:attribute>
       <dia:attribute name="end_arrow">
         <dia:enum val="1"/>
