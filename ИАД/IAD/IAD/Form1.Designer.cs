@@ -67,6 +67,10 @@
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.stepsMALbl = new System.Windows.Forms.Label();
             this.stepsMAT = new System.Windows.Forms.TextBox();
+            this.stepsRWLbl = new System.Windows.Forms.Label();
+            this.stepsRWT = new System.Windows.Forms.TextBox();
+            this.RWalfaLbl = new System.Windows.Forms.Label();
+            this.alfaT = new System.Windows.Forms.TextBox();
             this.menu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.scene)).BeginInit();
             this.scenepanel.SuspendLayout();
@@ -86,7 +90,7 @@
             this.menu.Location = new System.Drawing.Point(0, 0);
             this.menu.Name = "menu";
             this.menu.Padding = new System.Windows.Forms.Padding(9, 3, 0, 3);
-            this.menu.Size = new System.Drawing.Size(1167, 35);
+            this.menu.Size = new System.Drawing.Size(1254, 35);
             this.menu.TabIndex = 0;
             this.menu.Text = "menuStrip1";
             // 
@@ -119,6 +123,7 @@
             this.модельСлучайногоБлужданияСоСдвигомToolStripMenuItem.Name = "модельСлучайногоБлужданияСоСдвигомToolStripMenuItem";
             this.модельСлучайногоБлужданияСоСдвигомToolStripMenuItem.Size = new System.Drawing.Size(452, 30);
             this.модельСлучайногоБлужданияСоСдвигомToolStripMenuItem.Text = "Модель случайного блуждания со сдвигом";
+            this.модельСлучайногоБлужданияСоСдвигомToolStripMenuItem.Click += new System.EventHandler(this.модельСлучайногоБлужданияСоСдвигомToolStripMenuItem_Click);
             // 
             // оПрограммеToolStripMenuItem
             // 
@@ -176,6 +181,10 @@
             // 
             // scenepanel
             // 
+            this.scenepanel.Controls.Add(this.RWalfaLbl);
+            this.scenepanel.Controls.Add(this.alfaT);
+            this.scenepanel.Controls.Add(this.stepsRWLbl);
+            this.scenepanel.Controls.Add(this.stepsRWT);
             this.scenepanel.Controls.Add(this.stepsMALbl);
             this.scenepanel.Controls.Add(this.stepsMAT);
             this.scenepanel.Controls.Add(this.modelNameLbl);
@@ -202,7 +211,7 @@
             this.scenepanel.Location = new System.Drawing.Point(0, 42);
             this.scenepanel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.scenepanel.Name = "scenepanel";
-            this.scenepanel.Size = new System.Drawing.Size(1166, 758);
+            this.scenepanel.Size = new System.Drawing.Size(1254, 758);
             this.scenepanel.TabIndex = 1;
             // 
             // modelNameLbl
@@ -231,7 +240,7 @@
             // modelMANmr
             // 
             this.modelMANmr.Enabled = false;
-            this.modelMANmr.Location = new System.Drawing.Point(1014, 191);
+            this.modelMANmr.Location = new System.Drawing.Point(968, 191);
             this.modelMANmr.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.modelMANmr.Maximum = new decimal(new int[] {
             2,
@@ -299,7 +308,7 @@
             // 
             this.modelMALbl.AutoSize = true;
             this.modelMALbl.Enabled = false;
-            this.modelMALbl.Location = new System.Drawing.Point(1010, 166);
+            this.modelMALbl.Location = new System.Drawing.Point(964, 166);
             this.modelMALbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.modelMALbl.Name = "modelMALbl";
             this.modelMALbl.Size = new System.Drawing.Size(76, 20);
@@ -311,7 +320,7 @@
             // 
             this.stepsARLbl.AutoSize = true;
             this.stepsARLbl.Enabled = false;
-            this.stepsARLbl.Location = new System.Drawing.Point(844, 235);
+            this.stepsARLbl.Location = new System.Drawing.Point(819, 235);
             this.stepsARLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.stepsARLbl.Name = "stepsARLbl";
             this.stepsARLbl.Size = new System.Drawing.Size(72, 20);
@@ -321,7 +330,7 @@
             // 
             // YScrBr
             // 
-            this.YScrBr.Location = new System.Drawing.Point(801, 11);
+            this.YScrBr.Location = new System.Drawing.Point(794, 11);
             this.YScrBr.Minimum = -100;
             this.YScrBr.Name = "YScrBr";
             this.YScrBr.Size = new System.Drawing.Size(21, 617);
@@ -330,7 +339,7 @@
             // 
             // XScrBr
             // 
-            this.XScrBr.Location = new System.Drawing.Point(18, 638);
+            this.XScrBr.Location = new System.Drawing.Point(18, 633);
             this.XScrBr.Minimum = -100;
             this.XScrBr.Name = "XScrBr";
             this.XScrBr.Size = new System.Drawing.Size(772, 18);
@@ -340,7 +349,7 @@
             // stepsART
             // 
             this.stepsART.Enabled = false;
-            this.stepsART.Location = new System.Drawing.Point(844, 265);
+            this.stepsART.Location = new System.Drawing.Point(819, 265);
             this.stepsART.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.stepsART.Name = "stepsART";
             this.stepsART.Size = new System.Drawing.Size(128, 26);
@@ -352,7 +361,7 @@
             // modelARNmr
             // 
             this.modelARNmr.Enabled = false;
-            this.modelARNmr.Location = new System.Drawing.Point(844, 191);
+            this.modelARNmr.Location = new System.Drawing.Point(819, 191);
             this.modelARNmr.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.modelARNmr.Maximum = new decimal(new int[] {
             2,
@@ -373,7 +382,7 @@
             // 
             this.modelARLbl.AutoSize = true;
             this.modelARLbl.Enabled = false;
-            this.modelARLbl.Location = new System.Drawing.Point(844, 166);
+            this.modelARLbl.Location = new System.Drawing.Point(819, 166);
             this.modelARLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.modelARLbl.Name = "modelARLbl";
             this.modelARLbl.Size = new System.Drawing.Size(139, 20);
@@ -453,7 +462,7 @@
             // 
             this.stepsMALbl.AutoSize = true;
             this.stepsMALbl.Enabled = false;
-            this.stepsMALbl.Location = new System.Drawing.Point(1014, 235);
+            this.stepsMALbl.Location = new System.Drawing.Point(968, 235);
             this.stepsMALbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.stepsMALbl.Name = "stepsMALbl";
             this.stepsMALbl.Size = new System.Drawing.Size(72, 20);
@@ -464,24 +473,74 @@
             // stepsMAT
             // 
             this.stepsMAT.Enabled = false;
-            this.stepsMAT.Location = new System.Drawing.Point(1014, 265);
+            this.stepsMAT.Location = new System.Drawing.Point(968, 265);
             this.stepsMAT.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.stepsMAT.Name = "stepsMAT";
             this.stepsMAT.Size = new System.Drawing.Size(128, 26);
             this.stepsMAT.TabIndex = 22;
             this.stepsMAT.Text = "0";
             this.stepsMAT.Visible = false;
+            this.stepsMAT.TextChanged += new System.EventHandler(this.stepsMAT_TextChanged);
+            // 
+            // stepsRWLbl
+            // 
+            this.stepsRWLbl.AutoSize = true;
+            this.stepsRWLbl.Enabled = false;
+            this.stepsRWLbl.Location = new System.Drawing.Point(1109, 166);
+            this.stepsRWLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.stepsRWLbl.Name = "stepsRWLbl";
+            this.stepsRWLbl.Size = new System.Drawing.Size(72, 20);
+            this.stepsRWLbl.TabIndex = 25;
+            this.stepsRWLbl.Text = "Прогноз";
+            this.stepsRWLbl.Visible = false;
+            // 
+            // stepsRWT
+            // 
+            this.stepsRWT.Enabled = false;
+            this.stepsRWT.Location = new System.Drawing.Point(1106, 190);
+            this.stepsRWT.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.stepsRWT.Name = "stepsRWT";
+            this.stepsRWT.Size = new System.Drawing.Size(128, 26);
+            this.stepsRWT.TabIndex = 24;
+            this.stepsRWT.Text = "0";
+            this.stepsRWT.Visible = false;
+            this.stepsRWT.TextChanged += new System.EventHandler(this.stepsRWT_TextChanged);
+            // 
+            // RWalfaLbl
+            // 
+            this.RWalfaLbl.AutoSize = true;
+            this.RWalfaLbl.Enabled = false;
+            this.RWalfaLbl.Location = new System.Drawing.Point(1109, 235);
+            this.RWalfaLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.RWalfaLbl.Name = "RWalfaLbl";
+            this.RWalfaLbl.Size = new System.Drawing.Size(56, 20);
+            this.RWalfaLbl.TabIndex = 27;
+            this.RWalfaLbl.Text = "Сдвиг";
+            this.RWalfaLbl.Visible = false;
+            // 
+            // alfaT
+            // 
+            this.alfaT.Enabled = false;
+            this.alfaT.Location = new System.Drawing.Point(1109, 265);
+            this.alfaT.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.alfaT.Name = "alfaT";
+            this.alfaT.Size = new System.Drawing.Size(128, 26);
+            this.alfaT.TabIndex = 26;
+            this.alfaT.Text = "0";
+            this.alfaT.Visible = false;
+            this.alfaT.TextChanged += new System.EventHandler(this.alfaT_TextChanged);
             // 
             // IAD
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1167, 800);
+            this.ClientSize = new System.Drawing.Size(1254, 800);
             this.Controls.Add(this.scenepanel);
             this.Controls.Add(this.menu);
             this.MainMenuStrip = this.menu;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "IAD";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ИАД";
             this.menu.ResumeLayout(false);
             this.menu.PerformLayout();
@@ -538,6 +597,10 @@
         private System.Windows.Forms.Label modelNameLbl;
         private System.Windows.Forms.Label stepsMALbl;
         private System.Windows.Forms.TextBox stepsMAT;
+        private System.Windows.Forms.Label stepsRWLbl;
+        private System.Windows.Forms.TextBox stepsRWT;
+        private System.Windows.Forms.Label RWalfaLbl;
+        private System.Windows.Forms.TextBox alfaT;
     }
 }
 

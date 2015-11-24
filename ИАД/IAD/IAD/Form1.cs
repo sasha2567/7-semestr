@@ -17,6 +17,7 @@ namespace IAD
         GraphBuilder graphBuilder;
         AR AutoR = new AR();
         MA MovA = new MA();
+        RW RWwD = new RW();
         int Model = 0;
         int lenghtData = 32;
         int steps;
@@ -164,9 +165,38 @@ namespace IAD
                 List<PointF> forecast = MovA.Solve(data, q, steps);
                 result = forecast;
                 CreateConfidenceLimits(steps);
-                pen = new Pen(Color.Fuchsia, 2);
+                pen = new Pen(Color.Green, 2);
                 graphBuilder.DrawPlot(pen, forecast);
                 
+                for (int i = 1; i < steps + 1; i++)
+                {
+                    dataDGV.Rows.Add(forecast[i].X, forecast[i].Y);
+                }
+            }
+        }
+
+        void CreateGraphicRW()
+        {
+            //Исходный график
+            pen = new Pen(Color.Red, 2);
+            graphBuilder.DrawPlot(pen, data);
+            dataDGV.Rows.Clear();
+            for (int i = 0; i < data.Count; i++)
+            {
+                dataDGV.Rows.Add(data[i].X, data[i].Y);
+            }
+            //прогноз по MA
+            steps = Convert.ToInt32(stepsRWT.Text);
+            float alfa = (float)Convert.ToDouble(alfaT.Text);
+            if (steps > 0)
+            {
+                List<PointF> forecast = RWwD.forecast(data, steps, alfa);            
+
+                result = forecast;
+                CreateConfidenceLimits(steps);
+                pen = new Pen(Color.Green, 2);
+                graphBuilder.DrawPlot(pen, forecast);
+
                 for (int i = 1; i < steps + 1; i++)
                 {
                     dataDGV.Rows.Add(forecast[i].X, forecast[i].Y);
@@ -209,6 +239,7 @@ namespace IAD
             {
                 if (Model == 1) CreateGraphicAR();
                 if (Model == 2) CreateGraphicMA();
+                if (Model == 3) CreateGraphicRW();
             }
             modelMANmr.Maximum = lenghtData - 1;
         }
@@ -225,6 +256,7 @@ namespace IAD
             {
                 if (Model == 1) CreateGraphicAR();
                 if (Model == 2) CreateGraphicMA();
+                if (Model == 3) CreateGraphicRW();
             }
         }
 
@@ -240,6 +272,7 @@ namespace IAD
             {
                 if (Model == 1) CreateGraphicAR();
                 if (Model == 2) CreateGraphicMA();
+                if (Model == 3) CreateGraphicRW();
             }
         }
 
@@ -278,6 +311,15 @@ namespace IAD
             stepsMALbl.Visible = false;
             stepsMAT.Visible = false;
 
+            stepsRWLbl.Enabled = false;
+            stepsRWT.Enabled = false;
+            RWalfaLbl.Enabled = false;
+            alfaT.Enabled = false;
+            stepsRWLbl.Visible = false;
+            stepsRWT.Visible = false;
+            RWalfaLbl.Visible = false;
+            alfaT.Visible = false;
+
             Model = 1;
             modelNameLbl.Text = "Модель:Авторегрессия";
         }
@@ -289,6 +331,8 @@ namespace IAD
                 CreateGraphicAR();
             if (Model == 2)
                 CreateGraphicMA();
+            if (Model == 3)
+                CreateGraphicRW();
         }
 
         private void hScrollBar1_Scroll(object sender, ScrollEventArgs e)
@@ -298,6 +342,8 @@ namespace IAD
                 CreateGraphicAR();
             if (Model == 2)
                 CreateGraphicMA();
+            if (Model == 3)
+                CreateGraphicRW();
         }
 
         private void модельСкользящегоСреднегоToolStripMenuItem_Click(object sender, EventArgs e)
@@ -330,6 +376,15 @@ namespace IAD
             stepsMALbl.Visible = true;
             stepsMAT.Visible = true;
 
+            stepsRWLbl.Enabled = false;
+            stepsRWT.Enabled = false;
+            RWalfaLbl.Enabled = false;
+            alfaT.Enabled = false;
+            stepsRWLbl.Visible = false;
+            stepsRWT.Visible = false;
+            RWalfaLbl.Visible = false;
+            alfaT.Visible = false;
+
             Model = 2;
             modelNameLbl.Text = "Модель:Скользящее среднее";
         }
@@ -341,6 +396,8 @@ namespace IAD
                 CreateGraphicAR();
             if (Model == 2)
                 CreateGraphicMA();
+            if (Model == 3)
+                CreateGraphicRW();
             
         }
 
@@ -357,6 +414,100 @@ namespace IAD
                 {
                     MessageBox.Show("Введена не цифра");
                     stepsART.Text = "";
+                }
+            }
+        }
+
+        private void модельСлучайногоБлужданияСоСдвигомToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            dataLoadBtn.Enabled = true;
+            graphBuildBtn.Enabled = true;
+            dataDGV.Enabled = true;
+            dataLbl.Enabled = true;
+            dataLoadBtn.Visible = true;
+            graphBuildBtn.Visible = true;
+            dataDGV.Visible = true;
+            dataLbl.Visible = true;
+
+            modelARLbl.Enabled = false;
+            modelARNmr.Enabled = false;
+            stepsARLbl.Enabled = false;
+            stepsART.Enabled = false;
+            modelARLbl.Visible = false;
+            modelARNmr.Visible = false;
+            stepsARLbl.Visible = false;
+            stepsART.Visible = false;
+
+
+            modelMANmr.Enabled = false;
+            modelMALbl.Enabled = false;
+            stepsMALbl.Enabled = false;
+            stepsMAT.Enabled = false;
+            modelMANmr.Visible = false;
+            modelMALbl.Visible = false;
+            stepsMALbl.Visible = false;
+            stepsMAT.Visible = false;
+
+            stepsRWLbl.Enabled = true;
+            stepsRWT.Enabled = true;
+            RWalfaLbl.Enabled = true;
+            alfaT.Enabled = true;
+            stepsRWLbl.Visible = true;
+            stepsRWT.Visible = true;
+            RWalfaLbl.Visible = true;
+            alfaT.Visible = true;
+
+            Model = 3;
+            modelNameLbl.Text = "Модель:Случайное блуждание со сдвигом";
+        }
+
+        private void stepsMAT_TextChanged(object sender, EventArgs e)
+        {
+            string text = stepsMAT.Text;
+            if (text != "")
+            {
+                try
+                {
+                    Convert.ToInt32(stepsMAT.Text);
+                }
+                catch
+                {
+                    MessageBox.Show("Введена не цифра");
+                    stepsMAT.Text = "";
+                }
+            }
+        }
+
+        private void stepsRWT_TextChanged(object sender, EventArgs e)
+        {
+            string text = stepsRWT.Text;
+            if (text != "")
+            {
+                try
+                {
+                    Convert.ToInt32(stepsRWT.Text);
+                }
+                catch
+                {
+                    MessageBox.Show("Введена не цифра");
+                    stepsRWT.Text = "";
+                }
+            }
+        }
+
+        private void alfaT_TextChanged(object sender, EventArgs e)
+        {
+            string text = alfaT.Text;
+            if (text != "")
+            {
+                try
+                {
+                    Convert.ToDouble(alfaT.Text);
+                }
+                catch
+                {
+                    MessageBox.Show("Введена не цифра с плавающей точкой");
+                    alfaT.Text = "";
                 }
             }
         }
