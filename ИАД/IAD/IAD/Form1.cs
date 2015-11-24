@@ -121,17 +121,13 @@ namespace IAD
             graphBuilder.DrawPlot(pen, data);
             
             //Тренд
-            List<PointF> trend = AutoR.GetTrend(data);
-            pen = new Pen(Color.SteelBlue, 2);
-            graphBuilder.DrawPlot(pen, trend);
-            AutoR.GetRegression(data);
             dataDGV.Rows.Clear();
             for (int i = 0; i < data.Count; i++)
             {
                 dataDGV.Rows.Add(data[i].X, data[i].Y);
             }
             //прогноз по AR
-            steps = Convert.ToInt32(stepsT.Text);
+            steps = Convert.ToInt32(stepsART.Text);
             if (steps > 0) 
             { 
                 List<PointF> forecast = AutoR.Forecast(data, steps);
@@ -139,7 +135,10 @@ namespace IAD
                 CreateConfidenceLimits(steps);
                 pen = new Pen(Color.Green, 2);
                 graphBuilder.DrawPlot(pen, forecast);
-                
+                List<PointF> model = AutoR.Model(data);
+                pen = new Pen(Color.Black, 2);
+                pen.DashStyle = DashStyle.Dash;
+                graphBuilder.DrawPlot(pen, model);
                 for (int i = 1; i < steps + 1; i++)
                 {
                     dataDGV.Rows.Add(forecast[i].X, forecast[i].Y);
@@ -158,12 +157,13 @@ namespace IAD
                 dataDGV.Rows.Add(data[i].X, data[i].Y);
             }
             //прогноз по MA
-            steps = Convert.ToInt32(stepsT.Text);
-            int q = Convert.ToInt32(qscaleNmr.Value);
+            steps = Convert.ToInt32(stepsMAT.Text);
+            int q = Convert.ToInt32(modelMANmr.Value);
             if (steps > 0)
             {
                 List<PointF> forecast = MovA.Solve(data, q, steps);
                 result = forecast;
+                CreateConfidenceLimits(steps);
                 pen = new Pen(Color.Fuchsia, 2);
                 graphBuilder.DrawPlot(pen, forecast);
                 
@@ -196,7 +196,7 @@ namespace IAD
             GraphicsInitial(0);
             scaleXTrcBr.Value = 5;
             scaleYTrcBr.Value = 5;
-            qscaleNmr.Maximum = lenghtData - 1;
+            modelMANmr.Maximum = lenghtData - 1;
             scaleValX.Text = scaleXTrcBr.Value.ToString();
             scaleValY.Text = scaleYTrcBr.Value.ToString();
         }
@@ -210,7 +210,7 @@ namespace IAD
                 if (Model == 1) CreateGraphicAR();
                 if (Model == 2) CreateGraphicMA();
             }
-            qscaleNmr.Maximum = lenghtData - 1;
+            modelMANmr.Maximum = lenghtData - 1;
         }
 
         private void scalexTrcBr_Scroll(object sender, EventArgs e)
@@ -251,22 +251,33 @@ namespace IAD
         private void модельАвторегрессииToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             dataLoadBtn.Enabled = true;
-            modelLbl.Enabled = true;
-            modelNmr.Enabled = true;
-            stepsL.Enabled = true;
-            stepsT.Enabled = true;
+            graphBuildBtn.Enabled = true;
             dataDGV.Enabled = true;
             dataLbl.Enabled = true;
-            graphBuildBtn.Enabled = true;
-
             dataLoadBtn.Visible = true;
-            modelLbl.Visible = true;
-            modelNmr.Visible = true;
-            stepsL.Visible = true;
-            stepsT.Visible = true;
+            graphBuildBtn.Visible = true;
             dataDGV.Visible = true;
             dataLbl.Visible = true;
-            graphBuildBtn.Visible = true;
+            
+            modelARLbl.Enabled = true;
+            modelARNmr.Enabled = true;
+            stepsARLbl.Enabled = true;
+            stepsART.Enabled = true;
+            modelARLbl.Visible = true;
+            modelARNmr.Visible = true;
+            stepsARLbl.Visible = true;
+            stepsART.Visible = true;
+
+
+            modelMANmr.Enabled = false;
+            modelMALbl.Enabled = false;
+            stepsMALbl.Enabled = false;
+            stepsMAT.Enabled = false;
+            modelMANmr.Visible = false;
+            modelMALbl.Visible = false;
+            stepsMALbl.Visible = false;
+            stepsMAT.Visible = false;
+
             Model = 1;
             modelNameLbl.Text = "Модель:Авторегрессия";
         }
@@ -292,26 +303,33 @@ namespace IAD
         private void модельСкользящегоСреднегоToolStripMenuItem_Click(object sender, EventArgs e)
         {
             dataLoadBtn.Enabled = true;
-            modelLbl.Enabled = true;
-            modelNmr.Enabled = true;
-            stepsL.Enabled = true;
-            stepsT.Enabled = true;
+            graphBuildBtn.Enabled = true;
             dataDGV.Enabled = true;
             dataLbl.Enabled = true;
-            qscaleNmr.Enabled = true;
-            qLbl.Enabled = true;
-            graphBuildBtn.Enabled = true;
-
             dataLoadBtn.Visible = true;
-            modelLbl.Visible = true;
-            modelNmr.Visible = true;
-            stepsL.Visible = true;
-            stepsT.Visible = true;
+            graphBuildBtn.Visible = true;
             dataDGV.Visible = true;
             dataLbl.Visible = true;
-            qscaleNmr.Visible = true;
-            qLbl.Visible = true;
-            graphBuildBtn.Visible = true;
+
+            modelARLbl.Enabled = false;
+            modelARNmr.Enabled = false;
+            stepsARLbl.Enabled = false;
+            stepsART.Enabled = false;
+            modelARLbl.Visible = false;
+            modelARNmr.Visible = false;
+            stepsARLbl.Visible = false;
+            stepsART.Visible = false;
+            
+            
+            modelMANmr.Enabled = true;
+            modelMALbl.Enabled = true;
+            stepsMALbl.Enabled = true;
+            stepsMAT.Enabled = true;
+            modelMANmr.Visible = true;
+            modelMALbl.Visible = true;
+            stepsMALbl.Visible = true;
+            stepsMAT.Visible = true;
+
             Model = 2;
             modelNameLbl.Text = "Модель:Скользящее среднее";
         }
@@ -328,17 +346,17 @@ namespace IAD
 
         private void stepsT_TextChanged(object sender, EventArgs e)
         {
-            string text = stepsT.Text;
+            string text = stepsART.Text;
             if (text != "")
             {
                 try
                 {
-                    Convert.ToInt32(stepsT.Text);
+                    Convert.ToInt32(stepsART.Text);
                 }
                 catch
                 {
                     MessageBox.Show("Введена не цифра");
-                    stepsT.Text = "";
+                    stepsART.Text = "";
                 }
             }
         }
