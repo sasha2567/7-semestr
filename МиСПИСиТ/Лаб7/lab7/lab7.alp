@@ -154,7 +154,7 @@
 				<Connector>
 					<Id>1448040684956</Id>
 					<Name><![CDATA[connector]]></Name>
-					<X>110</X><Y>170</Y>
+					<X>110</X><Y>130</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -187,7 +187,7 @@
 				<Connector>
 					<Id>1448040702686</Id>
 					<Name><![CDATA[connector2]]></Name>
-					<X>150</X><Y>170</Y>
+					<X>150</X><Y>130</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -205,7 +205,7 @@
 					<TargetEmbeddedObjectReference>
 						<PackageName><![CDATA[lab7]]></PackageName>
 						<ClassName><![CDATA[Main]]></ClassName>
-						<ItemName><![CDATA[Cashbox1]]></ItemName>
+						<ItemName><![CDATA[Cashbox]]></ItemName>
 					</TargetEmbeddedObjectReference>
 					<TargetConnectableItemReference>
 						<PackageName><![CDATA[lab7]]></PackageName>
@@ -214,13 +214,13 @@
 					</TargetConnectableItemReference>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>60</X><Y>0</Y></Point>
+						<Point><X>70</X><Y>0</Y></Point>
 					</Points>
 				</Connector>
 				<Connector>
 					<Id>1448046871153</Id>
 					<Name><![CDATA[connector1]]></Name>
-					<X>940</X><Y>390</Y>
+					<X>980</X><Y>210</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -247,13 +247,13 @@
 					</TargetConnectableItemReference>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>-40</X><Y>0</Y></Point>
+						<Point><X>-60</X><Y>0</Y></Point>
 					</Points>
 				</Connector>
 				<Connector>
 					<Id>1448049647558</Id>
 					<Name><![CDATA[connector3]]></Name>
-					<X>590</X><Y>290</Y>
+					<X>600</X><Y>160</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -271,7 +271,7 @@
 					<TargetEmbeddedObjectReference>
 						<PackageName><![CDATA[lab7]]></PackageName>
 						<ClassName><![CDATA[Main]]></ClassName>
-						<ItemName><![CDATA[Cashbox1]]></ItemName>
+						<ItemName><![CDATA[Cashbox]]></ItemName>
 					</TargetEmbeddedObjectReference>
 					<TargetConnectableItemReference>
 						<PackageName><![CDATA[lab7]]></PackageName>
@@ -280,41 +280,9 @@
 					</TargetConnectableItemReference>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>-60</X><Y>0</Y></Point>
-					</Points>
-				</Connector>
-				<Connector>
-					<Id>1448050220376</Id>
-					<Name><![CDATA[connector4]]></Name>
-					<X>380</X><Y>460</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<SourceEmbeddedObjectReference>
-						<PackageName><![CDATA[lab7]]></PackageName>
-						<ClassName><![CDATA[Main]]></ClassName>
-						<ItemName><![CDATA[ErrorSink]]></ItemName>
-					</SourceEmbeddedObjectReference>
-					<SourceConnectableItemReference>
-						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
-						<ClassName><![CDATA[Sink]]></ClassName>
-						<ItemName><![CDATA[in]]></ItemName>
-					</SourceConnectableItemReference>
-					<TargetEmbeddedObjectReference>
-						<PackageName><![CDATA[lab7]]></PackageName>
-						<ClassName><![CDATA[Main]]></ClassName>
-						<ItemName><![CDATA[Cashbox1]]></ItemName>
-					</TargetEmbeddedObjectReference>
-					<TargetConnectableItemReference>
-						<PackageName><![CDATA[lab7]]></PackageName>
-						<ClassName><![CDATA[PreparationOfDocuments]]></ClassName>
-						<ItemName><![CDATA[error]]></ItemName>
-					</TargetConnectableItemReference>
-					<Points>
-						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>-50</X><Y>0</Y></Point>
-						<Point><X>-50</X><Y>-130</Y></Point>
+						<Point><X>-20</X><Y>0</Y></Point>
+						<Point><X>-20</X><Y>90</Y></Point>
+						<Point><X>-60</X><Y>90</Y></Point>
 					</Points>
 				</Connector>
 			</Connectors>
@@ -344,7 +312,7 @@
 				<EmbeddedObject>
 					<Id>1448036938378</Id>
 					<Name><![CDATA[ApplicationSource]]></Name>
-					<X>0</X><Y>160</Y>
+					<X>0</X><Y>120</Y>
 					<Label><X>-30</X><Y>45</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -604,7 +572,7 @@ agent.CountOfUserDocuments = count;]]></Code>
 				<EmbeddedObject>
 					<Id>1448036948282</Id>
 					<Name><![CDATA[DocumentSink]]></Name>
-					<X>940</X><Y>380</Y>
+					<X>980</X><Y>200</Y>
 					<Label><X>-5</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -673,9 +641,9 @@ agent.CountOfUserDocuments = count;]]></Code>
 				</EmbeddedObject>
 				<EmbeddedObject>
 					<Id>0</Id>
-					<Name><![CDATA[Cashbox1]]></Name>
-					<X>210</X><Y>60</Y>
-					<Label><X>15</X><Y>115</Y></Label>
+					<Name><![CDATA[Cashbox]]></Name>
+					<X>220</X><Y>130</Y>
+					<Label><X>70</X><Y>-5</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
@@ -700,6 +668,15 @@ agent.CountOfUserDocuments = count;]]></Code>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[MakeCapacity]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[ErrorCapacity]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[CountUserError]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[CountUserSuccess]]></Name>
 						</Parameter>
 					</Parameters>
 					<ReplicationFlag>false</ReplicationFlag>
@@ -749,7 +726,7 @@ agent.CountOfUserDocuments = count;]]></Code>
 				<EmbeddedObject>
 					<Id>1448040683734</Id>
 					<Name><![CDATA[queue]]></Name>
-					<X>110</X><Y>150</Y>
+					<X>110</X><Y>110</Y>
 					<Label><X>-5</X><Y>-10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -864,8 +841,8 @@ agent.CountOfUserDocuments = count;]]></Code>
 				<EmbeddedObject>
 					<Id>0</Id>
 					<Name><![CDATA[Maker]]></Name>
-					<X>590</X><Y>70</Y>
-					<Label><X>60</X><Y>170</Y></Label>
+					<X>590</X><Y>160</Y>
+					<Label><X>55</X><Y>-30</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
@@ -896,6 +873,12 @@ agent.CountOfUserDocuments = count;]]></Code>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[Type]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[CountCP]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[CountTP]]></Name>
 						</Parameter>
 					</Parameters>
 					<ReplicationFlag>false</ReplicationFlag>
@@ -942,86 +925,13 @@ agent.CountOfUserDocuments = count;]]></Code>
 					<QuantityColumn>
 					</QuantityColumn>
 				</EmbeddedObject>
-				<EmbeddedObject>
-					<Id>1448050217973</Id>
-					<Name><![CDATA[ErrorSink]]></Name>
-					<X>380</X><Y>450</Y>
-					<Label><X>-15</X><Y>40</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<ActiveObjectClass>
-						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
-						<ClassName><![CDATA[Sink]]></ClassName>
-					</ActiveObjectClass>
-					<GenericParameterSubstitute>
-						<GenericParameterSubstituteReference>
-							<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
-							<ClassName><![CDATA[Sink]]></ClassName>
-							<ItemName><![CDATA[1412336242929]]></ItemName>
-						</GenericParameterSubstituteReference>
-						<GenericParameterSubstituteValue Class="CodeValue">
-							<Code><![CDATA[Application]]></Code>
-						</GenericParameterSubstituteValue>
-					</GenericParameterSubstitute>
-					<Parameters>
-						<Parameter>
-							<Name><![CDATA[onEnter]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[destroyEntity]]></Name>
-						</Parameter>
-					</Parameters>
-					<ReplicationFlag>false</ReplicationFlag>
-					<Replication Class="CodeValue">
-						<Code><![CDATA[100]]></Code>
-					</Replication>
-					<CollectionType>ARRAY_LIST_BASED</CollectionType>
-					<InitialSpeedCode Class="CodeUnitValue">
-						<Code><![CDATA[10]]></Code>
-						<Unit Class="SpeedUnits"><![CDATA[MPS]]></Unit>
-					</InitialSpeedCode>
-					<InitialLocationType>AT_ANIMATION_POSITION</InitialLocationType>
-					<XCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</XCode>
-					<YCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</YCode>
-					<ZCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</ZCode>
-					<ColumnCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</ColumnCode>
-					<RowCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</RowCode>
-					<LatitudeCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</LatitudeCode>
-					<LongitudeCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</LongitudeCode>
-					<LocationNameCode Class="CodeValue">
-						<Code><![CDATA[""]]></Code>
-					</LocationNameCode>
-					<InitializationType>SPECIFIED_NUMBER</InitializationType>
-					<InitializationDatabaseTableQuery>
-						<TableReference>
-						</TableReference>
-					</InitializationDatabaseTableQuery>
-					<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>
-					<QuantityColumn>
-					</QuantityColumn>
-				</EmbeddedObject>
 			</EmbeddedObjects>
 
 			<Shapes>
 				<EmbeddedObjectPresentation>
 					<Id>1448045810373</Id>
-					<Name><![CDATA[Cashbox1_presentation]]></Name>
-					<X>200</X><Y>30</Y>
+					<Name><![CDATA[Cashbox_presentation]]></Name>
+					<X>100</X><Y>-140</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1041,7 +951,7 @@ agent.CountOfUserDocuments = count;]]></Code>
 				<EmbeddedObjectPresentation>
 					<Id>1448048886847</Id>
 					<Name><![CDATA[Maker_presentation]]></Name>
-					<X>620</X><Y>370</Y>
+					<X>510</X><Y>-160</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1058,190 +968,13 @@ agent.CountOfUserDocuments = count;]]></Code>
 					<Latitude>0.0</Latitude>
 					<Longitude>0.0</Longitude>
 				</EmbeddedObjectPresentation>
-				<Group>
-					<Id>1448050765835</Id>
-					<Name><![CDATA[message]]></Name>
-					<X>740</X><Y>340</Y>
-					<Label><X>140.475</X><Y>0</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D</DrawMode>
-					<AsObject>true</AsObject>
-					<EmbeddedIcon>true</EmbeddedIcon>
-					<Z>0</Z>
-					<Rotation>0.0</Rotation>
-
-			<Shapes>
-				<Rectangle>
-					<Id>1448050765837</Id>
-					<Name><![CDATA[_ps310]]></Name>
-					<X>-112.38</X><Y>-84.141</Y>
-					<Label><X>10</X><Y>10</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<AsObject>true</AsObject>
-					<EmbeddedIcon>false</EmbeddedIcon>
-					<Z>0</Z>
-					<ZHeight>10</ZHeight>
-					<LineWidth>1</LineWidth>
-					<LineColor/>
-					<LineMaterial>null</LineMaterial>
-					<LineStyle>SOLID</LineStyle>
-					<Width>224.759</Width>
-					<Height>168.283</Height>
-					<Rotation>0.0</Rotation>
-					<FillColor>-10496</FillColor>
-					<FillMaterial>null</FillMaterial>
-				</Rectangle>
-				<Polyline>
-					<Id>1448050765839</Id>
-					<Name><![CDATA[_ps311]]></Name>
-					<X>-112.38</X><Y>-42.071</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<AsObject>true</AsObject>
-					<EmbeddedIcon>false</EmbeddedIcon>
-					<Z>0</Z>
-					<ZHeight>10</ZHeight>
-					<LineWidth>1</LineWidth>
-					<LineColor/>
-					<LineMaterial>null</LineMaterial>
-					<LineStyle>SOLID</LineStyle>
-					<BeginArrowSize>1</BeginArrowSize>
-					<BeginArrowStyle>0</BeginArrowStyle>
-					<EndArrowSize>1</EndArrowSize>
-					<EndArrowStyle>0</EndArrowStyle>
-					<FillColor>-3564522</FillColor>
-					<FillMaterial>null</FillMaterial>
-					<Points>
-					   <Point><X>0</X><Y>0</Y><Z>0</Z></Point>
-					   <Point><X>112.38</X><Y>112.189</Y><Z>0</Z></Point>
-					   <Point><X>224.759</X><Y>0</Y><Z>0</Z></Point>
-					   <Point><X>224.759</X><Y>-14.023</Y><Z>0</Z></Point>
-					   <Point><X>112.38</X><Y>70.118</Y><Z>0</Z></Point>
-					   <Point><X>0</X><Y>-14.023</Y><Z>0</Z></Point>
-					</Points>
-					<Closed>true</Closed>
-				</Polyline>
-				<Polyline>
-					<Id>1448050765841</Id>
-					<Name><![CDATA[_ps312]]></Name>
-					<X>112.38</X><Y>-56.094</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<AsObject>true</AsObject>
-					<EmbeddedIcon>false</EmbeddedIcon>
-					<Z>0</Z>
-					<ZHeight>10</ZHeight>
-					<LineWidth>1</LineWidth>
-					<LineColor>-12108506</LineColor>
-					<LineMaterial>null</LineMaterial>
-					<LineStyle>SOLID</LineStyle>
-					<BeginArrowSize>1</BeginArrowSize>
-					<BeginArrowStyle>0</BeginArrowStyle>
-					<EndArrowSize>1</EndArrowSize>
-					<EndArrowStyle>0</EndArrowStyle>
-					<FillColor/>
-					<FillMaterial>null</FillMaterial>
-					<Points>
-					   <Point><X>0</X><Y>0</Y><Z>0</Z></Point>
-					   <Point><X>-112.38</X><Y>84.141</Y><Z>0</Z></Point>
-					   <Point><X>-224.759</X><Y>0</Y><Z>0</Z></Point>
-					</Points>
-					<Closed>false</Closed>
-				</Polyline>
-				<Rectangle>
-					<Id>1448050765843</Id>
-					<Name><![CDATA[_ps313]]></Name>
-					<X>-112.38</X><Y>-84.141</Y>
-					<Label><X>10</X><Y>10</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<AsObject>true</AsObject>
-					<EmbeddedIcon>false</EmbeddedIcon>
-					<Z>0</Z>
-					<ZHeight>10</ZHeight>
-					<LineWidth>1</LineWidth>
-					<LineColor>-12108506</LineColor>
-					<LineMaterial>null</LineMaterial>
-					<LineStyle>SOLID</LineStyle>
-					<Width>224.759</Width>
-					<Height>168.283</Height>
-					<Rotation>0.0</Rotation>
-					<FillColor>7035432</FillColor>
-					<FillMaterial>null</FillMaterial>
-				</Rectangle>
-				<Line>
-					<Id>1448050765845</Id>
-					<Name><![CDATA[_ps314]]></Name>
-					<X>-112.38</X><Y>70.118</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<AsObject>true</AsObject>
-					<EmbeddedIcon>false</EmbeddedIcon>
-					<Z>0</Z>
-					<ZHeight>10</ZHeight>
-					<LineWidth>1</LineWidth>
-					<LineColor>-12108506</LineColor>
-					<LineMaterial>null</LineMaterial>
-					<LineStyle>SOLID</LineStyle>
-					<BeginArrowSize>1</BeginArrowSize>
-					<BeginArrowStyle>0</BeginArrowStyle>
-					<EndArrowSize>1</EndArrowSize>
-					<EndArrowStyle>0</EndArrowStyle>
-					<Dx>83</Dx>
-					<Dy>-71</Dy>
-					<Dz>0</Dz>
-				</Line>
-				<Line>
-					<Id>1448050765847</Id>
-					<Name><![CDATA[_ps315]]></Name>
-					<X>112.38</X><Y>84.141</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<AsObject>true</AsObject>
-					<EmbeddedIcon>false</EmbeddedIcon>
-					<Z>0</Z>
-					<ZHeight>10</ZHeight>
-					<LineWidth>1</LineWidth>
-					<LineColor>-12108506</LineColor>
-					<LineMaterial>null</LineMaterial>
-					<LineStyle>SOLID</LineStyle>
-					<BeginArrowSize>1</BeginArrowSize>
-					<BeginArrowStyle>0</BeginArrowStyle>
-					<EndArrowSize>1</EndArrowSize>
-					<EndArrowStyle>0</EndArrowStyle>
-					<Dx>-86</Dx>
-					<Dy>-85</Dy>
-					<Dz>0</Dz>
-				</Line>
-			</Shapes>
-
-				</Group>
 			</Shapes>
 			<Controls>
 				<Control Type="Slider">
 				 	<EmbeddedIcon>true</EmbeddedIcon>				
 					<Id>1448085480076</Id>
 					<Name><![CDATA[LambdaSlider]]></Name>
-					<X>200</X><Y>80</Y>
+					<X>310</X><Y>30</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1286,6 +1019,138 @@ agent.CountOfUserDocuments = count;]]></Code>
 					</ExtendedProperties>
 				</Control>
 			</Controls>
+			<Charts>
+    			<BarChart>
+					<Id>1448387356393</Id>
+					<Name><![CDATA[chart]]></Name>
+					<X>250</X><Y>360</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<AutoUpdate>true</AutoUpdate>
+					<OccurrenceAtTime>true</OccurrenceAtTime>
+					<OccurrenceDate>1448438400000</OccurrenceDate>
+					<OccurrenceTime Class="CodeUnitValue">
+						<Code><![CDATA[0]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
+					</OccurrenceTime>
+					<RecurrenceCode Class="CodeUnitValue">
+						<Code><![CDATA[1]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
+					</RecurrenceCode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Width>260</Width>
+					<Height>250</Height>
+					<BackgroundColor/>
+					<BorderColor/>
+					<ChartArea>
+						<XOffset>50</XOffset>
+						<YOffset>30</YOffset>
+						<Width>180</Width>
+						<Height>130</Height>
+						<BackgroundColor>-1</BackgroundColor>
+						<BorderColor>-16777216</BorderColor>
+						<GridColor>-12566464</GridColor>
+					</ChartArea>
+					<Legend>
+						<Place>SOUTH</Place>
+						<TextColor>-16777216</TextColor>
+						<Size>60</Size>
+					</Legend>
+					<Labels>
+						<HorLabelsPosition>DEFAULT</HorLabelsPosition>
+						<VerLabelsPosition>DEFAULT</VerLabelsPosition>
+						<TextColor>-12566464</TextColor>
+					</Labels>
+					<Persistent>true</Persistent>
+					<ShowLegend>true</ShowLegend>
+					<DataItem>
+					<Expression><![CDATA[Cashbox.CountUserError]]></Expression>
+					<Color>-14774017</Color>
+					<Expression2Flag>true</Expression2Flag>
+						<Title><![CDATA[UserError]]></Title>
+					</DataItem>
+					<DataItem>
+					<Expression><![CDATA[Cashbox.CountUserSuccess]]></Expression>
+					<Color>-3137392</Color>
+					<Expression2Flag>true</Expression2Flag>
+						<Title><![CDATA[UserSuccess]]></Title>
+					</DataItem>
+					<ScaleFromExpression><![CDATA[0]]></ScaleFromExpression>
+					<ScaleToExpression><![CDATA[1]]></ScaleToExpression>
+					<ScaleType>AUTO</ScaleType>
+					<Bars>
+						<Direction>UP</Direction>
+						<RelativeWidth>0.8</RelativeWidth>
+					</Bars>
+    			</BarChart>
+    			<BarChart>
+					<Id>1448387364704</Id>
+					<Name><![CDATA[chart1]]></Name>
+					<X>630</X><Y>350</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<AutoUpdate>true</AutoUpdate>
+					<OccurrenceAtTime>true</OccurrenceAtTime>
+					<OccurrenceDate>1448438400000</OccurrenceDate>
+					<OccurrenceTime Class="CodeUnitValue">
+						<Code><![CDATA[0]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
+					</OccurrenceTime>
+					<RecurrenceCode Class="CodeUnitValue">
+						<Code><![CDATA[1]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
+					</RecurrenceCode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Width>260</Width>
+					<Height>270</Height>
+					<BackgroundColor/>
+					<BorderColor/>
+					<ChartArea>
+						<XOffset>50</XOffset>
+						<YOffset>30</YOffset>
+						<Width>180</Width>
+						<Height>140</Height>
+						<BackgroundColor>-1</BackgroundColor>
+						<BorderColor>-16777216</BorderColor>
+						<GridColor>-12566464</GridColor>
+					</ChartArea>
+					<Legend>
+						<Place>SOUTH</Place>
+						<TextColor>-16777216</TextColor>
+						<Size>70</Size>
+					</Legend>
+					<Labels>
+						<HorLabelsPosition>DEFAULT</HorLabelsPosition>
+						<VerLabelsPosition>DEFAULT</VerLabelsPosition>
+						<TextColor>-12566464</TextColor>
+					</Labels>
+					<Persistent>true</Persistent>
+					<ShowLegend>true</ShowLegend>
+					<DataItem>
+					<Expression><![CDATA[Maker.CountCP]]></Expression>
+					<Color>-23296</Color>
+					<Expression2Flag>true</Expression2Flag>
+						<Title><![CDATA[CountCP]]></Title>
+					</DataItem>
+					<DataItem>
+					<Expression><![CDATA[Maker.CountTP]]></Expression>
+					<Color>-4343957</Color>
+					<Expression2Flag>true</Expression2Flag>
+						<Title><![CDATA[CountTP]]></Title>
+					</DataItem>
+					<ScaleFromExpression><![CDATA[0]]></ScaleFromExpression>
+					<ScaleToExpression><![CDATA[1]]></ScaleToExpression>
+					<ScaleType>AUTO</ScaleType>
+					<Bars>
+						<Direction>UP</Direction>
+						<RelativeWidth>0.8</RelativeWidth>
+					</Bars>
+    			</BarChart>
+			</Charts>
 
 		</ActiveObjectClass>
 		<!--   =========   Active Object Class   ========  -->
@@ -1378,7 +1243,7 @@ agent.CountOfUserDocuments = count;]]></Code>
 				<Variable Class="Parameter">
 					<Id>1448040542219</Id>
 					<Name><![CDATA[ApplicationCapacity]]></Name>
-					<X>70</X><Y>50</Y>
+					<X>140</X><Y>120</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1403,7 +1268,7 @@ agent.CountOfUserDocuments = count;]]></Code>
 				<Variable Class="Parameter">
 					<Id>1448040544123</Id>
 					<Name><![CDATA[CheckCapacity]]></Name>
-					<X>70</X><Y>90</Y>
+					<X>140</X><Y>160</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1428,7 +1293,7 @@ agent.CountOfUserDocuments = count;]]></Code>
 				<Variable Class="Parameter">
 					<Id>1448040546415</Id>
 					<Name><![CDATA[MakeCapacity]]></Name>
-					<X>70</X><Y>130</Y>
+					<X>140</X><Y>200</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1439,10 +1304,85 @@ agent.CountOfUserDocuments = count;]]></Code>
 						<NumericType><![CDATA[double]]></NumericType>
 						<SdArray>false</SdArray>
 						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[1000]]></Code>
+							<Code><![CDATA[500]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1448040546413</Id>
+							<EditorContolType>TEXT_BOX</EditorContolType>
+							<MinSliderValue><![CDATA[0]]></MinSliderValue>
+							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
+							<DelimeterType>NO_DELIMETER</DelimeterType>
+						</ParameterEditor>
+					</Properties>                 
+				</Variable>
+				<Variable Class="Parameter">
+					<Id>1448386639257</Id>
+					<Name><![CDATA[ErrorCapacity]]></Name>
+					<X>140</X><Y>90</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+						<Type><![CDATA[int]]></Type>
+						<UnitType><![CDATA[NONE]]></UnitType>
+						<NumericType><![CDATA[double]]></NumericType>
+						<SdArray>false</SdArray>
+						<DefaultValue Class="CodeValue">
+							<Code><![CDATA[500]]></Code>
+						</DefaultValue>
+						<ParameterEditor>
+							<Id>1448386639255</Id>
+							<EditorContolType>TEXT_BOX</EditorContolType>
+							<MinSliderValue><![CDATA[0]]></MinSliderValue>
+							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
+							<DelimeterType>NO_DELIMETER</DelimeterType>
+						</ParameterEditor>
+					</Properties>                 
+				</Variable>
+				<Variable Class="Parameter">
+					<Id>1448386652420</Id>
+					<Name><![CDATA[CountUserError]]></Name>
+					<X>290</X><Y>120</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+						<Type><![CDATA[int]]></Type>
+						<UnitType><![CDATA[NONE]]></UnitType>
+						<NumericType><![CDATA[double]]></NumericType>
+						<SdArray>false</SdArray>
+						<DefaultValue Class="CodeValue">
+							<Code><![CDATA[0]]></Code>
+						</DefaultValue>
+						<ParameterEditor>
+							<Id>1448386652418</Id>
+							<EditorContolType>TEXT_BOX</EditorContolType>
+							<MinSliderValue><![CDATA[0]]></MinSliderValue>
+							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
+							<DelimeterType>NO_DELIMETER</DelimeterType>
+						</ParameterEditor>
+					</Properties>                 
+				</Variable>
+				<Variable Class="Parameter">
+					<Id>1448386654755</Id>
+					<Name><![CDATA[CountUserSuccess]]></Name>
+					<X>290</X><Y>90</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+						<Type><![CDATA[int]]></Type>
+						<UnitType><![CDATA[NONE]]></UnitType>
+						<NumericType><![CDATA[double]]></NumericType>
+						<SdArray>false</SdArray>
+						<DefaultValue Class="CodeValue">
+							<Code><![CDATA[0]]></Code>
+						</DefaultValue>
+						<ParameterEditor>
+							<Id>1448386654753</Id>
 							<EditorContolType>TEXT_BOX</EditorContolType>
 							<MinSliderValue><![CDATA[0]]></MinSliderValue>
 							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
@@ -1455,7 +1395,7 @@ agent.CountOfUserDocuments = count;]]></Code>
 				<Port>
 					<Id>1448037491711</Id>
 					<Name><![CDATA[in]]></Name>
-					<X>80</X><Y>190</Y>
+					<X>150</X><Y>260</Y>
 					<Label><X>-10</X><Y>-15</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1467,20 +1407,8 @@ agent.CountOfUserDocuments = count;]]></Code>
 				<Port>
 					<Id>1448037497937</Id>
 					<Name><![CDATA[out]]></Name>
-					<X>400</X><Y>310</Y>
+					<X>470</X><Y>380</Y>
 					<Label><X>-15</X><Y>25</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<IncomingMessageType><![CDATA[Object]]></IncomingMessageType>
-					<OutgoingMessageType><![CDATA[Object]]></OutgoingMessageType>
-					<CustomPort><![CDATA[false]]></CustomPort>
-				</Port>
-				<Port>
-					<Id>1448050086007</Id>
-					<Name><![CDATA[error]]></Name>
-					<X>200</X><Y>350</Y>
-					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
@@ -1493,7 +1421,7 @@ agent.CountOfUserDocuments = count;]]></Code>
 				<Connector>
 					<Id>1448037715157</Id>
 					<Name><![CDATA[connector1]]></Name>
-					<X>80</X><Y>190</Y>
+					<X>150</X><Y>260</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1518,7 +1446,7 @@ agent.CountOfUserDocuments = count;]]></Code>
 				<Connector>
 					<Id>1448037793087</Id>
 					<Name><![CDATA[connector2]]></Name>
-					<X>80</X><Y>310</Y>
+					<X>150</X><Y>380</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1555,7 +1483,7 @@ agent.CountOfUserDocuments = count;]]></Code>
 				<Connector>
 					<Id>1448037912401</Id>
 					<Name><![CDATA[connector]]></Name>
-					<X>140</X><Y>230</Y>
+					<X>210</X><Y>300</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1588,7 +1516,7 @@ agent.CountOfUserDocuments = count;]]></Code>
 				<Connector>
 					<Id>1448038368088</Id>
 					<Name><![CDATA[connector6]]></Name>
-					<X>330</X><Y>310</Y>
+					<X>400</X><Y>380</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1612,7 +1540,7 @@ agent.CountOfUserDocuments = count;]]></Code>
 				<Connector>
 					<Id>1448050101970</Id>
 					<Name><![CDATA[connector3]]></Name>
-					<X>190</X><Y>310</Y>
+					<X>260</X><Y>380</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1645,7 +1573,7 @@ agent.CountOfUserDocuments = count;]]></Code>
 				<Connector>
 					<Id>1448050191122</Id>
 					<Name><![CDATA[connector4]]></Name>
-					<X>210</X><Y>310</Y>
+					<X>280</X><Y>380</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1676,27 +1604,76 @@ agent.CountOfUserDocuments = count;]]></Code>
 					</Points>
 				</Connector>
 				<Connector>
-					<Id>1448050196783</Id>
+					<Id>1448386759193</Id>
 					<Name><![CDATA[connector5]]></Name>
-					<X>200</X><Y>350</Y>
+					<X>120</X><Y>460</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
-					<SourceId>1448050086007</SourceId>
+					<SourceEmbeddedObjectReference>
+						<PackageName><![CDATA[lab7]]></PackageName>
+						<ClassName><![CDATA[PreparationOfDocuments]]></ClassName>
+						<ItemName><![CDATA[UserError]]></ItemName>
+					</SourceEmbeddedObjectReference>
+					<SourceConnectableItemReference>
+						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
+						<ClassName><![CDATA[Delay]]></ClassName>
+						<ItemName><![CDATA[out]]></ItemName>
+					</SourceConnectableItemReference>
 					<TargetEmbeddedObjectReference>
 						<PackageName><![CDATA[lab7]]></PackageName>
 						<ClassName><![CDATA[PreparationOfDocuments]]></ClassName>
-						<ItemName><![CDATA[selectOutput]]></ItemName>
+						<ItemName><![CDATA[CheckCompletenessOfDocuments]]></ItemName>
 					</TargetEmbeddedObjectReference>
 					<TargetConnectableItemReference>
 						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
-						<ClassName><![CDATA[SelectOutput]]></ClassName>
-						<ItemName><![CDATA[outF]]></ItemName>
+						<ClassName><![CDATA[Delay]]></ClassName>
+						<ItemName><![CDATA[in]]></ItemName>
 					</TargetConnectableItemReference>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>0</X><Y>-30</Y></Point>
+						<Point><X>20</X><Y>0</Y></Point>
+						<Point><X>20</X><Y>-80</Y></Point>
+						<Point><X>30</X><Y>-80</Y></Point>
+					</Points>
+				</Connector>
+				<Connector>
+					<Id>1448386770508</Id>
+					<Name><![CDATA[connector7]]></Name>
+					<X>270</X><Y>390</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<SourceEmbeddedObjectReference>
+						<PackageName><![CDATA[lab7]]></PackageName>
+						<ClassName><![CDATA[PreparationOfDocuments]]></ClassName>
+						<ItemName><![CDATA[selectOutput]]></ItemName>
+					</SourceEmbeddedObjectReference>
+					<SourceConnectableItemReference>
+						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
+						<ClassName><![CDATA[SelectOutput]]></ClassName>
+						<ItemName><![CDATA[outF]]></ItemName>
+					</SourceConnectableItemReference>
+					<TargetEmbeddedObjectReference>
+						<PackageName><![CDATA[lab7]]></PackageName>
+						<ClassName><![CDATA[PreparationOfDocuments]]></ClassName>
+						<ItemName><![CDATA[UserError]]></ItemName>
+					</TargetEmbeddedObjectReference>
+					<TargetConnectableItemReference>
+						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
+						<ClassName><![CDATA[Delay]]></ClassName>
+						<ItemName><![CDATA[in]]></ItemName>
+					</TargetConnectableItemReference>
+					<Points>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>0</X><Y>30</Y></Point>
+						<Point><X>-120</X><Y>30</Y></Point>
+						<Point><X>-120</X><Y>100</Y></Point>
+						<Point><X>-210</X><Y>100</Y></Point>
+						<Point><X>-210</X><Y>70</Y></Point>
+						<Point><X>-190</X><Y>70</Y></Point>
 					</Points>
 				</Connector>
 			</Connectors>
@@ -1741,7 +1718,7 @@ agent.CountOfUserDocuments = count;]]></Code>
 				<EmbeddedObject>
 					<Id>1448037563816</Id>
 					<Name><![CDATA[queue]]></Name>
-					<X>220</X><Y>210</Y>
+					<X>290</X><Y>280</Y>
 					<Label><X>55</X><Y>5</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1856,7 +1833,7 @@ agent.CountOfUserDocuments = count;]]></Code>
 				<EmbeddedObject>
 					<Id>1448037591983</Id>
 					<Name><![CDATA[ApplicationProcessing]]></Name>
-					<X>100</X><Y>210</Y>
+					<X>170</X><Y>280</Y>
 					<Label><X>-10</X><Y>-15</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1966,8 +1943,8 @@ agent.CountOfUserDocuments = count;]]></Code>
 				<EmbeddedObject>
 					<Id>1448037791127</Id>
 					<Name><![CDATA[CheckCompletenessOfDocuments]]></Name>
-					<X>80</X><Y>290</Y>
-					<Label><X>-80</X><Y>50</Y></Label>
+					<X>150</X><Y>360</Y>
+					<Label><X>-205</X><Y>15</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
@@ -2073,7 +2050,7 @@ agent.CountOfUserDocuments = count;]]></Code>
 				<EmbeddedObject>
 					<Id>1448038352424</Id>
 					<Name><![CDATA[MakeAgreement]]></Name>
-					<X>290</X><Y>290</Y>
+					<X>360</X><Y>360</Y>
 					<Label><X>5</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -2180,7 +2157,7 @@ agent.CountOfUserDocuments = count;]]></Code>
 				<EmbeddedObject>
 					<Id>1448050100631</Id>
 					<Name><![CDATA[selectOutput]]></Name>
-					<X>180</X><Y>300</Y>
+					<X>250</X><Y>370</Y>
 					<Label><X>-20</X><Y>-15</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -2223,9 +2200,125 @@ agent.CountOfUserDocuments = count;]]></Code>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onExitTrue]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[CountUserSuccess += 1;]]></Code>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onExitFalse]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[CountUserError += 1;]]></Code>
+							</Value>
+						</Parameter>
+					</Parameters>
+					<ReplicationFlag>false</ReplicationFlag>
+					<Replication Class="CodeValue">
+						<Code><![CDATA[100]]></Code>
+					</Replication>
+					<CollectionType>ARRAY_LIST_BASED</CollectionType>
+					<InitialSpeedCode Class="CodeUnitValue">
+						<Code><![CDATA[10]]></Code>
+						<Unit Class="SpeedUnits"><![CDATA[MPS]]></Unit>
+					</InitialSpeedCode>
+					<InitialLocationType>AT_ANIMATION_POSITION</InitialLocationType>
+					<XCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</XCode>
+					<YCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</YCode>
+					<ZCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</ZCode>
+					<ColumnCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</ColumnCode>
+					<RowCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</RowCode>
+					<LatitudeCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</LatitudeCode>
+					<LongitudeCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</LongitudeCode>
+					<LocationNameCode Class="CodeValue">
+						<Code><![CDATA[""]]></Code>
+					</LocationNameCode>
+					<InitializationType>SPECIFIED_NUMBER</InitializationType>
+					<InitializationDatabaseTableQuery>
+						<TableReference>
+						</TableReference>
+					</InitializationDatabaseTableQuery>
+					<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>
+					<QuantityColumn>
+					</QuantityColumn>
+				</EmbeddedObject>
+				<EmbeddedObject>
+					<Id>1448386626230</Id>
+					<Name><![CDATA[UserError]]></Name>
+					<X>80</X><Y>440</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<ActiveObjectClass>
+						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
+						<ClassName><![CDATA[Delay]]></ClassName>
+					</ActiveObjectClass>
+					<GenericParameterSubstitute>
+						<GenericParameterSubstituteReference>
+							<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
+							<ClassName><![CDATA[Delay]]></ClassName>
+							<ItemName><![CDATA[1412336242930]]></ItemName>
+						</GenericParameterSubstituteReference>
+					</GenericParameterSubstitute>
+					<Parameters>
+						<Parameter>
+							<Name><![CDATA[type]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[delayTime]]></Name>
+							<Value Class="CodeUnitValue">
+								<Code><![CDATA[normal(0.5,1)]]></Code>
+								<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+							</Value>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[capacity]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[ErrorCapacity]]></Code>
+							</Value>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[maximumCapacity]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[entityLocation]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[pushProtocol]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[restoreEntityLocationOnExit]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[forceStatisticsCollection]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[onEnter]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[onAtExit]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[onExit]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[agent.CountOfUserDocuments = main.MaxCountOfUserDocuments;]]></Code>
+							</Value>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[onRemove]]></Name>
 						</Parameter>
 					</Parameters>
 					<ReplicationFlag>false</ReplicationFlag>
@@ -2277,15 +2370,15 @@ agent.CountOfUserDocuments = count;]]></Code>
 				<Figure3D>
 					<Id>1448037431427</Id>
 					<Name><![CDATA[cashDesk]]></Name>
-					<X>170</X><Y>280</Y>
+					<X>300</X><Y>400</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<X>170</X><Y>280</Y><Z>0</Z>
+					<X>300</X><Y>400</Y><Z>0</Z>
 					<Label><X>0</X><Y>-10</Y></Label>
-					<FileName><![CDATA[x3d/cash_desk.x3d]]></FileName>
+					<FileName><![CDATA[cash_desk.x3d]]></FileName>
 					<ColorTable>
 						<ColorMapping>
 							<Name><![CDATA[Material_(1)_Surf]]></Name>
@@ -2319,7 +2412,7 @@ agent.CountOfUserDocuments = count;]]></Code>
 				 	<EmbeddedIcon>true</EmbeddedIcon>				
 					<Id>1448085547600</Id>
 					<Name><![CDATA[ApplicationSlider]]></Name>
-					<X>230</X><Y>80</Y>
+					<X>370</X><Y>440</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -2343,7 +2436,7 @@ agent.CountOfUserDocuments = count;]]></Code>
 				 	<EmbeddedIcon>true</EmbeddedIcon>				
 					<Id>1448085557466</Id>
 					<Name><![CDATA[CheckSlider]]></Name>
-					<X>230</X><Y>120</Y>
+					<X>260</X><Y>440</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -2367,7 +2460,7 @@ agent.CountOfUserDocuments = count;]]></Code>
 				 	<EmbeddedIcon>true</EmbeddedIcon>				
 					<Id>1448085589311</Id>
 					<Name><![CDATA[MakeSlider]]></Name>
-					<X>230</X><Y>160</Y>
+					<X>160</X><Y>440</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -3136,7 +3229,7 @@ agent.CountOfUserDocuments = count;]]></Code>
 				<Variable Class="Parameter">
 					<Id>1448049229609</Id>
 					<Name><![CDATA[SelectCapacity]]></Name>
-					<X>80</X><Y>60</Y>
+					<X>80</X><Y>110</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -3161,7 +3254,7 @@ agent.CountOfUserDocuments = count;]]></Code>
 				<Variable Class="Parameter">
 					<Id>1448049229613</Id>
 					<Name><![CDATA[CPCapacity]]></Name>
-					<X>80</X><Y>110</Y>
+					<X>80</X><Y>160</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -3186,7 +3279,7 @@ agent.CountOfUserDocuments = count;]]></Code>
 				<Variable Class="Parameter">
 					<Id>1448049229616</Id>
 					<Name><![CDATA[TPCapacity]]></Name>
-					<X>80</X><Y>160</Y>
+					<X>80</X><Y>210</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -3211,7 +3304,7 @@ agent.CountOfUserDocuments = count;]]></Code>
 				<Variable Class="Parameter">
 					<Id>1448049562805</Id>
 					<Name><![CDATA[Type]]></Name>
-					<X>300</X><Y>60</Y>
+					<X>300</X><Y>110</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -3230,12 +3323,62 @@ agent.CountOfUserDocuments = count;]]></Code>
 						</ParameterEditor>
 					</Properties>                 
 				</Variable>
+				<Variable Class="Parameter">
+					<Id>1448387150518</Id>
+					<Name><![CDATA[CountCP]]></Name>
+					<X>300</X><Y>140</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+						<Type><![CDATA[int]]></Type>
+						<UnitType><![CDATA[NONE]]></UnitType>
+						<NumericType><![CDATA[double]]></NumericType>
+						<SdArray>false</SdArray>
+						<DefaultValue Class="CodeValue">
+							<Code><![CDATA[0]]></Code>
+						</DefaultValue>
+						<ParameterEditor>
+							<Id>1448387150516</Id>
+							<EditorContolType>TEXT_BOX</EditorContolType>
+							<MinSliderValue><![CDATA[0]]></MinSliderValue>
+							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
+							<DelimeterType>NO_DELIMETER</DelimeterType>
+						</ParameterEditor>
+					</Properties>                 
+				</Variable>
+				<Variable Class="Parameter">
+					<Id>1448387153052</Id>
+					<Name><![CDATA[CountTP]]></Name>
+					<X>300</X><Y>170</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+						<Type><![CDATA[int]]></Type>
+						<UnitType><![CDATA[NONE]]></UnitType>
+						<NumericType><![CDATA[double]]></NumericType>
+						<SdArray>false</SdArray>
+						<DefaultValue Class="CodeValue">
+							<Code><![CDATA[0]]></Code>
+						</DefaultValue>
+						<ParameterEditor>
+							<Id>1448387153050</Id>
+							<EditorContolType>TEXT_BOX</EditorContolType>
+							<MinSliderValue><![CDATA[0]]></MinSliderValue>
+							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
+							<DelimeterType>NO_DELIMETER</DelimeterType>
+						</ParameterEditor>
+					</Properties>                 
+				</Variable>
 			</Variables>
 			<Ports>
 				<Port>
 					<Id>1448049086079</Id>
 					<Name><![CDATA[in]]></Name>
-					<X>100</X><Y>270</Y>
+					<X>90</X><Y>320</Y>
 					<Label><X>-5</X><Y>-25</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -3261,7 +3404,7 @@ agent.CountOfUserDocuments = count;]]></Code>
 				<Connector>
 					<Id>1448049125140</Id>
 					<Name><![CDATA[connector]]></Name>
-					<X>100</X><Y>270</Y>
+					<X>90</X><Y>320</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -3279,7 +3422,8 @@ agent.CountOfUserDocuments = count;]]></Code>
 					</TargetConnectableItemReference>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>40</X><Y>0</Y></Point>
+						<Point><X>0</X><Y>-50</Y></Point>
+						<Point><X>50</X><Y>-50</Y></Point>
 					</Points>
 				</Connector>
 				<Connector>
@@ -4197,9 +4341,15 @@ Type = agent.TypeOfDocument;]]></Code>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onExitTrue]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[CountCP += 1;]]></Code>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onExitFalse]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[CountTP += 1;]]></Code>
+							</Value>
 						</Parameter>
 					</Parameters>
 					<ReplicationFlag>false</ReplicationFlag>
@@ -4701,13 +4851,13 @@ Type = agent.TypeOfDocument;]]></Code>
 				<Figure3D>
 					<Id>1448048886693</Id>
 					<Name><![CDATA[laptop_open_off]]></Name>
-					<X>230</X><Y>320</Y>
+					<X>240</X><Y>350</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<X>230</X><Y>320</Y><Z>0</Z>
+					<X>240</X><Y>350</Y><Z>0</Z>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<FileName><![CDATA[x3d/laptop_open_off.x3d]]></FileName>
 					<ColorTable>
@@ -4724,7 +4874,7 @@ Type = agent.TypeOfDocument;]]></Code>
 							<OriginalColor>-10526881</OriginalColor>
 						</ColorMapping>
 					</ColorTable>
-					<Scale>12.0</Scale>
+					<Scale>27.0</Scale>
 					<Rotation>0.0</Rotation>
 					<AxisOrder>XYZ_AXIS_ORDER</AxisOrder>
 					<ApplyShading>true</ApplyShading>
@@ -4735,7 +4885,7 @@ Type = agent.TypeOfDocument;]]></Code>
 				 	<EmbeddedIcon>true</EmbeddedIcon>				
 					<Id>1448095823167</Id>
 					<Name><![CDATA[SelectSlider]]></Name>
-					<X>180</X><Y>50</Y>
+					<X>300</X><Y>440</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -4759,7 +4909,7 @@ Type = agent.TypeOfDocument;]]></Code>
 				 	<EmbeddedIcon>true</EmbeddedIcon>				
 					<Id>1448095859687</Id>
 					<Name><![CDATA[CPSlider]]></Name>
-					<X>180</X><Y>100</Y>
+					<X>190</X><Y>440</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -4783,7 +4933,7 @@ Type = agent.TypeOfDocument;]]></Code>
 				 	<EmbeddedIcon>true</EmbeddedIcon>				
 					<Id>1448095904605</Id>
 					<Name><![CDATA[TPSlider]]></Name>
-					<X>180</X><Y>150</Y>
+					<X>80</X><Y>440</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
