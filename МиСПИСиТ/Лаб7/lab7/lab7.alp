@@ -597,10 +597,16 @@ agent.StartTime = time();]]></Code>
 							<ClassName><![CDATA[Sink]]></ClassName>
 							<ItemName><![CDATA[1412336242929]]></ItemName>
 						</GenericParameterSubstituteReference>
+						<GenericParameterSubstituteValue Class="CodeValue">
+							<Code><![CDATA[Document]]></Code>
+						</GenericParameterSubstituteValue>
 					</GenericParameterSubstitute>
 					<Parameters>
 						<Parameter>
 							<Name><![CDATA[onEnter]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[agent.EndTime = time();]]></Code>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[destroyEntity]]></Name>
@@ -687,6 +693,12 @@ agent.StartTime = time();]]></Code>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[CountUserSuccess]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[TempDelay]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[TempDelay1]]></Name>
 						</Parameter>
 					</Parameters>
 					<ReplicationFlag>false</ReplicationFlag>
@@ -889,9 +901,6 @@ agent.StartTime = time();]]></Code>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[CountTP]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[TempTime]]></Name>
 						</Parameter>
 					</Parameters>
 					<ReplicationFlag>false</ReplicationFlag>
@@ -1183,14 +1192,14 @@ agent.StartTime = time();]]></Code>
 						<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
 					</RecurrenceCode>
 					<EmbeddedIcon>false</EmbeddedIcon>
-					<Width>190</Width>
+					<Width>230</Width>
 					<Height>300</Height>
 					<BackgroundColor/>
 					<BorderColor/>
 					<ChartArea>
 						<XOffset>50</XOffset>
 						<YOffset>30</YOffset>
-						<Width>110</Width>
+						<Width>150</Width>
 						<Height>140</Height>
 						<BackgroundColor>-1</BackgroundColor>
 						<BorderColor>-16777216</BorderColor>
@@ -1209,10 +1218,69 @@ agent.StartTime = time();]]></Code>
 					<Persistent>true</Persistent>
 					<ShowLegend>true</ShowLegend>
 					<DataItem>
-					<Expression><![CDATA[Cashbox.data.deviation()]]></Expression>
-					<Color>-16728065</Color>
+					<Expression><![CDATA[Cashbox.data.mean()]]></Expression>
+					<Color>-23296</Color>
 					<Expression2Flag>true</Expression2Flag>
-						<Title><![CDATA[delay]]></Title>
+						<Title><![CDATA[delayMean]]></Title>
+					</DataItem>
+					<ScaleFromExpression><![CDATA[0]]></ScaleFromExpression>
+					<ScaleToExpression><![CDATA[1]]></ScaleToExpression>
+					<ScaleType>AUTO</ScaleType>
+					<Bars>
+						<Direction>UP</Direction>
+						<RelativeWidth>0.8</RelativeWidth>
+					</Bars>
+    			</BarChart>
+    			<BarChart>
+					<Id>1448449478971</Id>
+					<Name><![CDATA[chart3]]></Name>
+					<X>660</X><Y>360</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<AutoUpdate>true</AutoUpdate>
+					<OccurrenceAtTime>true</OccurrenceAtTime>
+					<OccurrenceDate>1448438400000</OccurrenceDate>
+					<OccurrenceTime Class="CodeUnitValue">
+						<Code><![CDATA[0]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
+					</OccurrenceTime>
+					<RecurrenceCode Class="CodeUnitValue">
+						<Code><![CDATA[1]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
+					</RecurrenceCode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Width>230</Width>
+					<Height>300</Height>
+					<BackgroundColor/>
+					<BorderColor/>
+					<ChartArea>
+						<XOffset>50</XOffset>
+						<YOffset>30</YOffset>
+						<Width>150</Width>
+						<Height>140</Height>
+						<BackgroundColor>-1</BackgroundColor>
+						<BorderColor>-16777216</BorderColor>
+						<GridColor>-12566464</GridColor>
+					</ChartArea>
+					<Legend>
+						<Place>SOUTH</Place>
+						<TextColor>-16777216</TextColor>
+						<Size>100</Size>
+					</Legend>
+					<Labels>
+						<HorLabelsPosition>DEFAULT</HorLabelsPosition>
+						<VerLabelsPosition>DEFAULT</VerLabelsPosition>
+						<TextColor>-12566464</TextColor>
+					</Labels>
+					<Persistent>true</Persistent>
+					<ShowLegend>true</ShowLegend>
+					<DataItem>
+					<Expression><![CDATA[Cashbox.data1.mean()]]></Expression>
+					<Color>-13447886</Color>
+					<Expression2Flag>true</Expression2Flag>
+						<Title><![CDATA[MakeDelayMean]]></Title>
 					</DataItem>
 					<ScaleFromExpression><![CDATA[0]]></ScaleFromExpression>
 					<ScaleToExpression><![CDATA[1]]></ScaleToExpression>
@@ -1315,7 +1383,7 @@ agent.StartTime = time();]]></Code>
 				<Variable Class="Parameter">
 					<Id>1448040542219</Id>
 					<Name><![CDATA[ApplicationCapacity]]></Name>
-					<X>140</X><Y>120</Y>
+					<X>240</X><Y>60</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1340,7 +1408,7 @@ agent.StartTime = time();]]></Code>
 				<Variable Class="Parameter">
 					<Id>1448040544123</Id>
 					<Name><![CDATA[CheckCapacity]]></Name>
-					<X>140</X><Y>160</Y>
+					<X>240</X><Y>100</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1365,7 +1433,7 @@ agent.StartTime = time();]]></Code>
 				<Variable Class="Parameter">
 					<Id>1448040546415</Id>
 					<Name><![CDATA[MakeCapacity]]></Name>
-					<X>140</X><Y>200</Y>
+					<X>240</X><Y>140</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1390,7 +1458,7 @@ agent.StartTime = time();]]></Code>
 				<Variable Class="Parameter">
 					<Id>1448386639257</Id>
 					<Name><![CDATA[ErrorCapacity]]></Name>
-					<X>140</X><Y>90</Y>
+					<X>240</X><Y>30</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1415,7 +1483,7 @@ agent.StartTime = time();]]></Code>
 				<Variable Class="Parameter">
 					<Id>1448386652420</Id>
 					<Name><![CDATA[CountUserError]]></Name>
-					<X>290</X><Y>120</Y>
+					<X>390</X><Y>60</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1440,7 +1508,7 @@ agent.StartTime = time();]]></Code>
 				<Variable Class="Parameter">
 					<Id>1448386654755</Id>
 					<Name><![CDATA[CountUserSuccess]]></Name>
-					<X>290</X><Y>90</Y>
+					<X>390</X><Y>30</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1462,12 +1530,56 @@ agent.StartTime = time();]]></Code>
 						</ParameterEditor>
 					</Properties>                 
 				</Variable>
+				<Variable Class="Parameter">
+					<Id>1448448652535</Id>
+					<Name><![CDATA[TempDelay]]></Name>
+					<X>390</X><Y>90</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+						<Type><![CDATA[double]]></Type>
+						<UnitType><![CDATA[NONE]]></UnitType>
+						<NumericType><![CDATA[double]]></NumericType>
+						<SdArray>false</SdArray>
+						<ParameterEditor>
+							<Id>1448448652533</Id>
+							<EditorContolType>TEXT_BOX</EditorContolType>
+							<MinSliderValue><![CDATA[0]]></MinSliderValue>
+							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
+							<DelimeterType>NO_DELIMETER</DelimeterType>
+						</ParameterEditor>
+					</Properties>                 
+				</Variable>
+				<Variable Class="Parameter">
+					<Id>1448449441795</Id>
+					<Name><![CDATA[TempDelay1]]></Name>
+					<X>390</X><Y>130</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+						<Type><![CDATA[double]]></Type>
+						<UnitType><![CDATA[NONE]]></UnitType>
+						<NumericType><![CDATA[double]]></NumericType>
+						<SdArray>false</SdArray>
+						<ParameterEditor>
+							<Id>1448449441793</Id>
+							<EditorContolType>TEXT_BOX</EditorContolType>
+							<MinSliderValue><![CDATA[0]]></MinSliderValue>
+							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
+							<DelimeterType>NO_DELIMETER</DelimeterType>
+						</ParameterEditor>
+					</Properties>                 
+				</Variable>
 			</Variables>
 			<Ports>
 				<Port>
 					<Id>1448037491711</Id>
 					<Name><![CDATA[in]]></Name>
-					<X>150</X><Y>260</Y>
+					<X>250</X><Y>200</Y>
 					<Label><X>-10</X><Y>-15</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1479,7 +1591,7 @@ agent.StartTime = time();]]></Code>
 				<Port>
 					<Id>1448037497937</Id>
 					<Name><![CDATA[out]]></Name>
-					<X>470</X><Y>380</Y>
+					<X>570</X><Y>320</Y>
 					<Label><X>-15</X><Y>25</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1493,7 +1605,7 @@ agent.StartTime = time();]]></Code>
 				<Connector>
 					<Id>1448037715157</Id>
 					<Name><![CDATA[connector1]]></Name>
-					<X>150</X><Y>260</Y>
+					<X>250</X><Y>200</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1518,7 +1630,7 @@ agent.StartTime = time();]]></Code>
 				<Connector>
 					<Id>1448037793087</Id>
 					<Name><![CDATA[connector2]]></Name>
-					<X>150</X><Y>380</Y>
+					<X>250</X><Y>320</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1555,7 +1667,7 @@ agent.StartTime = time();]]></Code>
 				<Connector>
 					<Id>1448037912401</Id>
 					<Name><![CDATA[connector]]></Name>
-					<X>210</X><Y>300</Y>
+					<X>310</X><Y>240</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1588,7 +1700,7 @@ agent.StartTime = time();]]></Code>
 				<Connector>
 					<Id>1448038368088</Id>
 					<Name><![CDATA[connector6]]></Name>
-					<X>400</X><Y>380</Y>
+					<X>500</X><Y>320</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1612,7 +1724,7 @@ agent.StartTime = time();]]></Code>
 				<Connector>
 					<Id>1448050101970</Id>
 					<Name><![CDATA[connector3]]></Name>
-					<X>260</X><Y>380</Y>
+					<X>360</X><Y>320</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1645,7 +1757,7 @@ agent.StartTime = time();]]></Code>
 				<Connector>
 					<Id>1448050191122</Id>
 					<Name><![CDATA[connector4]]></Name>
-					<X>280</X><Y>380</Y>
+					<X>380</X><Y>320</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1678,7 +1790,7 @@ agent.StartTime = time();]]></Code>
 				<Connector>
 					<Id>1448386759193</Id>
 					<Name><![CDATA[connector5]]></Name>
-					<X>120</X><Y>460</Y>
+					<X>220</X><Y>400</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1713,7 +1825,7 @@ agent.StartTime = time();]]></Code>
 				<Connector>
 					<Id>1448386770508</Id>
 					<Name><![CDATA[connector7]]></Name>
-					<X>270</X><Y>390</Y>
+					<X>370</X><Y>330</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1751,9 +1863,9 @@ agent.StartTime = time();]]></Code>
 			</Connectors>
 			<AnalysisData>
     			<HistogramData>
-					<Id>1448446661792</Id>
+					<Id>1448448200535</Id>
 					<Name><![CDATA[data]]></Name>
-					<X>20</X><Y>410</Y>
+					<X>120</X><Y>380</Y>
 					<Label><X>15</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1769,12 +1881,43 @@ agent.StartTime = time();]]></Code>
 						<Code><![CDATA[1]]></Code>
 						<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
 					</RecurrenceCode>
-					<Value><![CDATA[]]></Value>
-					<NumberOfIntervals>10</NumberOfIntervals>
+					<Value><![CDATA[TempDelay]]></Value>
+					<NumberOfIntervals>50</NumberOfIntervals>
 					<MinMaxAutodetect>true</MinMaxAutodetect>
 					<RangeMinExpression><![CDATA[0]]></RangeMinExpression>
 					<RangeMaxExpression><![CDATA[1]]></RangeMaxExpression>
-					<InitialIntervalSize><![CDATA[0.1]]></InitialIntervalSize>
+					<InitialIntervalSize><![CDATA[0.01]]></InitialIntervalSize>
+					<CalculateCDF>true</CalculateCDF>
+					<CalculatePercentiles>false</CalculatePercentiles>
+					<LowPercent>10</LowPercent>
+					<HighPercent>10</HighPercent>
+					<Title><![CDATA[]]></Title>
+				</HistogramData>
+    			<HistogramData>
+					<Id>1448449434280</Id>
+					<Name><![CDATA[data1]]></Name>
+					<X>120</X><Y>420</Y>
+					<Label><X>15</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<AutoUpdate>true</AutoUpdate>
+					<OccurrenceAtTime>true</OccurrenceAtTime>
+					<OccurrenceDate>1448524800000</OccurrenceDate>
+					<OccurrenceTime Class="CodeUnitValue">
+						<Code><![CDATA[0]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
+					</OccurrenceTime>
+					<RecurrenceCode Class="CodeUnitValue">
+						<Code><![CDATA[1]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
+					</RecurrenceCode>
+					<Value><![CDATA[TempDelay1]]></Value>
+					<NumberOfIntervals>50</NumberOfIntervals>
+					<MinMaxAutodetect>true</MinMaxAutodetect>
+					<RangeMinExpression><![CDATA[0]]></RangeMinExpression>
+					<RangeMaxExpression><![CDATA[1]]></RangeMaxExpression>
+					<InitialIntervalSize><![CDATA[0.01]]></InitialIntervalSize>
 					<CalculateCDF>true</CalculateCDF>
 					<CalculatePercentiles>false</CalculatePercentiles>
 					<LowPercent>10</LowPercent>
@@ -1823,7 +1966,7 @@ agent.StartTime = time();]]></Code>
 				<EmbeddedObject>
 					<Id>1448037563816</Id>
 					<Name><![CDATA[queue]]></Name>
-					<X>290</X><Y>280</Y>
+					<X>390</X><Y>220</Y>
 					<Label><X>55</X><Y>5</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1941,7 +2084,7 @@ agent.StartTime = time();]]></Code>
 				<EmbeddedObject>
 					<Id>1448037591983</Id>
 					<Name><![CDATA[ApplicationProcessing]]></Name>
-					<X>170</X><Y>280</Y>
+					<X>270</X><Y>220</Y>
 					<Label><X>-10</X><Y>-15</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -2051,7 +2194,7 @@ agent.StartTime = time();]]></Code>
 				<EmbeddedObject>
 					<Id>1448037791127</Id>
 					<Name><![CDATA[CheckCompletenessOfDocuments]]></Name>
-					<X>150</X><Y>360</Y>
+					<X>250</X><Y>300</Y>
 					<Label><X>-205</X><Y>15</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -2106,7 +2249,8 @@ agent.StartTime = time();]]></Code>
 							<Name><![CDATA[onEnter]]></Name>
 							<Value Class="CodeValue">
 								<Code><![CDATA[agent.MakeAgreementDelay = delayTime;
-data.add(agent.MakeAgreementDelay);]]></Code>
+data.add(agent.MakeAgreementDelay);
+TempDelay = delayTime;]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
@@ -2165,7 +2309,7 @@ data.add(agent.MakeAgreementDelay);]]></Code>
 				<EmbeddedObject>
 					<Id>1448038352424</Id>
 					<Name><![CDATA[MakeAgreement]]></Name>
-					<X>360</X><Y>360</Y>
+					<X>460</X><Y>300</Y>
 					<Label><X>5</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -2215,6 +2359,9 @@ data.add(agent.MakeAgreementDelay);]]></Code>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onEnter]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[TempDelay1 = delayTime;]]></Code>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onAtExit]]></Name>
@@ -2272,7 +2419,7 @@ data.add(agent.MakeAgreementDelay);]]></Code>
 				<EmbeddedObject>
 					<Id>1448050100631</Id>
 					<Name><![CDATA[selectOutput]]></Name>
-					<X>250</X><Y>370</Y>
+					<X>350</X><Y>310</Y>
 					<Label><X>-20</X><Y>-15</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -2372,7 +2519,7 @@ data.add(agent.MakeAgreementDelay);]]></Code>
 				<EmbeddedObject>
 					<Id>1448386626230</Id>
 					<Name><![CDATA[UserError]]></Name>
-					<X>80</X><Y>440</Y>
+					<X>180</X><Y>380</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -2485,13 +2632,13 @@ data.add(agent.MakeAgreementDelay);]]></Code>
 				<Figure3D>
 					<Id>1448037431427</Id>
 					<Name><![CDATA[cashDesk]]></Name>
-					<X>300</X><Y>400</Y>
+					<X>400</X><Y>340</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<X>300</X><Y>400</Y><Z>0</Z>
+					<X>400</X><Y>340</Y><Z>0</Z>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<FileName><![CDATA[cash_desk.x3d]]></FileName>
 					<ColorTable>
@@ -2527,7 +2674,7 @@ data.add(agent.MakeAgreementDelay);]]></Code>
 				 	<EmbeddedIcon>true</EmbeddedIcon>				
 					<Id>1448085547600</Id>
 					<Name><![CDATA[ApplicationSlider]]></Name>
-					<X>370</X><Y>440</Y>
+					<X>470</X><Y>380</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -2551,7 +2698,7 @@ data.add(agent.MakeAgreementDelay);]]></Code>
 				 	<EmbeddedIcon>true</EmbeddedIcon>				
 					<Id>1448085557466</Id>
 					<Name><![CDATA[CheckSlider]]></Name>
-					<X>260</X><Y>440</Y>
+					<X>360</X><Y>380</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -2575,7 +2722,7 @@ data.add(agent.MakeAgreementDelay);]]></Code>
 				 	<EmbeddedIcon>true</EmbeddedIcon>				
 					<Id>1448085589311</Id>
 					<Name><![CDATA[MakeSlider]]></Name>
-					<X>160</X><Y>440</Y>
+					<X>260</X><Y>380</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -3598,28 +3745,6 @@ data.add(agent.MakeAgreementDelay);]]></Code>
 						</ParameterEditor>
 					</Properties>                 
 				</Variable>
-				<Variable Class="Parameter">
-					<Id>1448445964916</Id>
-					<Name><![CDATA[TempTime]]></Name>
-					<X>300</X><Y>200</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
-						<Type><![CDATA[double]]></Type>
-						<UnitType><![CDATA[NONE]]></UnitType>
-						<NumericType><![CDATA[double]]></NumericType>
-						<SdArray>false</SdArray>
-						<ParameterEditor>
-							<Id>1448445964914</Id>
-							<EditorContolType>TEXT_BOX</EditorContolType>
-							<MinSliderValue><![CDATA[0]]></MinSliderValue>
-							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
-							<DelimeterType>NO_DELIMETER</DelimeterType>
-						</ParameterEditor>
-					</Properties>                 
-				</Variable>
 			</Variables>
 			<Ports>
 				<Port>
@@ -3860,7 +3985,6 @@ data.add(agent.MakeAgreementDelay);]]></Code>
 					<TargetId>1448049087704</TargetId>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>-30</X><Y>0</Y></Point>
 						<Point><X>30</X><Y>0</Y></Point>
 						<Point><X>30</X><Y>40</Y></Point>
 						<Point><X>70</X><Y>40</Y></Point>
@@ -3887,7 +4011,6 @@ data.add(agent.MakeAgreementDelay);]]></Code>
 					<TargetId>1448049087704</TargetId>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>-30</X><Y>0</Y></Point>
 						<Point><X>30</X><Y>0</Y></Point>
 						<Point><X>30</X><Y>-30</Y></Point>
 						<Point><X>70</X><Y>-30</Y></Point>
@@ -4253,8 +4376,7 @@ data.add(agent.MakeAgreementDelay);]]></Code>
 							<Value Class="CodeValue">
 								<Code><![CDATA[DocumentSource.inject(1);
 Type = agent.TypeOfDocument;
-agent.EndTime = time();
-TempTime = agent.EndTime;]]></Code>
+agent.EndTime = time();]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
@@ -4492,7 +4614,7 @@ TempTime = agent.EndTime;]]></Code>
 							<Name><![CDATA[onAtExit]]></Name>
 							<Value Class="CodeValue">
 								<Code><![CDATA[agent.TypeDocument = Type;
-agent.StartTime = TempTime;]]></Code>
+agent.StartTime = time();]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
