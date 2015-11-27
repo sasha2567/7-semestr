@@ -41,6 +41,12 @@
             this.gridBtn = new System.Windows.Forms.Button();
             this.dataLoadBtn = new System.Windows.Forms.Button();
             this.scenepanel = new System.Windows.Forms.Panel();
+            this.RWalfaLbl = new System.Windows.Forms.Label();
+            this.alfaT = new System.Windows.Forms.TextBox();
+            this.stepsRWLbl = new System.Windows.Forms.Label();
+            this.stepsRWT = new System.Windows.Forms.TextBox();
+            this.stepsMALbl = new System.Windows.Forms.Label();
+            this.stepsMAT = new System.Windows.Forms.TextBox();
             this.modelNameLbl = new System.Windows.Forms.Label();
             this.graphBuildBtn = new System.Windows.Forms.Button();
             this.modelMANmr = new System.Windows.Forms.NumericUpDown();
@@ -65,12 +71,6 @@
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
-            this.stepsMALbl = new System.Windows.Forms.Label();
-            this.stepsMAT = new System.Windows.Forms.TextBox();
-            this.stepsRWLbl = new System.Windows.Forms.Label();
-            this.stepsRWT = new System.Windows.Forms.TextBox();
-            this.RWalfaLbl = new System.Windows.Forms.Label();
-            this.alfaT = new System.Windows.Forms.TextBox();
             this.menu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.scene)).BeginInit();
             this.scenepanel.SuspendLayout();
@@ -213,6 +213,78 @@
             this.scenepanel.Name = "scenepanel";
             this.scenepanel.Size = new System.Drawing.Size(1254, 758);
             this.scenepanel.TabIndex = 1;
+            // 
+            // RWalfaLbl
+            // 
+            this.RWalfaLbl.AutoSize = true;
+            this.RWalfaLbl.Enabled = false;
+            this.RWalfaLbl.Location = new System.Drawing.Point(1109, 235);
+            this.RWalfaLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.RWalfaLbl.Name = "RWalfaLbl";
+            this.RWalfaLbl.Size = new System.Drawing.Size(56, 20);
+            this.RWalfaLbl.TabIndex = 27;
+            this.RWalfaLbl.Text = "Сдвиг";
+            this.RWalfaLbl.Visible = false;
+            // 
+            // alfaT
+            // 
+            this.alfaT.Enabled = false;
+            this.alfaT.Location = new System.Drawing.Point(1109, 265);
+            this.alfaT.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.alfaT.Name = "alfaT";
+            this.alfaT.Size = new System.Drawing.Size(128, 26);
+            this.alfaT.TabIndex = 26;
+            this.alfaT.Text = "0";
+            this.alfaT.Visible = false;
+            this.alfaT.TextChanged += new System.EventHandler(this.alfaT_TextChanged);
+            // 
+            // stepsRWLbl
+            // 
+            this.stepsRWLbl.AutoSize = true;
+            this.stepsRWLbl.Enabled = false;
+            this.stepsRWLbl.Location = new System.Drawing.Point(1109, 166);
+            this.stepsRWLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.stepsRWLbl.Name = "stepsRWLbl";
+            this.stepsRWLbl.Size = new System.Drawing.Size(72, 20);
+            this.stepsRWLbl.TabIndex = 25;
+            this.stepsRWLbl.Text = "Прогноз";
+            this.stepsRWLbl.Visible = false;
+            // 
+            // stepsRWT
+            // 
+            this.stepsRWT.Enabled = false;
+            this.stepsRWT.Location = new System.Drawing.Point(1106, 190);
+            this.stepsRWT.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.stepsRWT.Name = "stepsRWT";
+            this.stepsRWT.Size = new System.Drawing.Size(128, 26);
+            this.stepsRWT.TabIndex = 24;
+            this.stepsRWT.Text = "0";
+            this.stepsRWT.Visible = false;
+            this.stepsRWT.TextChanged += new System.EventHandler(this.stepsRWT_TextChanged);
+            // 
+            // stepsMALbl
+            // 
+            this.stepsMALbl.AutoSize = true;
+            this.stepsMALbl.Enabled = false;
+            this.stepsMALbl.Location = new System.Drawing.Point(968, 235);
+            this.stepsMALbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.stepsMALbl.Name = "stepsMALbl";
+            this.stepsMALbl.Size = new System.Drawing.Size(72, 20);
+            this.stepsMALbl.TabIndex = 23;
+            this.stepsMALbl.Text = "Прогноз";
+            this.stepsMALbl.Visible = false;
+            // 
+            // stepsMAT
+            // 
+            this.stepsMAT.Enabled = false;
+            this.stepsMAT.Location = new System.Drawing.Point(968, 265);
+            this.stepsMAT.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.stepsMAT.Name = "stepsMAT";
+            this.stepsMAT.Size = new System.Drawing.Size(128, 26);
+            this.stepsMAT.TabIndex = 22;
+            this.stepsMAT.Text = "0";
+            this.stepsMAT.Visible = false;
+            this.stepsMAT.TextChanged += new System.EventHandler(this.stepsMAT_TextChanged);
             // 
             // modelNameLbl
             // 
@@ -458,82 +530,12 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
-            // stepsMALbl
-            // 
-            this.stepsMALbl.AutoSize = true;
-            this.stepsMALbl.Enabled = false;
-            this.stepsMALbl.Location = new System.Drawing.Point(968, 235);
-            this.stepsMALbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.stepsMALbl.Name = "stepsMALbl";
-            this.stepsMALbl.Size = new System.Drawing.Size(72, 20);
-            this.stepsMALbl.TabIndex = 23;
-            this.stepsMALbl.Text = "Прогноз";
-            this.stepsMALbl.Visible = false;
-            // 
-            // stepsMAT
-            // 
-            this.stepsMAT.Enabled = false;
-            this.stepsMAT.Location = new System.Drawing.Point(968, 265);
-            this.stepsMAT.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.stepsMAT.Name = "stepsMAT";
-            this.stepsMAT.Size = new System.Drawing.Size(128, 26);
-            this.stepsMAT.TabIndex = 22;
-            this.stepsMAT.Text = "0";
-            this.stepsMAT.Visible = false;
-            this.stepsMAT.TextChanged += new System.EventHandler(this.stepsMAT_TextChanged);
-            // 
-            // stepsRWLbl
-            // 
-            this.stepsRWLbl.AutoSize = true;
-            this.stepsRWLbl.Enabled = false;
-            this.stepsRWLbl.Location = new System.Drawing.Point(1109, 166);
-            this.stepsRWLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.stepsRWLbl.Name = "stepsRWLbl";
-            this.stepsRWLbl.Size = new System.Drawing.Size(72, 20);
-            this.stepsRWLbl.TabIndex = 25;
-            this.stepsRWLbl.Text = "Прогноз";
-            this.stepsRWLbl.Visible = false;
-            // 
-            // stepsRWT
-            // 
-            this.stepsRWT.Enabled = false;
-            this.stepsRWT.Location = new System.Drawing.Point(1106, 190);
-            this.stepsRWT.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.stepsRWT.Name = "stepsRWT";
-            this.stepsRWT.Size = new System.Drawing.Size(128, 26);
-            this.stepsRWT.TabIndex = 24;
-            this.stepsRWT.Text = "0";
-            this.stepsRWT.Visible = false;
-            this.stepsRWT.TextChanged += new System.EventHandler(this.stepsRWT_TextChanged);
-            // 
-            // RWalfaLbl
-            // 
-            this.RWalfaLbl.AutoSize = true;
-            this.RWalfaLbl.Enabled = false;
-            this.RWalfaLbl.Location = new System.Drawing.Point(1109, 235);
-            this.RWalfaLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.RWalfaLbl.Name = "RWalfaLbl";
-            this.RWalfaLbl.Size = new System.Drawing.Size(56, 20);
-            this.RWalfaLbl.TabIndex = 27;
-            this.RWalfaLbl.Text = "Сдвиг";
-            this.RWalfaLbl.Visible = false;
-            // 
-            // alfaT
-            // 
-            this.alfaT.Enabled = false;
-            this.alfaT.Location = new System.Drawing.Point(1109, 265);
-            this.alfaT.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.alfaT.Name = "alfaT";
-            this.alfaT.Size = new System.Drawing.Size(128, 26);
-            this.alfaT.TabIndex = 26;
-            this.alfaT.Text = "0";
-            this.alfaT.Visible = false;
-            this.alfaT.TextChanged += new System.EventHandler(this.alfaT_TextChanged);
-            // 
             // IAD
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
+            this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1254, 800);
             this.Controls.Add(this.scenepanel);
             this.Controls.Add(this.menu);
@@ -542,6 +544,7 @@
             this.Name = "IAD";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ИАД";
+            this.Load += new System.EventHandler(this.IAD_Load);
             this.menu.ResumeLayout(false);
             this.menu.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.scene)).EndInit();
