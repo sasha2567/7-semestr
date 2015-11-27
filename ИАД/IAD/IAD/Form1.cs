@@ -21,6 +21,7 @@ namespace IAD
         int Model = 0;
         int lenghtData = 32;
         int steps;
+        int graphFat = 3, forecastFat = 3, modelFat = 2, borderFat = 1;
         List<PointF> data = new List<PointF>();
         List<PointF> result = new List<PointF>();
         List<PointF> upBorder;
@@ -109,7 +110,7 @@ namespace IAD
                 upBorder.Add(new PointF(result[k + 1].X, result[k + 1].Y + Sy * Student[lenghtData - 1]));
                 bottomBorder.Add(new PointF(result[k + 1].X, result[k + 1].Y - Sy * Student[lenghtData - 1]));
             }
-            pen = new Pen(Color.Blue, 1);
+            pen = new Pen(Color.Blue, borderFat);
             pen.DashStyle = DashStyle.Dash;
             graphBuilder.DrawPlot(pen, upBorder);
             graphBuilder.DrawPlot(pen, bottomBorder);
@@ -118,7 +119,7 @@ namespace IAD
         void CreateGraphicAR()
         {
             //Исходный график
-            pen = new Pen(Color.Red, 2);
+            pen = new Pen(Color.Red, graphFat);
             graphBuilder.DrawPlot(pen, data);
             
             //Тренд
@@ -129,15 +130,16 @@ namespace IAD
             }
             //прогноз по AR
             steps = Convert.ToInt32(stepsART.Text);
+            int exponent = (int)modelARNmr.Value;
             if (steps > 0) 
             { 
-                List<PointF> forecast = AutoR.Forecast(data, steps);
+                List<PointF> forecast = AutoR.Forecast(data, steps,exponent);
                 result = forecast;
                 CreateConfidenceLimits(steps);
-                pen = new Pen(Color.Green, 2);
+                pen = new Pen(Color.Green, forecastFat);
                 graphBuilder.DrawPlot(pen, forecast);
-                List<PointF> model = AutoR.Model(data);
-                pen = new Pen(Color.Black, 2);
+                List<PointF> model = AutoR.Model(data,exponent);
+                pen = new Pen(Color.Black, modelFat);
                 pen.DashStyle = DashStyle.Dash;
                 graphBuilder.DrawPlot(pen, model);
                 for (int i = 1; i < steps + 1; i++)
@@ -150,7 +152,7 @@ namespace IAD
         void CreateGraphicMA()
         {
             //Исходный график
-            pen = new Pen(Color.Red, 2);
+            pen = new Pen(Color.Red, graphFat);
             graphBuilder.DrawPlot(pen, data);
             dataDGV.Rows.Clear();
             for (int i = 0; i < data.Count; i++)
@@ -165,7 +167,7 @@ namespace IAD
                 List<PointF> forecast = MovA.Solve(data, q, steps);
                 result = forecast;
                 CreateConfidenceLimits(steps);
-                pen = new Pen(Color.Green, 2);
+                pen = new Pen(Color.Green, forecastFat);
                 graphBuilder.DrawPlot(pen, forecast);
                 
                 for (int i = 1; i < steps + 1; i++)
@@ -178,7 +180,7 @@ namespace IAD
         void CreateGraphicRW()
         {
             //Исходный график
-            pen = new Pen(Color.Red, 2);
+            pen = new Pen(Color.Red, graphFat);
             graphBuilder.DrawPlot(pen, data);
             dataDGV.Rows.Clear();
             for (int i = 0; i < data.Count; i++)
@@ -194,7 +196,7 @@ namespace IAD
 
                 result = forecast;
                 CreateConfidenceLimits(steps);
-                pen = new Pen(Color.Green, 2);
+                pen = new Pen(Color.Green, forecastFat);
                 graphBuilder.DrawPlot(pen, forecast);
 
                 for (int i = 1; i < steps + 1; i++)
