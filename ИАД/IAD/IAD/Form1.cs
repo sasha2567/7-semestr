@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Timers;
+using System.IO;
 
 namespace IAD
 {
@@ -289,10 +290,14 @@ namespace IAD
             graphBuildBtn.Enabled = true;
             dataDGV.Enabled = true;
             dataLbl.Enabled = true;
+            readBtn.Enabled = true;
+            writeBtn.Enabled = true;
             dataLoadBtn.Visible = true;
             graphBuildBtn.Visible = true;
             dataDGV.Visible = true;
             dataLbl.Visible = true;
+            readBtn.Visible = true;
+            writeBtn.Visible = true;
             
             modelARLbl.Enabled = true;
             modelARNmr.Enabled = true;
@@ -354,10 +359,14 @@ namespace IAD
             graphBuildBtn.Enabled = true;
             dataDGV.Enabled = true;
             dataLbl.Enabled = true;
+            readBtn.Enabled = true;
+            writeBtn.Enabled = true;
             dataLoadBtn.Visible = true;
             graphBuildBtn.Visible = true;
             dataDGV.Visible = true;
             dataLbl.Visible = true;
+            readBtn.Visible = true;
+            writeBtn.Visible = true;
 
             modelARLbl.Enabled = false;
             modelARNmr.Enabled = false;
@@ -426,10 +435,14 @@ namespace IAD
             graphBuildBtn.Enabled = true;
             dataDGV.Enabled = true;
             dataLbl.Enabled = true;
+            readBtn.Enabled = true;
+            writeBtn.Enabled = true;
             dataLoadBtn.Visible = true;
             graphBuildBtn.Visible = true;
             dataDGV.Visible = true;
             dataLbl.Visible = true;
+            readBtn.Visible = true;
+            writeBtn.Visible = true;
 
             modelARLbl.Enabled = false;
             modelARNmr.Enabled = false;
@@ -500,23 +513,42 @@ namespace IAD
         private void alfaT_TextChanged(object sender, EventArgs e)
         {
             string text = alfaT.Text;
-            if (text != "")
+            try
             {
-                try
-                {
-                    Convert.ToDouble(alfaT.Text);
-                }
-                catch
-                {
-                    MessageBox.Show("Введена не цифра с плавающей точкой");
-                    alfaT.Text = "";
-                }
+                Convert.ToDouble(alfaT.Text);
+            }
+            catch
+            {
+                MessageBox.Show("Введена не цифра с плавающей точкой");
+                alfaT.Text = "";
             }
         }
 
-        private void IAD_Load(object sender, EventArgs e)
+        private void readBtn_Click(object sender, EventArgs e)
         {
-
+            openFileDialog1.ShowDialog();
+            try
+            {
+                string fileName = openFileDialog1.FileName;
+                StreamReader stream = new StreamReader(fileName, Encoding.ASCII);
+                char[] separator = new char[3];
+                separator[0] = ' ';
+                separator[1] = ';';
+                data.Clear();
+                while (!stream.EndOfStream)
+                {
+                    string str = stream.ReadLine();
+                    string[] values = str.Split(separator);
+                    data.Add(new PointF((float)Convert.ToDouble(values[0]), (float)Convert.ToDouble(values[1])));
+                }
+                stream.Close();
+                lenghtData = data.Count;
+                modelMANmr.Maximum = lenghtData - 1;
+            }
+            catch
+            {
+                MessageBox.Show("Произошла ошибка при открытии файла.\nПожалуйста повторите попытку.");
+            }
         }
     }
 }
