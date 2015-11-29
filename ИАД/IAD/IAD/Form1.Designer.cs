@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.menu = new System.Windows.Forms.MenuStrip();
             this.модельАвторегрессииToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.модельАвторегрессииToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -68,9 +67,9 @@
             this.scaleXLbl = new System.Windows.Forms.Label();
             this.scaleXTrcBr = new System.Windows.Forms.TrackBar();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.colorDialog1 = new System.Windows.Forms.ColorDialog();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.readBtn = new System.Windows.Forms.Button();
+            this.writeBtn = new System.Windows.Forms.Button();
             this.menu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.scene)).BeginInit();
             this.scenepanel.SuspendLayout();
@@ -181,6 +180,8 @@
             // 
             // scenepanel
             // 
+            this.scenepanel.Controls.Add(this.writeBtn);
+            this.scenepanel.Controls.Add(this.readBtn);
             this.scenepanel.Controls.Add(this.RWalfaLbl);
             this.scenepanel.Controls.Add(this.alfaT);
             this.scenepanel.Controls.Add(this.stepsRWLbl);
@@ -530,6 +531,31 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
+            // readBtn
+            // 
+            this.readBtn.Enabled = false;
+            this.readBtn.Location = new System.Drawing.Point(357, 671);
+            this.readBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.readBtn.Name = "readBtn";
+            this.readBtn.Size = new System.Drawing.Size(105, 69);
+            this.readBtn.TabIndex = 28;
+            this.readBtn.Text = "Чтение из файла";
+            this.readBtn.UseVisualStyleBackColor = true;
+            this.readBtn.Visible = false;
+            this.readBtn.Click += new System.EventHandler(this.readBtn_Click);
+            // 
+            // writeBtn
+            // 
+            this.writeBtn.Enabled = false;
+            this.writeBtn.Location = new System.Drawing.Point(470, 671);
+            this.writeBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.writeBtn.Name = "writeBtn";
+            this.writeBtn.Size = new System.Drawing.Size(105, 69);
+            this.writeBtn.TabIndex = 29;
+            this.writeBtn.Text = "Запись в файл";
+            this.writeBtn.UseVisualStyleBackColor = true;
+            this.writeBtn.Visible = false;
+            // 
             // IAD
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -544,7 +570,6 @@
             this.Name = "IAD";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ИАД";
-            this.Load += new System.EventHandler(this.IAD_Load);
             this.menu.ResumeLayout(false);
             this.menu.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.scene)).EndInit();
@@ -575,8 +600,6 @@
         private System.Windows.Forms.Button dataLoadBtn;
         private System.Windows.Forms.Panel scenepanel;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
-        private System.Windows.Forms.ColorDialog colorDialog1;
-        private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label scaleYLbl;
         private System.Windows.Forms.TrackBar scaleYTrcBr;
         private System.Windows.Forms.Label scaleXLbl;
@@ -604,6 +627,8 @@
         private System.Windows.Forms.TextBox stepsRWT;
         private System.Windows.Forms.Label RWalfaLbl;
         private System.Windows.Forms.TextBox alfaT;
+        private System.Windows.Forms.Button writeBtn;
+        private System.Windows.Forms.Button readBtn;
     }
 }
 
