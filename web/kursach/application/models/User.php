@@ -14,8 +14,6 @@ class User extends CI_Model {
      * add data
      */
     function add($data){
-        $id = count($this->getlist()) + 1;
-        $data[$this->key_id] = $id;
         $this->db->insert($this->table, $data);
     }
 
@@ -36,7 +34,7 @@ class User extends CI_Model {
     }
 
     /**
-     * get info about good
+     * get info
      */
     function get($id){
         $this->db->where($this->key_id, $id);
@@ -46,7 +44,7 @@ class User extends CI_Model {
 
 
     /**
-     * get info about good
+     * get info
      */
     function getUser($username)
     {
@@ -56,7 +54,7 @@ class User extends CI_Model {
     }
 
     /**
-     * get list of goods
+     * get list
      */
     function getlist(){
         $query = $this->db->get($this->table);

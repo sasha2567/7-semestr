@@ -1,31 +1,56 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Страница редактирования рецептов</title>
-</head>
-<body>
-Панель администрирования сайта http://justcooking.16mb.com
-<?php
-require_once 'menu.php';
-?>
-Все 
-<?php
-$attributes = array(
-    'class' => 'recipe_redact', 
-    'id' => 'form_redact_recipe'
-);
-echo form_open('adminredact/redact/'.$recipe_id, $attributes); 
-?>
-<label>Название</label>
-<input type="text" name="recipe_description" value="<?=$description?>"/>
-<br />
-<label>Ингридиенты</label>
-<input type="text" name="recipe_ingredients" value="<?=$ingredients?>"/>
-<br />
-<label>Рецепт</label>
-<textarea rows="10" cols="80" name="recipe_recipe"><?=$recipe?></textarea>
-<br />
-<input type="submit" name="recipe_redact_btn" value="Сохранить изменения в рецепте" />
-<?php form_close();?>
-</body>
-</html>
+            <div id="templatemo_right_col">
+                 
+                <div class="templatemo_gallery">
+                    <div clacc="image">
+                        <img src="<?=base_url();?>images/<?=$item['image']?>" height="150" width="150"/>
+                    </div>
+
+                    <div class="templatemo_title">
+                        <?=$item['description']?>                        
+                    </div>
+                </div>
+                <div class="templatemo_post_area">
+                    <?php
+                    foreach ($products as $value) {
+                    ?>
+                    <h1><?=$value['product']." : ".$value['count']." ".$value['type']?></h1>
+                    <?php 
+                    }
+                    ?>
+                </div>
+                <p>
+                    <?=$item['recipe']?>
+                </p> 
+
+                <div class="templatemo_section">
+                <?php
+                foreach ($coments as $value) {
+                ?>
+                    <h1>Пользователь : <?=$value->user['username'];?></h1>
+                    <h2><?=$value->coment['datetime']?></h2>
+                    <p><?=$value->coment['coment']?></p>
+                <?php
+                }
+                ?>
+                </div>
+                <?php
+                    if(isset($username) && $username !== FALSE){
+                ?>
+                        <div id="coment_form">
+                <?php
+                        $attributes = array(
+                            'class' => 'user_login', 
+                            'id' => 'form_add_coment'
+                        );
+                        echo form_open('users/recipes/addcoment/'.$item['recipe_id'], $attributes); 
+                ?>
+                            <label>Коментарий</label>
+                            <textarea rows="4" cols="68" name="coment_user"></textarea>
+                            <br />
+                            <input type="submit" name="add_coment_user" value="Добавить коментарий" />
+                        
+                <?php 
+                        echo form_close();
+                    }
+                ?>
+                        </div>
