@@ -40,6 +40,8 @@
             this.gridBtn = new System.Windows.Forms.Button();
             this.dataLoadBtn = new System.Windows.Forms.Button();
             this.scenepanel = new System.Windows.Forms.Panel();
+            this.writeBtn = new System.Windows.Forms.Button();
+            this.readBtn = new System.Windows.Forms.Button();
             this.RWalfaLbl = new System.Windows.Forms.Label();
             this.alfaT = new System.Windows.Forms.TextBox();
             this.stepsRWLbl = new System.Windows.Forms.Label();
@@ -68,8 +70,6 @@
             this.scaleXTrcBr = new System.Windows.Forms.TrackBar();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
-            this.readBtn = new System.Windows.Forms.Button();
-            this.writeBtn = new System.Windows.Forms.Button();
             this.menu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.scene)).BeginInit();
             this.scenepanel.SuspendLayout();
@@ -214,6 +214,31 @@
             this.scenepanel.Name = "scenepanel";
             this.scenepanel.Size = new System.Drawing.Size(1254, 758);
             this.scenepanel.TabIndex = 1;
+            // 
+            // writeBtn
+            // 
+            this.writeBtn.Enabled = false;
+            this.writeBtn.Location = new System.Drawing.Point(470, 671);
+            this.writeBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.writeBtn.Name = "writeBtn";
+            this.writeBtn.Size = new System.Drawing.Size(105, 69);
+            this.writeBtn.TabIndex = 29;
+            this.writeBtn.Text = "Запись в файл";
+            this.writeBtn.UseVisualStyleBackColor = true;
+            this.writeBtn.Visible = false;
+            // 
+            // readBtn
+            // 
+            this.readBtn.Enabled = false;
+            this.readBtn.Location = new System.Drawing.Point(357, 671);
+            this.readBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.readBtn.Name = "readBtn";
+            this.readBtn.Size = new System.Drawing.Size(105, 69);
+            this.readBtn.TabIndex = 28;
+            this.readBtn.Text = "Чтение из файла";
+            this.readBtn.UseVisualStyleBackColor = true;
+            this.readBtn.Visible = false;
+            this.readBtn.Click += new System.EventHandler(this.readBtn_Click);
             // 
             // RWalfaLbl
             // 
@@ -393,7 +418,7 @@
             // 
             this.stepsARLbl.AutoSize = true;
             this.stepsARLbl.Enabled = false;
-            this.stepsARLbl.Location = new System.Drawing.Point(819, 235);
+            this.stepsARLbl.Location = new System.Drawing.Point(825, 235);
             this.stepsARLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.stepsARLbl.Name = "stepsARLbl";
             this.stepsARLbl.Size = new System.Drawing.Size(72, 20);
@@ -422,7 +447,7 @@
             // stepsART
             // 
             this.stepsART.Enabled = false;
-            this.stepsART.Location = new System.Drawing.Point(819, 265);
+            this.stepsART.Location = new System.Drawing.Point(825, 265);
             this.stepsART.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.stepsART.Name = "stepsART";
             this.stepsART.Size = new System.Drawing.Size(128, 26);
@@ -434,7 +459,7 @@
             // modelARNmr
             // 
             this.modelARNmr.Enabled = false;
-            this.modelARNmr.Location = new System.Drawing.Point(819, 191);
+            this.modelARNmr.Location = new System.Drawing.Point(825, 191);
             this.modelARNmr.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.modelARNmr.Maximum = new decimal(new int[] {
             2,
@@ -455,7 +480,7 @@
             // 
             this.modelARLbl.AutoSize = true;
             this.modelARLbl.Enabled = false;
-            this.modelARLbl.Location = new System.Drawing.Point(819, 166);
+            this.modelARLbl.Location = new System.Drawing.Point(825, 166);
             this.modelARLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.modelARLbl.Name = "modelARLbl";
             this.modelARLbl.Size = new System.Drawing.Size(139, 20);
@@ -530,31 +555,6 @@
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
-            // 
-            // readBtn
-            // 
-            this.readBtn.Enabled = false;
-            this.readBtn.Location = new System.Drawing.Point(357, 671);
-            this.readBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.readBtn.Name = "readBtn";
-            this.readBtn.Size = new System.Drawing.Size(105, 69);
-            this.readBtn.TabIndex = 28;
-            this.readBtn.Text = "Чтение из файла";
-            this.readBtn.UseVisualStyleBackColor = true;
-            this.readBtn.Visible = false;
-            this.readBtn.Click += new System.EventHandler(this.readBtn_Click);
-            // 
-            // writeBtn
-            // 
-            this.writeBtn.Enabled = false;
-            this.writeBtn.Location = new System.Drawing.Point(470, 671);
-            this.writeBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.writeBtn.Name = "writeBtn";
-            this.writeBtn.Size = new System.Drawing.Size(105, 69);
-            this.writeBtn.TabIndex = 29;
-            this.writeBtn.Text = "Запись в файл";
-            this.writeBtn.UseVisualStyleBackColor = true;
-            this.writeBtn.Visible = false;
             // 
             // IAD
             // 
