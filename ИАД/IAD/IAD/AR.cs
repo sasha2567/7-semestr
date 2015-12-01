@@ -14,70 +14,28 @@ namespace IAD
         public float coefB;
         public float coefC;
 
-        private float[] determinant2x2(int n,float[] yt, float[] yt1)
+        private float[] determinant2x2(PointF y, PointF y1, PointF y2)
         {
             float[] result = new float[2];
-            float sumyt = 0;
-            for (int i = 0; i < yt.Length;i++ )
-            {
-                sumyt += yt[i];
-            }
-            float sumyt1 = 0;
-            for (int i = 0; i < yt1.Length; i++)
-            {
-                sumyt1 += yt1[i];
-            }
-            float sumy2t = 0;
-            for (int i = 0; i < yt.Length; i++)
-            {
-                sumy2t += yt[i] * yt[i];
-            }
-            float sumytyt1 = 0;
-            for (int i = 0; i < (yt.Length < yt1.Length ? yt.Length : yt1.Length); i++)
-            {
-                sumytyt1 += yt[i] * yt1[i];
-            }
-            float det0 = n * sumy2t - sumyt * sumyt1;
-            float det1 = (sumyt * sumy2t - sumyt1 * sumytyt1) / det0;
-            float det2 = (n * sumytyt1 - sumyt * sumyt) / det0;
+            float det1 = (y.Y - y1.Y) / (y1.Y - y2.Y);
+            float det2 = (y1.Y * y1.Y - y.Y * y2.Y) / (y1.Y - y2.Y);
             result[0] = det1;
             result[1] = det2;
             return result;
         }
 
-        private float[] determinant3x3(int n, float[] yt, float[] yt1, float[] yt2)
+        private float[] determinant3x3(PointF y, PointF y1, PointF y2, PointF y3, PointF y4)
         {
             float[] result = new float[3];
-            float sumyt = 0;
-            for (int i = 0; i < yt.Length; i++)
-            {
-                sumyt += yt[i];
-            }
-            float sumyt1 = 0;
-            for (int i = 0; i < yt1.Length; i++)
-            {
-                sumyt1 += yt1[i];
-            }
-            float sumyt2 = 0;
-            for (int i = 0; i < yt1.Length; i++)
-            {
-                sumyt2 += yt1[i];
-            }
-            float sumy2t1 = 0;
-            for (int i = 0; i < yt.Length; i++)
-            {
-                sumy2t1 += yt1[i] * yt1[i];
-            }
-            float sumy2t2 = 0;
-            for (int i = 0; i < yt.Length; i++)
-            {
-                sumy2t2 += yt2[i] * yt2[i];
-            }
-            float sumytyt1 = 0;
-            for (int i = 0; i < (yt.Length < yt1.Length ? yt.Length : yt1.Length); i++)
-            {
-                sumytyt1 += yt[i] * yt1[i];
-            }
+            float det1 = (y4.Y * y.Y * y.Y - 2 * y1.Y * y2.Y * y3.Y + y2.Y * y2.Y * y2.Y - y.Y * y2.Y * y4.Y + y.Y * y3.Y * y3.Y) /
+                (y2.Y * y2.Y - y2.Y * y3.Y - y4.Y * y2.Y + y3.Y * y3.Y - y1.Y * y3.Y + y1.Y * y4.Y);
+            float det2 = (y2.Y * y2.Y + y.Y * y3.Y - y.Y * y4.Y - y1.Y * y2.Y + y1.Y * y4.Y - y2.Y * y3.Y) /
+                (y2.Y * y2.Y - y2.Y * y3.Y - y4.Y * y2.Y + y3.Y * y3.Y - y1.Y * y3.Y + y1.Y * y4.Y);
+            float det3 = (y1.Y * y1.Y - y1.Y * y2.Y - y1.Y * y3.Y + y2.Y * y2.Y - y.Y * y2.Y + y.Y * y3.Y) /
+                (y2.Y * y2.Y - y2.Y * y3.Y - y4.Y * y2.Y + y3.Y * y3.Y - y1.Y * y3.Y + y1.Y * y4.Y);
+            result[0] = det1;
+            result[1] = det2;
+            result[2] = det3;
             return result;
         }
 
@@ -86,6 +44,7 @@ namespace IAD
             if (steps > 0)
             {
                 List<PointF> result = new List<PointF>(steps + 1);
+                List<PointF> temp = new List<PointF>(inmass.Count + steps);
                 result.Add(new PointF(inmass[inmass.Count - 1].X, inmass[inmass.Count - 1].Y));
                 float step = 0;
                 for (int i = 1; i < inmass.Count; i++)
@@ -93,78 +52,58 @@ namespace IAD
                 step /= inmass.Count - 1;
                 if (exponent == 1)
                 {
-                    float[] y = new float[inmass.Count - 1];
-                    float[] y1 = new float[inmass.Count - 1];
-                    for(int i=1; i<inmass.Count - 1;i++)
-                    {
-                        y[i]=inmass[i].Y;
-                        y1[i] = inmass[i-1].Y;
-                    }
-                    float[] res = determinant2x2(inmass.Count - 1,y,y1);
+
+                    float[] res = determinant2x2(result[0], inmass[inmass.Count - 2], inmass[inmass.Count - 3]);
                     coefA = res[0];
                     coefB = res[1];
-                    for (int i = 1; i <= steps; i++)
+                    result.Add(new PointF(result[0].X + step, coefB + coefA * result[0].Y));
+                    
+                    res = determinant2x2(result[1], result[0], inmass[inmass.Count - 2]);
+                    coefA = res[0];
+                    coefB = res[1];
+                    result.Add(new PointF(result[1].X + step, coefB + coefA * result[1].Y));
+                    for (int i = 2; i <= steps; i++)
                     {
-                        result.Add(new PointF(result[i - 1].X + step,
-                            coefA + coefB * result[i - 1].Y));
+                        res = determinant2x2(result[i], result[i - 1], result[i - 2]);
+                        coefA = res[0];
+                        coefB = res[1];
+                        result.Add(new PointF(result[i].X + step,
+                            coefB + coefA * result[i].Y));
                     }
                     return result;
                 }
-                if (exponent == 2)
+                if (exponent == 2 && inmass.Count >= 5)
                 {
-                    coefA = (
-                        inmass[inmass.Count - 5].Y * inmass[inmass.Count - 2].Y * inmass[inmass.Count - 2].Y -
-                        2 * inmass[inmass.Count - 2].Y * inmass[inmass.Count - 3].Y * inmass[inmass.Count - 4].Y +
-                        inmass[inmass.Count - 3].Y * inmass[inmass.Count - 3].Y * inmass[inmass.Count - 3].Y -
-                        inmass[inmass.Count - 1].Y * inmass[inmass.Count - 5].Y * inmass[inmass.Count - 3].Y +
-                        inmass[inmass.Count - 1].Y * inmass[inmass.Count - 4].Y * inmass[inmass.Count - 4].Y
-                        ) /
-                        (
-                        inmass[inmass.Count - 3].Y * inmass[inmass.Count - 3].Y -
-                        inmass[inmass.Count - 3].Y * inmass[inmass.Count - 4].Y -
-                        inmass[inmass.Count - 5].Y * inmass[inmass.Count - 3].Y +
-                        inmass[inmass.Count - 4].Y * inmass[inmass.Count - 4].Y -
-                        inmass[inmass.Count - 2].Y * inmass[inmass.Count - 4].Y +
-                        inmass[inmass.Count - 2].Y * inmass[inmass.Count - 5].Y
-                        );
-                    coefB = (
-                        inmass[inmass.Count - 3].Y * inmass[inmass.Count - 3].Y +
-                        inmass[inmass.Count - 1].Y * inmass[inmass.Count - 4].Y -
-                        inmass[inmass.Count - 1].Y * inmass[inmass.Count - 5].Y -
-                        inmass[inmass.Count - 2].Y * inmass[inmass.Count - 3].Y +
-                        inmass[inmass.Count - 2].Y * inmass[inmass.Count - 5].Y -
-                        inmass[inmass.Count - 3].Y * inmass[inmass.Count - 4].Y
-                        ) /
-                        (
-                        inmass[inmass.Count - 3].Y * inmass[inmass.Count - 3].Y -
-                        inmass[inmass.Count - 3].Y * inmass[inmass.Count - 4].Y -
-                        inmass[inmass.Count - 5].Y * inmass[inmass.Count - 3].Y +
-                        inmass[inmass.Count - 4].Y * inmass[inmass.Count - 4].Y -
-                        inmass[inmass.Count - 2].Y * inmass[inmass.Count - 4].Y +
-                        inmass[inmass.Count - 2].Y * inmass[inmass.Count - 5].Y
-                        );
-                    coefC = (
-                        inmass[inmass.Count - 2].Y * inmass[inmass.Count - 2].Y -
-                        inmass[inmass.Count - 2].Y * inmass[inmass.Count - 3].Y -
-                        inmass[inmass.Count - 4].Y * inmass[inmass.Count - 2].Y +
-                        inmass[inmass.Count - 3].Y * inmass[inmass.Count - 3].Y -
-                        inmass[inmass.Count - 1].Y * inmass[inmass.Count - 3].Y +
-                        inmass[inmass.Count - 1].Y * inmass[inmass.Count - 4].Y
-                        ) /
-                        (
-                        inmass[inmass.Count - 3].Y * inmass[inmass.Count - 3].Y -
-                        inmass[inmass.Count - 3].Y * inmass[inmass.Count - 4].Y -
-                        inmass[inmass.Count - 5].Y * inmass[inmass.Count - 3].Y +
-                        inmass[inmass.Count - 4].Y * inmass[inmass.Count - 4].Y -
-                        inmass[inmass.Count - 2].Y * inmass[inmass.Count - 4].Y +
-                        inmass[inmass.Count - 2].Y * inmass[inmass.Count - 5].Y
-                        );
-                    result.Add(new PointF(inmass[inmass.Count - 1].X + step,
-                        coefA + coefB * inmass[inmass.Count - 1].Y + coefC * inmass[inmass.Count - 2].Y));
-                    for (int i = 2; i <= steps; i++)
+                    float[] res = determinant3x3(result[0], inmass[inmass.Count - 2], inmass[inmass.Count - 3], inmass[inmass.Count - 4], inmass[inmass.Count - 5]);
+                    coefA = res[0];
+                    coefB = res[1];
+                    coefC = res[2];
+                    result.Add(new PointF(result[0].X + step, coefA + coefB * result[0].Y + coefC * inmass[inmass.Count - 2].Y));
+                    
+                    res = determinant3x3(result[1], result[0], inmass[inmass.Count - 2], inmass[inmass.Count - 3], inmass[inmass.Count - 4]);
+                    coefA = res[0];
+                    coefB = res[1];
+                    coefC = res[2];
+                    result.Add(new PointF(result[1].X + step, coefA + coefB * result[1].Y + coefC * result[0].Y));
+                    
+                    res = determinant3x3(result[2], result[1], result[1], inmass[inmass.Count - 2], inmass[inmass.Count - 3]);
+                    coefA = res[0];
+                    coefB = res[1];
+                    coefC = res[2];
+                    result.Add(new PointF(result[2].X + step, coefA + coefB * result[2].Y + coefC * result[1].Y));
+                    
+                    res = determinant3x3(result[3], result[2], result[1], result[1], inmass[inmass.Count - 2]);
+                    coefA = res[0];
+                    coefB = res[1];
+                    coefC = res[2];
+                    result.Add(new PointF(result[3].X + step, coefA + coefB * result[3].Y + coefC * result[2].Y));
+                    for (int i = 4; i <= steps; i++)
                     {
-                        result.Add(new PointF(result[i - 1].X + step,
-                            coefA + coefB * result[i - 1].Y + coefC * result[i - 2].Y));
+                        res = determinant3x3(result[i], result[i - 1], result[i - 2], result[i - 3], result[i - 4]);
+                        coefA = res[0];
+                        coefB = res[1];
+                        coefC = res[2];
+                        result.Add(new PointF(result[i].X + step, coefA + coefB * result[i].Y + coefC * result[i - 1].Y));
                     }
                     return result;
                 }
@@ -178,17 +117,30 @@ namespace IAD
             result.Add(new PointF(inmass[0].X, inmass[0].Y));
             if (exponent == 1)
             {
-                for (int i = 1; i < inmass.Count; i++)
+                float[] res = determinant2x2(inmass[2], inmass[1], inmass[0]);
+                coefA = res[0];
+                coefB = res[1];
+                result.Add(new PointF(inmass[1].X, coefB + coefA * inmass[0].Y));
+                for (int i = 2; i < inmass.Count; i++)
                 {
-                    result.Add(new PointF(inmass[i].X, coefA + coefB * inmass[i - 1].Y));
+                    res = determinant2x2(inmass[i], inmass[i - 1], inmass[i - 2]);
+                    coefA = res[0];
+                    coefB = res[1];
+                    result.Add(new PointF(inmass[i].X, coefB + coefA * inmass[i - 1].Y));
                 }
                 return result;
             }
             if (exponent == 2)
             {
                 result.Add(new PointF(inmass[1].X, inmass[1].Y));
-                for (int i = 2; i < inmass.Count; i++)
+                result.Add(new PointF(inmass[2].X, inmass[2].Y));
+                result.Add(new PointF(inmass[3].X, inmass[3].Y));
+                float[] res = new float[3];
+                for (int i = 4; i < inmass.Count; i++)
                 {
+                    res = determinant3x3(inmass[i], inmass[i-1], inmass[i-2], inmass[i-3], inmass[i-4]);
+                    coefA = res[0];
+                    coefB = res[1];
                     result.Add(new PointF(inmass[i].X, coefA + coefB * inmass[i - 1].Y + coefC * inmass[i - 2].Y));
                 }
                 return result;
