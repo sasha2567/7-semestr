@@ -513,6 +513,7 @@ namespace IAD
         private void alfaT_TextChanged(object sender, EventArgs e)
         {
             string text = alfaT.Text;
+            if(text != "-")
             try
             {
                 Convert.ToDouble(alfaT.Text);
