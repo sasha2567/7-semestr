@@ -1,0 +1,1 @@
+document.write("<script type=\"text\/javascript\">var between_type=\"adj\";var btw_click3rd_251297 = 'http://ddc.advertur.ru/click/';document.write('<script type = \"text\/javascript\" src = \"\/\/ddpnt.advertur.ru\/sections\/251297.js\"><\/scr'+'ipt>')<\/script>");

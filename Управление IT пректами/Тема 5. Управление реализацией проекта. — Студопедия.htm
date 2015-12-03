@@ -1,0 +1,749 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html g_init="6665"><head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<title>Тема 5. Управление реализацией проекта. — Студопедия</title>
+<link href="%D0%A2%D0%B5%D0%BC%D0%B0%205.%20%D0%A3%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5%20%D1%80%D0%B5%D0%B0%D0%BB%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D0%B5%D0%B9%20%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D0%B0.%20%E2%80%94%20%D0%A1%D1%82%D1%83%D0%B4%D0%BE%D0%BF%D0%B5%D0%B4%D0%B8%D1%8F_files/style.css" rel="stylesheet" type="text/css">
+<script src="%D0%A2%D0%B5%D0%BC%D0%B0%205.%20%D0%A3%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5%20%D1%80%D0%B5%D0%B0%D0%BB%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D0%B5%D0%B9%20%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D0%B0.%20%E2%80%94%20%D0%A1%D1%82%D1%83%D0%B4%D0%BE%D0%BF%D0%B5%D0%B4%D0%B8%D1%8F_files/async-ads.js" async=""></script><script src="%D0%A2%D0%B5%D0%BC%D0%B0%205.%20%D0%A3%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5%20%D1%80%D0%B5%D0%B0%D0%BB%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D0%B5%D0%B9%20%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D0%B0.%20%E2%80%94%20%D0%A1%D1%82%D1%83%D0%B4%D0%BE%D0%BF%D0%B5%D0%B4%D0%B8%D1%8F_files/code.js" async="" type="text/javascript"></script><script src="%D0%A2%D0%B5%D0%BC%D0%B0%205.%20%D0%A3%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5%20%D1%80%D0%B5%D0%B0%D0%BB%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D0%B5%D0%B9%20%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D0%B0.%20%E2%80%94%20%D0%A1%D1%82%D1%83%D0%B4%D0%BE%D0%BF%D0%B5%D0%B4%D0%B8%D1%8F_files/cse.js" async="" type="text/javascript"></script><script charset="windows-1251" type="text/javascript" src="%D0%A2%D0%B5%D0%BC%D0%B0%205.%20%D0%A3%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5%20%D1%80%D0%B5%D0%B0%D0%BB%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D0%B5%D0%B9%20%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D0%B0.%20%E2%80%94%20%D0%A1%D1%82%D1%83%D0%B4%D0%BE%D0%BF%D0%B5%D0%B4%D0%B8%D1%8F_files/show.js"></script>
+<style id="ya_share_style" type="text/css">.b-share-form-button{font:86%/17px Verdana,Arial,sans-serif;display:-moz-inline-box;display:inline-block;position:relative;height:19px;margin:0 3px;padding:0 4px;cursor:default;white-space:nowrap;text-decoration:none!important;color:#000!important;border:none;outline:none;background:url("//yastatic.net/share/static/b-share-form-button.png") 0 -20px repeat-x}.b-share-form-button:link:hover,.b-share-form-button:visited:hover{color:#000!important}.b-share-form-button__before,.b-share-form-button__after{position:absolute;width:3px;height:19px;background:url("//yastatic.net/share/static/b-share-form-button.png")}.b-share-form-button__before{margin-left:-7px}.b-share-form-button__after{margin-left:4px;background-position:-3px 0}.b-share-form-button::-moz-focus-inner{border:none}button.b-share-form-button .b-share-form-button__before,button.b-share-form-button .b-share-form-button__after{margin-top:-1px}@-moz-document url-prefix(){button.b-share-form-button .b-share-form-button__after{margin-top:-2px;margin-left:6px}button.b-share-form-button .b-share-form-button__before{margin-top:-2px;margin-left:-9px}}SPAN.b-share-form-button:hover,.b-share-form-button_state_hover{background-position:0 -60px}SPAN.b-share-form-button:hover .b-share-form-button__before,.b-share-form-button_state_hover .b-share-form-button__before{background-position:0 -40px}SPAN.b-share-form-button:hover .b-share-form-button__after,.b-share-form-button_state_hover .b-share-form-button__after{background-position:-3px -40px}.b-share-form-button_state_pressed,.b-share-form-button_state_pressed .b-share-form-button_share{background-position:0 -100px!important}.b-share-form-button_state_pressed .b-share-form-button__before{background-position:0 -80px!important}.b-share-form-button_state_pressed .b-share-form-button__after{background-position:-3px -80px!important}button.b-share-form-button_state_pressed{overflow:visible}.b-share-form-button_icons{position:relative;padding:0;background-position:0 -20px!important}.b-share-form-button_icons .b-share-form-button__before{left:0;margin-left:-3px;background-position:0 0!important}.b-share-form-button_icons .b-share-form-button__after{z-index:-1;margin-left:0;background-position:-3px 0!important}.b-share-form-button_icons .b-share__handle{padding:2px!important}.b-share-form-button_icons .b-share__handle_more{position:relative;padding-right:6px!important;margin-right:-4px}.b-share-form-button_icons .b-share-icon{opacity:.5;background-image:url("//yastatic.net/share/static/b-share-icon_size_14.png")}.b-share-form-button_icons A.b-share__handle:hover .b-share-icon{opacity:1}.b-share{font:86%/1.4545em Arial,sans-serif;display:-moz-inline-box;display:inline-block;padding:1px 3px 1px 4px!important;vertical-align:middle}.b-share .b-share-form-button{font-size:1em}.b-share__text .b-share-icon{margin:0 5px 0 0;border:none}.b-share__text{margin-right:5px}.b-share__handle{float:left;height:16px;padding:5px 3px 5px 2px!important;cursor:pointer;text-align:left;text-decoration:none!important}.b-share__handle_cursor_default{cursor:default}.b-share__handle .b-share-form-button{margin-top:-2px}.b-share__hr{display:none;float:left;width:1px;height:26px;margin:0 3px 0 2px}a.b-share__handle:hover .b-share__text{text-decoration:underline;color:red}.b-share_bordered{padding:0 2px 0 3px!important;border:1px solid #E4E4E4;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px}.b-share_bordered .b-share__hr{display:inline;background:#E4E4E4}.b-share_link{margin:-8px 0}a.b-share_link{margin:0}.b-share_link .b-share__text{text-decoration:underline;color:#1A3DC1}.b-share-form-button_share{padding-left:26px!important;vertical-align:top}.b-share-form-button_share .b-share-form-button__before{margin-left:-29px}.b-share-form-button_share .b-share-form-button__icon{position:absolute;width:20px;height:17px;margin:1px 0 0 -23px;background:url("//yastatic.net/share/static/b-share-form-button_share__icon.png") 0 0 no-repeat}.b-share-pseudo-link{border-bottom:1px dotted;cursor:pointer;text-decoration:none!important}.b-share_font_fixed{font-size:11px}.b-share__handle_more{font-size:9px;margin-top:-1px;color:#7B7B7B}A.b-share__handle_more:hover{color:#000}.b-share__group{float:left}.b-share-icon{float:left;display:inline;overflow:hidden;width:16px;height:16px;padding:0!important;vertical-align:top;border:0;background:url("//yastatic.net/share/static/b-share-icon.png") 0 99px no-repeat}.b-share-icon_vkontakte,.b-share-icon_custom{background-position:0 0}.b-share-icon_yaru,.b-share-icon_yaru_photo,.b-share-icon_yaru_wishlist{background-position:0 -17px}.b-share-icon_lj{background-position:0 -34px}.b-share-icon_twitter{background-position:0 -51px}.b-share-icon_facebook{background-position:0 -68px}.b-share-icon_moimir{background-position:0 -85px}.b-share-icon_friendfeed{background-position:0 -102px}.b-share-icon_mail{background-position:0 -119px}.b-share-icon_html{background-position:0 -136px}.b-share-icon_postcard{background-position:0 -153px}.b-share-icon_odnoklassniki{background-position:0 -170px}.b-share-icon_blogger{background-position:0 -187px}.b-share-icon_delicious{background-position:0 -221px}.b-share-icon_gbuzz{background-position:0 -238px}.b-share-icon_linkedin{background-position:0 -255px}.b-share-icon_myspace{background-position:0 -272px}.b-share-icon_evernote{background-position:0 -289px}.b-share-icon_digg{background-position:0 -306px}.b-share-icon_juick{background-position:0 -324px}.b-share-icon_moikrug{background-position:0 -341px}.b-share-icon_yazakladki{background-position:0 -358px}.b-share-icon_liveinternet{background-position:0 -375px}.b-share-icon_tutby{background-position:0 -392px}.b-share-icon_diary{background-position:0 -409px}.b-share-icon_gplus{background-position:0 -426px}.b-share-icon_pocket{background-position:0 -443px}.b-share-icon_surfingbird{background-position:0 -460px}.b-share-icon_pinterest{background-position:0 -477px}.b-share-icon_renren{background-position:0 0}.b-share-icon_renren,.b-share-icon_sina_weibo{background:url("//yastatic.net/share/static/b-share-icon__china.png") no-repeat}.b-share-icon_sina_weibo{background-position:-18px 0}.b-share-icon_qzone{background-position:-36px 0}.b-share-icon_qzone,.b-share-icon_tencent_weibo{background:url("//yastatic.net/share/static/b-share-icon__china.png") no-repeat}.b-share-icon_tencent_weibo{background-position:-54px 0}.b-share_theme_counter .b-share{display:inline-block;vertical-align:middle;white-space:nowrap}.b-share-counter{font:14px Arial,sans-serif;line-height:18px;display:none;float:left;margin:3px 6px 3px 3px;color:#fff}.b-share_theme_counter .b-share_type_small .b-share-counter{font-size:11px;line-height:14px;margin:2px 6px 2px 1px}.b-share_theme_counter .b-share-btn__counter .b-share-counter{display:block}.b-share-btn__counter{text-decoration:none}.b-share_theme_counter .b-share-btn__wrap{position:relative;float:left;margin-left:5px}.b-share_theme_counter .b-share_type_small .b-share-btn__wrap{margin-left:4px}.b-share_theme_counter .b-share-btn__wrap:first-child{margin-left:0}.b-share_theme_counter .b-share__link{display:inline-block;cursor:pointer;-webkit-border-radius:3px;border-radius:3px}.b-share_theme_counter .b-share_type_small .b-share__link{-webkit-border-radius:2px;border-radius:2px}.b-share_theme_counter .b-share-icon{display:block;float:left;width:24px;height:24px;background-image:url("//yastatic.net/share/static/b-share_counter_large.png");background-position:-20px 0}.b-share_theme_counter .b-share_type_small .b-share-icon{width:18px;height:18px;background-image:url("//yastatic.net/share/static/b-share_counter_small.png")}.b-share_theme_counter .b-share-icon_facebook{background-position:0 0}.b-share_theme_counter .b-share-btn__facebook{background-color:#3c5a98}.b-share_theme_counter .b-share-btn__facebook:hover{background-color:#30487a}.b-share_theme_counter .b-share-btn__facebook:active{border-top:2px solid #24365a;background-color:#334d81}.b-share_theme_counter .b-share-icon_moimir{background-position:0 -29px}.b-share_theme_counter .b-share-btn__moimir{background-color:#226eb7}.b-share_theme_counter .b-share-btn__moimir:hover{background-color:#1b5892}.b-share_theme_counter .b-share-btn__moimir:active{border-top:2px solid #14426d;background-color:#1d5e9c}.b-share_theme_counter .b-share-icon_vkontakte{background-position:0 -58px}.b-share_theme_counter .b-share-btn__vkontakte{background-color:#48729e}.b-share_theme_counter .b-share-btn__vkontakte:hover{background-color:#3a5b7e}.b-share_theme_counter .b-share-btn__vkontakte:active{border-top:2px solid #2b445e;background-color:#3d6186}.b-share_theme_counter .b-share-icon_twitter{background-position:0 -87px}.b-share_theme_counter .b-share-btn__twitter{background-color:#00aced}.b-share_theme_counter .b-share-btn__twitter:hover{background-color:#008abe}.b-share_theme_counter .b-share-btn__twitter:active{border-top:2px solid #00668d;background-color:#0092ca}.b-share_theme_counter .b-share-icon_odnoklassniki{background-position:0 -116px}.b-share_theme_counter .b-share-btn__odnoklassniki{background-color:#ff9f4d}.b-share_theme_counter .b-share-btn__odnoklassniki:hover{background-color:#cc7f3e}.b-share_theme_counter .b-share-btn__odnoklassniki:active{border-top:2px solid #975e2e;background-color:#d98742}.b-share_theme_counter .b-share-icon_gplus{background-position:0 -145px}.b-share_theme_counter .b-share-btn__gplus{background-color:#c25234}.b-share_theme_counter .b-share-btn__gplus:hover{background-color:#9b422a}.b-share_theme_counter .b-share-btn__gplus:active{border-top:2px solid #73311f;background-color:#a5462c}.b-share_theme_counter .b-share-icon_yaru{background-position:0 -174px}.b-share_theme_counter .b-share-btn__yaru{background-color:#d83933}.b-share_theme_counter .b-share-btn__yaru:hover{background-color:#ad2e29}.b-share_theme_counter .b-share-btn__yaru:active{border-top:2px solid #80221e;background-color:#b8312b}.b-share_theme_counter .b-share-icon_pinterest{background-position:0 -203px}.b-share_theme_counter .b-share-btn__pinterest{background-color:#cd1e27}.b-share_theme_counter .b-share-btn__pinterest:hover{background-color:#a4181f}.b-share_theme_counter .b-share-btn__pinterest:active{border-top:2px solid #7b1217;background-color:#ae1921}.b-share_theme_counter .b-share__link:active{height:22px}.b-share_theme_counter .b-share_type_small .b-share__link:active{height:16px}.b-share_theme_counter .b-share__link:active .b-share-icon,.b-share_theme_counter .b-share__link:active .b-share-counter{position:relative;top:-1px}.b-share_theme_counter .b-share__link::after{position:absolute;top:0;right:0;bottom:0;left:0;content:"";background-image:url(data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==)}.b-share_theme_counter .b-share__handle{height:auto;padding:0!important}</style><script type="text/javascript" src="%D0%A2%D0%B5%D0%BC%D0%B0%205.%20%D0%A3%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5%20%D1%80%D0%B5%D0%B0%D0%BB%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D0%B5%D0%B9%20%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D0%B0.%20%E2%80%94%20%D0%A1%D1%82%D1%83%D0%B4%D0%BE%D0%BF%D0%B5%D0%B4%D0%B8%D1%8F_files/jsapi"></script><link rel="stylesheet" href="%D0%A2%D0%B5%D0%BC%D0%B0%205.%20%D0%A3%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5%20%D1%80%D0%B5%D0%B0%D0%BB%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D0%B5%D0%B9%20%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D0%B0.%20%E2%80%94%20%D0%A1%D1%82%D1%83%D0%B4%D0%BE%D0%BF%D0%B5%D0%B4%D0%B8%D1%8F_files/defaultru.css" type="text/css"><link rel="stylesheet" href="%D0%A2%D0%B5%D0%BC%D0%B0%205.%20%D0%A3%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5%20%D1%80%D0%B5%D0%B0%D0%BB%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D0%B5%D0%B9%20%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D0%B0.%20%E2%80%94%20%D0%A1%D1%82%D1%83%D0%B4%D0%BE%D0%BF%D0%B5%D0%B4%D0%B8%D1%8F_files/default.css" type="text/css"><script src="%D0%A2%D0%B5%D0%BC%D0%B0%205.%20%D0%A3%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5%20%D1%80%D0%B5%D0%B0%D0%BB%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D0%B5%D0%B9%20%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D0%B0.%20%E2%80%94%20%D0%A1%D1%82%D1%83%D0%B4%D0%BE%D0%BF%D0%B5%D0%B4%D0%B8%D1%8F_files/defaultru.js" type="text/javascript"></script><style type="text/css">
+.gsc-control-cse {
+font-family: Arial, sans-serif;
+border-color: #FFFFFF;
+background-color: #FFFFFF;
+}
+.gsc-control-cse .gsc-table-result {
+font-family: Arial, sans-serif;
+}
+input.gsc-input, .gsc-input-box, .gsc-input-box-hover, .gsc-input-box-focus {
+border-color: #D9D9D9;
+}
+input.gsc-search-button, input.gsc-search-button:hover, input.gsc-search-button:focus {
+border-color: #666666;
+background-color: #CECECE;
+background-image: none;
+filter: none;
+}
+.gsc-tabHeader.gsc-tabhInactive {
+border-color: #E9E9E9;
+background-color: #E9E9E9;
+}
+.gsc-tabHeader.gsc-tabhActive {
+border-color: #FF9900;
+border-bottom-color: #FFFFFF;
+background-color: #FFFFFF;
+}
+.gsc-tabsArea {
+border-color: #FF9900;
+}
+.gsc-webResult.gsc-result,
+.gsc-results .gsc-imageResult {
+border-color: #FFFFFF;
+background-color: #FFFFFF;
+}
+.gsc-webResult.gsc-result:hover,
+.gsc-imageResult:hover {
+border-color: #FFFFFF;
+background-color: #FFFFFF;
+}
+.gs-webResult.gs-result a.gs-title:link,
+.gs-webResult.gs-result a.gs-title:link b,
+.gs-imageResult a.gs-title:link,
+.gs-imageResult a.gs-title:link b {
+color: #0000CC;
+}
+.gs-webResult.gs-result a.gs-title:visited,
+.gs-webResult.gs-result a.gs-title:visited b,
+.gs-imageResult a.gs-title:visited,
+.gs-imageResult a.gs-title:visited b {
+color: #0000CC;
+}
+.gs-webResult.gs-result a.gs-title:hover,
+.gs-webResult.gs-result a.gs-title:hover b,
+.gs-imageResult a.gs-title:hover,
+.gs-imageResult a.gs-title:hover b {
+color: #0000CC;
+}
+.gs-webResult.gs-result a.gs-title:active,
+.gs-webResult.gs-result a.gs-title:active b,
+.gs-imageResult a.gs-title:active,
+.gs-imageResult a.gs-title:active b {
+color: #0000CC;
+}
+.gsc-cursor-page {
+color: #0000CC;
+}
+a.gsc-trailing-more-results:link {
+color: #0000CC;
+}
+.gs-webResult .gs-snippet,
+.gs-imageResult .gs-snippet,
+.gs-fileFormatType {
+color: #000000;
+}
+.gs-webResult div.gs-visibleUrl,
+.gs-imageResult div.gs-visibleUrl {
+color: #008000;
+}
+.gs-webResult div.gs-visibleUrl-short {
+color: #008000;
+}
+.gs-webResult div.gs-visibleUrl-short {
+display: none;
+}
+.gs-webResult div.gs-visibleUrl-long {
+display: block;
+}
+.gs-promotion div.gs-visibleUrl-short {
+display: none;
+}
+.gs-promotion div.gs-visibleUrl-long {
+display: block;
+}
+.gsc-cursor-box {
+border-color: #FFFFFF;
+}
+.gsc-results .gsc-cursor-box .gsc-cursor-page {
+border-color: #E9E9E9;
+background-color: #FFFFFF;
+color: #0000CC;
+}
+.gsc-results .gsc-cursor-box .gsc-cursor-current-page {
+border-color: #FF9900;
+background-color: #FFFFFF;
+color: #0000CC;
+}
+.gsc-webResult.gsc-result.gsc-promotion {
+border-color: #336699;
+background-color: #FFFFFF;
+}
+.gsc-completion-title {
+color: #0000CC;
+}
+.gsc-completion-snippet {
+color: #000000;
+}
+.gs-promotion a.gs-title:link,
+.gs-promotion a.gs-title:link *,
+.gs-promotion .gs-snippet a:link {
+color: #0000CC;
+}
+.gs-promotion a.gs-title:visited,
+.gs-promotion a.gs-title:visited *,
+.gs-promotion .gs-snippet a:visited {
+color: #0000CC;
+}
+.gs-promotion a.gs-title:hover,
+.gs-promotion a.gs-title:hover *,
+.gs-promotion .gs-snippet a:hover {
+color: #0000CC;
+}
+.gs-promotion a.gs-title:active,
+.gs-promotion a.gs-title:active *,
+.gs-promotion .gs-snippet a:active {
+color: #0000CC;
+}
+.gs-promotion .gs-snippet,
+.gs-promotion .gs-title .gs-promotion-title-right,
+.gs-promotion .gs-title .gs-promotion-title-right * {
+color: #000000;
+}
+.gs-promotion .gs-visibleUrl,
+.gs-promotion .gs-visibleUrl-short {
+color: #008000;
+}</style><style type="text/css">.gscb_a{display:inline-block;font:27px/13px arial,sans-serif}.gsst_a .gscb_a{color:#a1b9ed;cursor:pointer}.gsst_a:hover .gscb_a,.gsst_a:focus .gscb_a{color:#36c}.gsst_a{display:inline-block}.gsst_a{cursor:pointer;padding:0 4px}.gsst_a:hover{text-decoration:none!important}.gsst_b{font-size:16px;padding:0 2px;position:relative;user-select:none;-moz-user-select:none;white-space:nowrap}.gsst_e{opacity:0.55;}.gsst_a:hover .gsst_e,.gsst_a:focus .gsst_e{opacity:0.72;}.gsst_a:active .gsst_e{opacity:1;}.gsst_f{background:white;text-align:left}.gsst_g{background-color:white;border:1px solid #ccc;border-top-color:#d9d9d9;box-shadow:0 2px 4px rgba(0,0,0,0.2);-moz-box-shadow:0 2px 4px rgba(0,0,0,0.2);margin:-1px -3px;padding:0 6px}.gsst_h{background-color:white;height:1px;margin-bottom:-1px;position:relative;top:-1px}.gsib_a{width:100%;padding:4px 6px 0}.gsib_a,.gsib_b{vertical-align:top}.gssb_c{border:0;position:absolute;z-index:989}.gssb_e{border:1px solid #ccc;border-top-color:#d9d9d9;box-shadow:0 2px 4px rgba(0,0,0,0.2);-moz-box-shadow:0 2px 4px rgba(0,0,0,0.2);cursor:default}.gssb_f{visibility:hidden;white-space:nowrap}.gssb_k{border:0;display:block;position:absolute;top:0;z-index:988}.gsdd_a{border:none!important}.gsq_a{padding:0}.gsq_a{padding:0}.gscsep_a{display:none}.gssb_a{padding:0 7px}.gssb_a,.gssb_a td{white-space:nowrap;overflow:hidden;line-height:22px}#gssb_b{font-size:11px;color:#36c;text-decoration:none}#gssb_b:hover{font-size:11px;color:#36c;text-decoration:underline}.gssb_g{text-align:center;padding:8px 0 7px;position:relative}.gssb_h{font-size:15px;height:28px;margin:0.2em}.gssb_i{background:#eee}.gss_ifl{visibility:hidden;padding-left:5px}.gssb_i .gss_ifl{visibility:visible}a.gssb_j{font-size:13px;color:#36c;text-decoration:none;line-height:100%}a.gssb_j:hover{text-decoration:underline}.gssb_l{height:1px;background-color:#e5e5e5}.gssb_m{color:#000;background:#fff}.gsfe_a{border:1px solid #b9b9b9;border-top-color:#a0a0a0;box-shadow:inset 0px 1px 2px rgba(0,0,0,0.1);-moz-box-shadow:inset 0px 1px 2px rgba(0,0,0,0.1);-webkit-box-shadow:inset 0px 1px 2px rgba(0,0,0,0.1);}.gsfe_b{border:1px solid #4d90fe;outline:none;box-shadow:inset 0px 1px 2px rgba(0,0,0,0.3);-moz-box-shadow:inset 0px 1px 2px rgba(0,0,0,0.3);-webkit-box-shadow:inset 0px 1px 2px rgba(0,0,0,0.3);}.gssb_a{padding:0 9px}.gsib_a{padding-right:8px;padding-left:8px}.gsst_a{padding-top:3px}.gssb_e{border:0}.gssb_l{margin:5px 0}.gssb_c .gsc-completion-container{position:static}.gssb_c{z-index:5000}.gsc-completion-container table{background:transparent;font-size:inherit;font-family:inherit}.gssb_c > tbody > tr,.gssb_c > tbody > tr > td,.gssb_d,.gssb_d > tbody > tr,.gssb_d > tbody > tr > td,.gssb_e,.gssb_e > tbody > tr,.gssb_e > tbody > tr > td{padding:0;margin:0;border:0}.gssb_a table,.gssb_a table tr,.gssb_a table tr td{padding:0;margin:0;border:0}</style></head>
+
+<body>
+ 
+<table align="left" border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tbody><tr>
+    <td rowspan="2" bgcolor="#E8E8E8" valign="top" width="160">
+<a href="http://studopedia.ru/"><img src="%D0%A2%D0%B5%D0%BC%D0%B0%205.%20%D0%A3%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5%20%D1%80%D0%B5%D0%B0%D0%BB%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D0%B5%D0%B9%20%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D0%B0.%20%E2%80%94%20%D0%A1%D1%82%D1%83%D0%B4%D0%BE%D0%BF%D0%B5%D0%B4%D0%B8%D1%8F_files/logo.jpg" alt="Студопедия" align="top" height="200" width="200"></a><br>
+<script type="text/javascript" src="%D0%A2%D0%B5%D0%BC%D0%B0%205.%20%D0%A3%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5%20%D1%80%D0%B5%D0%B0%D0%BB%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D0%B5%D0%B9%20%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D0%B0.%20%E2%80%94%20%D0%A1%D1%82%D1%83%D0%B4%D0%BE%D0%BF%D0%B5%D0%B4%D0%B8%D1%8F_files/cnt.js" charset="utf-8"></script>
+<center>Поделиться в соц. сетях:
+<div data-yasharelink="http://studopedia.ru/2_100878_tema--upravlenie-realizatsiey-proekta.html" class="yashare-auto-init b-share_theme_counter" data-yasharel10n="ru" data-yasharequickservices="yaru,vkontakte,odnoklassniki,twitter,moimir,facebook,gplus" data-yasharetheme="counter"><span class="b-share"><span class="b-share-btn__wrap"><a rel="nofollow" target="_blank" title="ВКонтакте" class="b-share__handle b-share__link b-share-btn__vkontakte" href="https://share.yandex.net/go.xml?service=vkontakte&amp;url=http%3A%2F%2Fstudopedia.ru%2F2_100878_tema--upravlenie-realizatsiey-proekta.html&amp;title=%D0%A2%D0%B5%D0%BC%D0%B0%205.%20%D0%A3%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5%20%D1%80%D0%B5%D0%B0%D0%BB%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D0%B5%D0%B9%20%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D0%B0.%20%E2%80%94%20%D0%A1%D1%82%D1%83%D0%B4%D0%BE%D0%BF%D0%B5%D0%B4%D0%B8%D1%8F" data-service="vkontakte"><span class="b-share-icon b-share-icon_vkontakte"></span><span class="b-share-counter">0</span></a></span><span class="b-share-btn__wrap"><a rel="nofollow" target="_blank" title="Одноклассники" class="b-share__handle b-share__link b-share-btn__odnoklassniki" href="https://share.yandex.net/go.xml?service=odnoklassniki&amp;url=http%3A%2F%2Fstudopedia.ru%2F2_100878_tema--upravlenie-realizatsiey-proekta.html&amp;title=%D0%A2%D0%B5%D0%BC%D0%B0%205.%20%D0%A3%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5%20%D1%80%D0%B5%D0%B0%D0%BB%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D0%B5%D0%B9%20%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D0%B0.%20%E2%80%94%20%D0%A1%D1%82%D1%83%D0%B4%D0%BE%D0%BF%D0%B5%D0%B4%D0%B8%D1%8F" data-service="odnoklassniki"><span class="b-share-icon b-share-icon_odnoklassniki"></span><span class="b-share-counter">0</span></a></span><span class="b-share-btn__wrap"><a rel="nofollow" target="_blank" title="Twitter" class="b-share__handle b-share__link b-share-btn__twitter" href="https://share.yandex.net/go.xml?service=twitter&amp;url=http%3A%2F%2Fstudopedia.ru%2F2_100878_tema--upravlenie-realizatsiey-proekta.html&amp;title=%D0%A2%D0%B5%D0%BC%D0%B0%205.%20%D0%A3%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5%20%D1%80%D0%B5%D0%B0%D0%BB%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D0%B5%D0%B9%20%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D0%B0.%20%E2%80%94%20%D0%A1%D1%82%D1%83%D0%B4%D0%BE%D0%BF%D0%B5%D0%B4%D0%B8%D1%8F" data-service="twitter"><span class="b-share-icon b-share-icon_twitter"></span><span class="b-share-counter"></span></a></span><span class="b-share-btn__wrap"><a rel="nofollow" target="_blank" title="Мой Мир" class="b-share__handle b-share__link b-share-btn__moimir" href="https://share.yandex.net/go.xml?service=moimir&amp;url=http%3A%2F%2Fstudopedia.ru%2F2_100878_tema--upravlenie-realizatsiey-proekta.html&amp;title=%D0%A2%D0%B5%D0%BC%D0%B0%205.%20%D0%A3%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5%20%D1%80%D0%B5%D0%B0%D0%BB%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D0%B5%D0%B9%20%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D0%B0.%20%E2%80%94%20%D0%A1%D1%82%D1%83%D0%B4%D0%BE%D0%BF%D0%B5%D0%B4%D0%B8%D1%8F" data-service="moimir"><span class="b-share-icon b-share-icon_moimir"></span><span class="b-share-counter"></span></a></span><span class="b-share-btn__wrap"><a rel="nofollow" target="_blank" title="Facebook" class="b-share__handle b-share__link b-share-btn__facebook" href="https://share.yandex.net/go.xml?service=facebook&amp;url=http%3A%2F%2Fstudopedia.ru%2F2_100878_tema--upravlenie-realizatsiey-proekta.html&amp;title=%D0%A2%D0%B5%D0%BC%D0%B0%205.%20%D0%A3%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5%20%D1%80%D0%B5%D0%B0%D0%BB%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D0%B5%D0%B9%20%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D0%B0.%20%E2%80%94%20%D0%A1%D1%82%D1%83%D0%B4%D0%BE%D0%BF%D0%B5%D0%B4%D0%B8%D1%8F" data-service="facebook"><span class="b-share-icon b-share-icon_facebook"></span><span class="b-share-counter">0</span></a></span><span class="b-share-btn__wrap"><a rel="nofollow" target="_blank" title="Google Plus" class="b-share__handle b-share__link b-share-btn__gplus" href="https://share.yandex.net/go.xml?service=gplus&amp;url=http%3A%2F%2Fstudopedia.ru%2F2_100878_tema--upravlenie-realizatsiey-proekta.html&amp;title=%D0%A2%D0%B5%D0%BC%D0%B0%205.%20%D0%A3%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5%20%D1%80%D0%B5%D0%B0%D0%BB%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D0%B5%D0%B9%20%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D0%B0.%20%E2%80%94%20%D0%A1%D1%82%D1%83%D0%B4%D0%BE%D0%BF%D0%B5%D0%B4%D0%B8%D1%8F" data-service="gplus"><span class="b-share-icon b-share-icon_gplus"></span><span class="b-share-counter">0</span></a></span><iframe style="display: none" src="%D0%A2%D0%B5%D0%BC%D0%B0%205.%20%D0%A3%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5%20%D1%80%D0%B5%D0%B0%D0%BB%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D0%B5%D0%B9%20%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D0%B0.%20%E2%80%94%20%D0%A1%D1%82%D1%83%D0%B4%D0%BE%D0%BF%D0%B5%D0%B4%D0%B8%D1%8F_files/ya-share-cnt.htm"></iframe></span></div>
+</center>
+
+<hr>
+<center><a href="http://studopedia.ru/zakaz.php" class="red" target="_blank"><img src="%D0%A2%D0%B5%D0%BC%D0%B0%205.%20%D0%A3%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5%20%D1%80%D0%B5%D0%B0%D0%BB%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D0%B5%D0%B9%20%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D0%B0.%20%E2%80%94%20%D0%A1%D1%82%D1%83%D0%B4%D0%BE%D0%BF%D0%B5%D0%B4%D0%B8%D1%8F_files/order%2520button.png" align="middle" width="200"></a></center>
+
+<center><br><noindex><a href="http://wikikak.org/" target="_blank" rel="nofollow"><font color="#AF0000">Задавайте вопрос на ВикиКак</font></a></noindex>
+</center>
+
+<ul>
+  <li><a class="nav_link" href="http://studopedia.ru/aviadvigatelestroenie.php">Авиадвигателестроения</a></li>
+  <li><a class="nav_link" href="http://studopedia.ru/adminpravo.php">Административное право</a></li>
+  <li><a class="nav_link" href="http://studopedia.ru/adminpravoby.php">Административное право Беларусии</a></li>
+
+  <li><a class="nav_link" href="http://studopedia.ru/algebra.php">Алгебра</a></li>
+  <li><a class="nav_link" href="http://studopedia.ru/arhitektura.php">Архитектура</a></li>
+  <li><a class="nav_link" href="http://studopedia.ru/bg.php">Безопасность жизнедеятельности</a></li>
+  <li><a class="nav_link" href="http://studopedia.ru/psiholog.php">Введение в профессию «психолог»</a></li>
+  <li><a class="nav_link" href="http://studopedia.ru/ekonomkultur.php">Введение в экономику культуры</a></li>
+
+  <li><a class="nav_link" href="http://studopedia.ru/mathematica.php">Высшая математика</a></li>
+  <li><a class="nav_link" href="http://studopedia.ru/geologia.php">Геология</a></li>
+
+  <li><a class="nav_link" href="http://studopedia.ru/geomorfologia.php">Геоморфология</a></li>
+  <li><a class="nav_link" href="http://studopedia.ru/gidroiogia.php">Гидрология и гидрометрии</a></li>
+
+
+  <li><a class="nav_link" href="http://studopedia.ru/gidrosystem.php">Гидросистемы и гидромашины</a></li>
+  <li><a class="nav_link" href="http://studopedia.ru/istoriyaukr.php">История Украины</a></li>
+  <li><a class="nav_link" href="http://studopedia.ru/culturology.php">Культурология</a></li>
+  <li><a class="nav_link" href="http://studopedia.ru/kulturologia.php">Культурология</a></li>
+
+  <li><a class="nav_link" href="http://studopedia.ru/logica.php">Логика</a></li>
+
+  <li><a class="nav_link" href="http://studopedia.ru/marketing.php">Маркетинг</a></li>
+  <li><a class="nav_link" href="http://studopedia.ru/mashinostroenie.php">Машиностроение</a></li>
+  <li><a class="nav_link" href="http://studopedia.ru/medpsiholog.php">Медицинская психология</a></li>
+  <li><a class="nav_link" href="http://studopedia.ru/menedjment.php">Менеджмент</a></li>
+ <li><a class="nav_link" href="http://studopedia.ru/svarka.php">Металлы и сварка</a></li>
+ <li><a class="nav_link" href="http://studopedia.ru/misi.php">Методы и средства измерений электрических величин</a></li>
+ <li><a class="nav_link" href="http://studopedia.ru/mirekonomika.php">Мировая экономика</a></li>
+  <li><a class="nav_link" href="http://studopedia.ru/nachertgeometria.php">Начертательная геометрия</a></li>
+  <li><a class="nav_link" href="http://studopedia.ru/osnekteor.php">Основы экономической теории</a></li>
+  <li><a class="nav_link" href="http://studopedia.ru/ohranatruda.php">Охрана труда</a></li>
+  <li><a class="nav_link" href="http://studopedia.ru/pojarnayataktika.php">Пожарная тактика</a></li>
+
+  <li><a class="nav_link" href="http://studopedia.ru/mishleniye.php">Процессы и структуры мышления</a></li>
+
+  <li><a class="nav_link" href="http://studopedia.ru/profpsihologia.php">Профессиональная психология</a></li>
+  <li><a class="nav_link" href="http://studopedia.ru/psihilogiya.php">Психология</a></li>
+  <li><a class="nav_link" href="http://studopedia.ru/psihologmened.php">Психология менеджмента</a></li>
+
+  <li><a class="nav_link" href="http://studopedia.ru/sfpip.php">Современные фундаментальные и прикладные исследования в приборостроении</a></li>
+
+  <li><a class="nav_link" href="http://studopedia.ru/socialpsihol.php">Социальная психология</a></li>
+ <li><a class="nav_link" href="http://studopedia.ru/socfilosofiaproblem.php">Социально-философская проблематика</a></li>
+  <li><a class="nav_link" href="http://studopedia.ru/sociologiya.php">Социология</a></li>
+  <li><a class="nav_link" href="http://studopedia.ru/statistic.php">Статистика</a></li>
+ <li><a class="nav_link" href="http://studopedia.ru/informatika.php">Теоретические основы информатики</a></li>
+  <li><a class="nav_link" href="http://studopedia.ru/teoravtoregul.php">Теория автоматического регулирования</a></li>
+  <li><a class="nav_link" href="http://studopedia.ru/tever.php">Теория вероятности</a></li>
+  <li><a class="nav_link" href="http://studopedia.ru/transpravo.php">Транспортное право</a></li>
+ <li><a class="nav_link" href="http://studopedia.ru/turopetator.php">Туроператор</a></li>
+  <li><a class="nav_link" href="http://studopedia.ru/ugolovnoepravo.php">Уголовное право</a></li>
+  <li><a class="nav_link" href="http://studopedia.ru/ugolovproces.php">Уголовный процесс</a></li>
+  <li><a class="nav_link" href="http://studopedia.ru/upravsovremproiz.php">Управление современным производством</a></li>
+
+  <li><a class="nav_link" href="http://studopedia.ru/fizika.php">Физика</a></li>
+  <li><a class="nav_link" href="http://studopedia.ru/fopi.php">Физические явления</a></li>
+  <li><a class="nav_link" href="http://studopedia.ru/filosofiya.php">Философия</a></li>
+ <li><a class="nav_link" href="http://studopedia.ru/holodustanov.php">Холодильные установки</a></li>
+  <li><a class="nav_link" href="http://studopedia.ru/ekologiya.php">Экология</a></li>
+  <li><a class="nav_link" href="http://studopedia.ru/ekonomika.php">Экономика</a></li>
+  <li><a class="nav_link" href="http://studopedia.ru/istoriyaekonomiki.php">История экономики</a></li>
+  <li><a class="nav_link" href="http://studopedia.ru/osnoviekonomiki.php">Основы экономики</a></li>
+  <li><a class="nav_link" href="http://studopedia.ru/ekonompred.php">Экономика предприятия</a></li>
+  <li><a class="nav_link" href="http://studopedia.ru/ekonomistor.php">Экономическая история</a></li>
+  <li><a class="nav_link" href="http://studopedia.ru/ekonomteor.php">Экономическая теория</a></li>
+  <li><a class="nav_link" href="http://studopedia.ru/ekonomanaliz.php">Экономический анализ</a></li>
+  <li><a class="nav_link" href="http://studopedia.ru/ekonomika-es.php">Развитие экономики ЕС</a></li>
+  <li><a class="nav_link" href="http://studopedia.ru/factors.php">Чрезвычайные ситуации</a></li>
+</ul>
+
+
+
+</td>
+    <td height="100" background="%D0%A2%D0%B5%D0%BC%D0%B0%205.%20%D0%A3%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5%20%D1%80%D0%B5%D0%B0%D0%BB%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D0%B5%D0%B9%20%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D0%B0.%20%E2%80%94%20%D0%A1%D1%82%D1%83%D0%B4%D0%BE%D0%BF%D0%B5%D0%B4%D0%B8%D1%8F_files/head.gif" bgcolor="#FDFCF7" valign="top" width="100%">
+<center>
+
+
+<a href="http://studopedia.ru/Avto/">Авто</a> | <a href="http://studopedia.ru/Avtomatizatsiya/">Автоматизация</a> | <a href="http://studopedia.ru/Arkhitektura/">Архитектура</a> | <a href="http://studopedia.ru/Astronomia/">Астрономия</a> | <a href="http://studopedia.ru/Audit/">Аудит</a> | <a href="http://studopedia.ru/Biologia/">Биология</a> | <a href="http://studopedia.ru/Bukhgalteriya/">Бухгалтерия</a> | <a href="http://studopedia.ru/Voennoe_delo/">Военное дело</a> | <a href="http://studopedia.ru/Genetika/">Генетика</a> | <a href="http://studopedia.ru/Geografiya/">География</a> | <a href="http://studopedia.ru/Geologiya/">Геология</a> | <a href="http://studopedia.ru/Gosudarstvo/">Государство</a> | <a href="http://studopedia.ru/Dom/">Дом</a> | <a href="http://studopedia.ru/SMI/">Журналистика и СМИ</a> | <a href="http://studopedia.ru/Izobretatelstvo/">Изобретательство</a> | <a href="http://studopedia.ru/Yazyki/">Иностранные языки</a> | <a href="http://studopedia.ru/Informatika/">Информатика</a> | <a href="http://studopedia.ru/Iskusstvo/">Искусство</a> | <a href="http://studopedia.ru/Istoria/">История</a> | <a href="http://studopedia.ru/Computer/">Компьютеры</a> | <a href="http://studopedia.ru/Kulinariya/">Кулинария</a> | <a href="http://studopedia.ru/Kultura/">Культура</a> | <a href="http://studopedia.ru/Leksikologiya/">Лексикология</a> | <a href="http://studopedia.ru/Literatura/">Литература</a> | <a href="http://studopedia.ru/Logika/">Логика</a> | <a href="http://studopedia.ru/Marketing/">Маркетинг</a> | <a href="http://studopedia.ru/Matematika/">Математика</a> | <a href="http://studopedia.ru/Mashinostroenie/">Машиностроение</a> | <a href="http://studopedia.ru/Meditsina/">Медицина</a> | <a href="http://studopedia.ru/Menedzhment/">Менеджмент</a> | <a href="http://studopedia.ru/Metally-Svarka/">Металлы и Сварка</a> | <a href="http://studopedia.ru/Mekhanika/">Механика</a> | <a href="http://studopedia.ru/Muzyka/">Музыка</a> | <a href="http://studopedia.ru/Naselenie/">Население</a> | <a href="http://studopedia.ru/Obrazovanie/">Образование</a> | <a href="http://studopedia.ru/OBZH/">Охрана безопасности жизни</a> | <a href="http://studopedia.ru/OkhranaTruda/">Охрана Труда</a> | <a href="http://studopedia.ru/Pedagogika/">Педагогика</a> | <a href="http://studopedia.ru/Politika/">Политика</a> | <a href="http://studopedia.ru/Pravo/">Право</a> | <a href="http://studopedia.ru/Priborostroenie/">Приборостроение</a> | <a href="http://studopedia.ru/Programmirovanie/">Программирование</a> | <a href="http://studopedia.ru/Proizvodstvo/">Производство</a> | <a href="http://studopedia.ru/Promyshlennost/">Промышленность</a> | <a href="http://studopedia.ru/Psikhologiya/">Психология</a> | <a href="http://studopedia.ru/Radio/">Радио</a> | <a href="http://studopedia.ru/Regiliya/">Регилия</a> | <a href="http://studopedia.ru/Svyaz/">Связь</a> | <a href="http://studopedia.ru/Sotsiologiya/">Социология</a> | <a href="http://studopedia.ru/Sport/">Спорт</a> | <a href="http://studopedia.ru/Standartizatsiya/">Стандартизация</a> | <a href="http://studopedia.ru/Stroitelstvo/">Строительство</a> | <a href="http://studopedia.ru/Tehnologii/">Технологии</a> | <a href="http://studopedia.ru/Torgovlya/">Торговля</a> | <a href="http://studopedia.ru/Turizm/">Туризм</a> | <a href="http://studopedia.ru/Fizika/">Физика</a> | <a href="http://studopedia.ru/Fiziologiya/">Физиология</a> | <a href="http://studopedia.ru/Filosofiya/">Философия</a> | <a href="http://studopedia.ru/Finansy/">Финансы</a> | <a href="http://studopedia.ru/Khimiya/">Химия</a> | <a href="http://studopedia.ru/Khozyaystvo/">Хозяйство</a> | <a href="http://studopedia.ru/Tsennoobrazovanie/">Ценнообразование</a> | <a href="http://studopedia.ru/Cherchenie/">Черчение</a> | <a href="http://studopedia.ru/Ekologiya/">Экология</a> | <a href="http://studopedia.ru/Ekonometrika/">Эконометрика</a> | <a href="http://studopedia.ru/Ekonomika/">Экономика</a> | <a href="http://studopedia.ru/Elektronika/">Электроника</a> | <a href="http://studopedia.ru/Yurispundenktsiya/">Юриспунденкция</a>
+
+</center>
+</td>
+  </tr>
+  <tr>
+    <td style="border-width:1px; border:#B1DCF9" valign="top" width="100%">
+	<noindex><p><i>Лучшие изречения:</i> <b><font color="red">Раньше студенты учились и подрабатывали, а теперь работают и подучиваются.</font></b>  <font color="green">2999</font> - <a href="http://studopedia.ru/words/goloswords.php?i=100878&amp;n=2&amp;id=26&amp;v=1"><img src="%D0%A2%D0%B5%D0%BC%D0%B0%205.%20%D0%A3%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5%20%D1%80%D0%B5%D0%B0%D0%BB%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D0%B5%D0%B9%20%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D0%B0.%20%E2%80%94%20%D0%A1%D1%82%D1%83%D0%B4%D0%BE%D0%BF%D0%B5%D0%B4%D0%B8%D1%8F_files/_plus.gif"></a> | <font color="red">2462</font> - <a href="http://studopedia.ru/words/goloswords.php?i=100878&amp;n=2&amp;id=26&amp;v=2"><img src="%D0%A2%D0%B5%D0%BC%D0%B0%205.%20%D0%A3%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5%20%D1%80%D0%B5%D0%B0%D0%BB%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D0%B5%D0%B9%20%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D0%B0.%20%E2%80%94%20%D0%A1%D1%82%D1%83%D0%B4%D0%BE%D0%BF%D0%B5%D0%B4%D0%B8%D1%8F_files/_minus.gif"></a> или <a href="http://studopedia.ru/words/">читать все...</a></p></noindex>	 <h1>Тема 5. Управление реализацией проекта.</h1>
+	 <div id="hypercontext">
+
+
+<table align="left" border="0" cellpadding="2" cellspacing="2" width="650"><tbody><tr>
+<td valign="top" width="350">
+<b>Читайте также:</b><br><ol><li><a href="http://studopedia.ru/2_29976_II-upravlenie-aktivami-predpriyatiya.html">II. УПРАВЛЕНИЕ АКТИВАМИ ПРЕДПРИЯТИЯ</a></li><li><a href="http://studopedia.ru/2_101735_III-proyavlenie-poznavatelnoy-deyatelnosti-obuchaemih-na-zanyatii-i-upravlenie-eyu.html">III. Проявление познавательной деятельности обучаемых на занятии и управление ею</a></li><li><a href="http://studopedia.ru/2_6534_avtomaticheskoe-upravlenie-i-regulirovanie.html">Автоматическое управление и регулирование</a></li><li><a href="http://studopedia.ru/2_100806_adaptivnoe-upravlenie.html">Адаптивное управление</a></li><li><a href="http://studopedia.ru/2_6944_adaptivnoe-upravlenie-tehnologicheskimi-protsessami.html">Адаптивное управление технологическими процессами</a></li><li><a href="http://studopedia.ru/2_101107_analiz-zatrat-na-upravlenie-kachestvom.html">Анализ затрат на управление качеством.</a></li><li><a href="http://studopedia.ru/2_127955_analiz-i-upravlenie-debitorskoy-zadolzhennostyu.html">Анализ и управление дебиторской задолженностью</a></li><li><a href="http://studopedia.ru/2_6748_analiz-i-upravlenie-zatratami-i-sebestoimostyu-produktsii.html">Анализ и управление затратами и себестоимостью продукции</a></li><li><a href="http://studopedia.ru/2_6742_analiz-i-upravlenie-ob-emom-proizvodstva-i-prodazh.html">Анализ и управление объемом производства и продаж</a></li><li><a href="http://studopedia.ru/2_127958_analiz-i-upravlenie-proizvodstvennimi-zapasami.html">Анализ и управление производственными запасами</a></li><li><a href="http://studopedia.ru/2_24901_analiz-rashodov-na-obsluzhivanie-proizvodstva-i-upravlenie.html">АНАЛИЗ РАСХОДОВ НА ОБСЛУЖИВАНИЕ ПРОИЗВОДСТВА И УПРАВЛЕНИЕ</a></li><li><a href="http://studopedia.ru/2_125754_antikrizisnoe-upravlenie.html">АНТИКРИЗИСНОЕ УПРАВЛЕНИЕ</a></li></ol>
+</td>
+<td valign="top" width="300">
+<noindex>
+<center>
+
+<script async="" src="%D0%A2%D0%B5%D0%BC%D0%B0%205.%20%D0%A3%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5%20%D1%80%D0%B5%D0%B0%D0%BB%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D0%B5%D0%B9%20%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D0%B0.%20%E2%80%94%20%D0%A1%D1%82%D1%83%D0%B4%D0%BE%D0%BF%D0%B5%D0%B4%D0%B8%D1%8F_files/adsbygoogle.js"></script>
+<!-- studru600x300 -->
+<ins class="adsbygoogle" style="display:inline-block;width:300px;height:600px" data-ad-client="ca-pub-1201569435861782" data-ad-slot="6071395133"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</center>
+</noindex>
+
+</td></tr></tbody></table><p><i>Содержание:</i></p>
+ <p>&nbsp;</p>
+ <p>1. Проектные структуры управления<strong><i></i></strong></p><i>
+ <p>Проектные структуры - это структуры управления комплексными «видами деятельности,</p>
+ <p>которые из-за решающего значения для компа­нии требуют обеспечения непрерывного</p>
+ <p>координирующего и интегри­рующего воздействия при жестких ограничениях по</p>
+ <p>затратам, срокам и качеству работ.</p>
+ <p>Традиционно руководитель подразделения в любой крупной компа­нии в рамках</p>
+ <p>организационной структуры иерархического типа имеет множество различных</p>
+ <p>обязанностей и несет ответственность за разнооб­разные аспекты нескольких разных</p>
+ <p>программ, проблем, проектов, видов продукции и услуг. Неизбежно, что в этих условиях</p>
+ <p>даже хороший руководитель будет на какие-то виды деятельности обращать больше</p>
+ <p>внимания, а на другие — меньше. В результате - невозможность учесть все</p>
+ <p>особенности, все детали проектов, что может привести к самым серьезным последствиям.</p>
+ <p>Поэтому для того чтобы управлять проектами, и прежде всего крупномасштабными,</p>
+ <p>и используются специальные проектные структуры управления.</p>
+ <p>Проектные структуры в компании, как правило, применяются тогда, когда возникает</p>
+ <p>необходимость разработать и осуществить организационный проект комплексного</p>
+ <p>характера, охватывающий, с одной стороны, решение широкого круга специализированных</p>
+ <p>технических, экономических, социальных и иных вопросов и, с другой стороны,</p>
+ <p>деятельность различных функциональных и линейных подразделений, к организационным</p>
+ <p>проектам можно отнести любые процессы целена­правленных изменений в системе, например</p>
+ <p>реконструкцию производ­ства, разработку и освоение новых видов 
+продукции и технологических процессов, строительство объектов и т.д.</p>
+ <p>Под проектной структурой управления понимается временная структура, создаваемая</p>
+ <p>для решения конкретной комплексной задачи (разработки проекта и его реализации).</p>
+ <p>Смысл проектной структуры управления состоит в том, чтобы собрать в одну команду</p>
+ <p>самых квали­фицированных сотрудников разных профессий для осуществления сложного</p>
+ <p>проекта в установленные сроки с заданным уровнем качества и в рамках выделенных</p>
+ <p>для этой цели материальных, финансовых и тру­довых ресурсов.</p>
+ <p>Однако у такой структуры имеются и серьезные недос­татки.</p>
+ <p>1) Не все сотрудники команды проекта загружены работой по про­екту на 100%.</p>
+ <p>2) В то же время их обязанности в функциональных подраз­делениях ложатся на плечи</p>
+ <p>других, приходится набирать дополнитель­ный персонал, и в результате</p>
+ <p>ресурсы организации используются неэф­фективно.</p>
+ <p>3) После завершения проекта возникают проблемы с трудоустройством</p>
+ <p>4) персонала проектных подразделений - их места в функциональных</p>
+ <p>подразделениях могут быть заняты.</p>
+ <p>3) Специалисты вырываются из своей профессиональной среды, что препятствует</p>
+ <p>их профессиональному росту.</p>
+ <p>5) Проектные структуры наиболее приспособлены для управления проектами,</p>
+ <p>уникальными для организации, сложными, имеющими большое значение или большой бюджет.</p>
+ <p><i>Матричные структуры управления.</i></p>
+ <p>В последнее время все большую популярность приобретают матричные структуры</p>
+ <p>управления проекта­ми. Матричная организация отражает закрепление в организационном</p>
+ <p>построении двух направлений руководства, двух организационных аль­тернатив.</p>
+ <p>Вертикальное направление — управление функциональными и линейными</p>
+ <p>структурными подразделениями компании.</p>
+ <p>Горизонтальное — управление отдельными проектами, программами, продуктами</p>
+ <p>для реализации которых привлекаются человеческие и иные ресурсы различных</p><center><br><script async="" src="%D0%A2%D0%B5%D0%BC%D0%B0%205.%20%D0%A3%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5%20%D1%80%D0%B5%D0%B0%D0%BB%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D0%B5%D0%B9%20%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D0%B0.%20%E2%80%94%20%D0%A1%D1%82%D1%83%D0%B4%D0%BE%D0%BF%D0%B5%D0%B4%D0%B8%D1%8F_files/adsbygoogle.js"></script>
+<!-- studru336 -->
+<ins class="adsbygoogle" style="display:inline-block;width:336px;height:280px" data-ad-client="ca-pub-1201569435861782" data-ad-slot="8538537534"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script><br>
+</center>
+ <p>подразделений компании.</p>
+ <p>При такой структуре устанавливается разделение прав менеджеров, осуществляющих</p>
+ <p>управление подразделениями, и менеджеров, руководящих выполнением проекта,</p>
+ <p>и важнейшей задачей высшего руководящего состава компании в этих условиях становится</p>
+ <p>поддержание баланса между двумя организационными альтернативами.</p>
+ <p>В связи с вышесказанным отличительной чертой организационной 
+структуры управления матричного типа является наличие у работников 
+одновременно двух руководителей, обладающих равными правами.</p>
+ <p>Исполнитель подчиняется непосредственному руководителю 
+функциональной службы, который наделен необходимыми проектными 
+полномочиями для осуществления процесса</p>
+ <p>управления в соответствии с запланированными сроками, выделенными 
+ресурсами и требуемым качеством. Возникает система двойного подчинения, 
+базирующаяся на сочетании двух</p>
+ <p>принципов — функционального и проектного.</p>
+ <p>Матричная структура чаще всего представляет собой наложение проектной структуры</p>
+ <p>на постоянную для данной компании линейно-функциональную структуру управления.</p>
+ <p>Порой такого вида структура образуется в результате постепенной 
+модификации дивизиональной структуры, она может быть результатом 
+наложения функциональной структуры на дивизиональную.</p>
+ <p>Ее подход сходен с продуктовым или функциональным. Образуется как бы
+ двойная структура (матрица), представляющая собой решетчатую 
+организацию, построенную на принципе двойного подчинения исполнителей. 
+Основополагающим принципом в матричном подходе к построению 
+организационных структур управления является не совершенствование</p>
+ <p>деятельности отдельных структурных подразделений, а улучшение их взаимодействия в целях</p>
+ <p>реализации того или иного проекта или эффективного решения определенной проблемы.</p>
+ <p>Это требование выполняется здесь за счет того, что в матричной структуре параллельно с</p>
+ <p>функциональными и линейными подразделениями создаются специальные органы</p>
+ <p>(проектные группы) для решения конкретных производственных задач. 
+Эти проектные группы формируются за счет специалистов подразделений, 
+находящихся на различных уровнях</p>
+ <p>управленческой иерархии. Таким образом, главным принципом формирования матричной</p>
+ <p>структуры является развитая сеть горизонтальных связей, многочисленные пересечения</p>
+ <p>которых с вертикальной иерархией образуются за счет взаимодействия руководителей</p>
+ <p>проектов с руководителями функциональных и линейных подразделений.</p>
+ <p>•Матричные структуры управления могут быть двух видов. В первом случае руководитель</p>
+ <p>проекта взаимодействует с двумя группами подчинных: с постоянными членами проектной</p>
+ <p>группы и с другими работ-никами функциональных подразделений, 
+которые подчиняются ему навременной основе и по ограниченному кругу 
+вопросов. При этом сохраняется подчиненность этих исполнителей 
+непосредственным руководителям подразделении, отделов, служб. Во втором 
+случае руководителю проекта могут подчиняться временно только 
+исполнители из соответствующих функциональных подразделений.</p><br><script type="text/javascript" src="%D0%A2%D0%B5%D0%BC%D0%B0%205.%20%D0%A3%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5%20%D1%80%D0%B5%D0%B0%D0%BB%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D0%B5%D0%B9%20%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D0%B0.%20%E2%80%94%20%D0%A1%D1%82%D1%83%D0%B4%D0%BE%D0%BF%D0%B5%D0%B4%D0%B8%D1%8F_files/code_002.js"></script><br>
+ <p>Руководители проектов в матричных структурах, так же как и в 
+рас­смотренных выше проектных, обладают так называемыми проектными 
+полномочиями. Причем эти полномочия могут выражаться в прямых 
+противоположностях: от всеобъемлющей линейной власти над всеми деталями 
+проекта до практически чисто консультационных полномо­чий. Выбор 
+конкретного варианта определяется тем, какие права деле­гирует ему 
+высшее руководство компании.</p>
+ <p>Руководители проектов в матричной структуре отвечают в целом за 
+интеграцию всех видов деятельности и ресурсов, относящихся к данно­му 
+проекту. Для того чтобы они смогли добиться этого, все материаль­ные и 
+финансовые ресурсы по данному проекту передаются в их полное 
+распоряжение. Руководители проектов сохраняют за собой право опре­делять
+ приоритетность и сроки решения той или иной задачи, в то время как 
+руководители структурных подразделений могут лишь выбирать конкретного 
+исполнителя и методику решения.</p>
+ <p>Достоинствами матричной структуры являются:</p>
+ <p>• интеграция различных видов деятельности компании в рамках реализуемых проектов, программ;</p>
+ <p>• получение высококачественных результатов по большому количе­ству проектов, программ, продуктов;</p>
+ <p>• значительная активизация деятельности руководителей и работ­ников 
+управленческого аппарата в результате формирования проектных 
+(программных) команд, активно взаимодействующих с функциональ­ными 
+подразделениями, усиление взаимосвязи между ними;</p>
+ <p>• вовлечение руководителей всех уровней и специалистов в сферу 
+активной творческой деятельности по реализации организационных проектов 
+и, прежде всего, по ускоренному техническому совершенство­ванию 
+производства;</p>
+ <p>• сокращение нагрузки на руководителей высшего уровня управления 
+путем передачи полномочий принятия решений на средний уровень при 
+сохранении единства координации и контроля за ключевыми решениями на 
+высшем уровне;</p>
+ <p>• усиление личной ответственности конкретного руководителя как за проект (программу) в целом, так и за его элементы;</p>
+ <p>• достижение большей гибкости и скоординированности работ, чем в 
+линейно-функциональных и дивизиональных организационных структурах 
+управления, т. е. лучшее и более быстрое реагирование матричной 
+структуры на изменение внешней среды;</p>
+ <p>• преодоление внутриорганизационных барьеров, не мешая при этом 
+развитию функциональной специализации. Несмотря на перечисленные выше 
+достоинства анализируемого вида структур управления, необходимо отметить
+ скептическое отношение к нему многих специалистов и, прежде всего, 
+практиков. Разработка матричных структур очень часто рассматривается как
+ достижение раз­вития управленческой теории, которое с трудом 
+реализуется на практике.</p>
+ <p>Приведем перечень недостатков матричных структур. Он получился достаточно внушительным и содержит следующие негативные моменты:</p>
+ <p>• сложность матричной структуры для практической реализации. Для ее 
+внедрения необходима длительная подготовка работников и соответствующая 
+организационная культура;</p>
+ <p>• структура сложна, громоздка и дорога не только во внедрении, но эксплуатации;</p>
+ <p>она является трудной и порой непонятной формой организации;</p>
+ <p>в связи с системой двойного подчинения подрывается принцип 
+единоначалия, что часто приводит к конфликтам; в рамках этой структуры 
+порождается двусмысленность роли исполнителя и его руководи­ли, что 
+создает напряжение в отношениях между членами трудового коллектива 
+компании;</p>
+ <p>в рамках матричной структуры наблюдается тенденция к анархии, в 
+условиях ее действия нечетко распределены права и ответственность между 
+ее элементами;</p>
+ <p>• для этой структуры характерна борьба за власть, так как в ее рамках чётко не определены властные полномочия;</p>
+ <p>• для данной структуры характерны чрезмерные накладные расходы в 
+связи с тем, что требуется больше средств для содержания большего 
+количества руководителей, а также порой на разрешение конфликтных 
+ситуаций;</p>
+ <p>мешает достижению высококачественных результатов двусмысленность и потеря ответственности;</p>
+ <p>при использовании матричной структуры возникают трудности с перспективным использованием специалистов в данной компании;</p>
+ <p>наблюдается частичное дублирование функций;</p>
+ <p>• несвоевременно принимаются управленческие решения; как правило характерно групповое принятие решений;</p>
+ <p>' отмечается конформизм в принятии групповых решений;</p>
+ <p>' нарушается традиционная система взаимосвязей между подразделениями-</p>
+ <p>• в условиях матричной структуры затрудняется и практически отсутствует полноценный</p>
+ <p>контроль по уровням управления;</p>
+ <p>• структура считается абсолютно неэффективной в кризисные периоды.</p>
+ <p>При этом следует отметить, что переход к матричным структурам как 
+правило, охватывает не всю компанию, а лишь какую-то часть. Матричные 
+структуры управления обычно используются, когда проекты повторяются, но 
+не являются рутинными.</p>
+ <p><i>Сетевые структуры.</i> Как уже было отмечено, процессы 
+децентрали­зации и разукрупнения неразрывно связаны с поэтапным 
+nepexoдом от линейно-функциональных к дивизиональным и матричным 
+структурам управления и от них — к сетевым организациям. Последняя форма
+ получила широкое распространение в мировой практике как наиболее 
+надежное средство выживания предприятий, прежде всего малого бизнеса в 
+условиях жесткой рыночной конкуренции</p>
+ <p>Под сетевыми организациями понимаются кооперационные соглашения, 
+объединяющие как правило, малые и средние компании. Сети представляют 
+собой точно гибкую структуру, позволяющую входящим в нее компаниям 
+конкурировать между собой, привлекать новых партнеров и одновременно 
+организовывать и координировать деятельность своих членов. Сетевые 
+организации объединяют два противоположных принципа — конкуренцию и 
+кооперацию.</p>
+ <p>Особое значение приобретают вопросы определения степени 
+децентрализации и разукрупнения, так как отклонения в ту или иную 
+сторону ведут к отрицательным последствиям. Хотя сетевые организации 
+обладают чертами, отличающими их от других организаци­онных форм, они 
+могут соединять в себе элементы разных ОСУ.</p>
+ <p>«В ито­ге сетевая организация включает в себя элементы специализации функ­циональной</p>
+ <p>формы, автономность дивизиональной структуры и воз­можность переброски ресурсов матричной организации».</p>
+ <p>Переход к сетевой структуре, как правило, происходит постепенно, т. е. традици­онная</p>
+ <p>иерархия должна последовательно заменяться на более «плоские» структуры прямого</p>
+ <p>сотрудничества, в которых постепенно вытесняются бюрократические отношения. При этом</p>
+ <p>существенно меняется роль ме­неджеров. В сетевой структуре все менеджеры оказываются</p>
+ <p>практически в равных условиях, иерархия исчезает.</p>
+ <p>При этом происходит отмирание большей части 
+контрольно-распорядительных функций менеджеров. Вместо них появляются 
+функции связанные с лидерством в данном коллективе, т. е. прежде всего 
+подбор команды, организация совместной работы, обучение, а также 
+представительские функции. По мере развития новейших информационных 
+технологий, средств телекоммуникаций сетевые структуры могут посте-пенно
+ трансформироваться в новый вид – виртуальные структуры. Построение 
+сетевой организации предполагает переход от традиционной 
+декапитализированной модели бизнеса, т. е. увеличение доходности 
+капитала и концентрацию усилий на основной деятельности компании при 
+меньшей опоре на физический капитал. Этого можно достичь путем передачи 
+внешним структурам вспомогательных функций, а также непосредственно 
+связанных с физическим капиталом составляющих производственного 
+процесса.</p>
+ <p>Распределение таких функций по цепочке «поставщик — потребитель» и 
+приводит к образованию сети, состоящей из системно взаимосвязанных 
+внешних структур. Способность таких сетей эффективно адаптироваться к 
+изменениям среды функционирования обеспечивает их устойчивость и в 
+конечном итоге является источником конкурентных преимуществ. Многие 
+известные промышленные группы, например ABB Group или ВР Аmосо, 
+трансформировались в многочисленные бизнес-единицы, взаимодействующие 
+друг с другом почти как отдельные компании. При этом управленческие 
+решения принимаются на все более низких уровнях.</p>
+ <p>Основные принципы управления сетевой организацией включают следующие:</p>
+ <p>- сокращение и минимизация иерархических уровней в организационных</p>
+ <p>структурах деловых организаций, трансформация пирамидальных структур в горизонтальные;</p>
+ <p>ориентация горизонтальных структур на управление базовыми процессами
+ деловых организаций, в отличие от традиционной функциональной 
+организации управления; переход от крупных организаций к сети 
+интегрированных между собой компаний (сужение собственной 
+производственной и управленческой деятельности);</p>
+ <p>- привлечение в новые структуры лучших исполнителей как реализация принципа «элитаризация сотрудничества и руководства»;</p>
+ <p>- распространение виртуального управления деятельностью, не требующего физического присутствия исполнителей;</p>
+ <p>- применение информационных технологий в бизнесе для ускорения производственных процессов;</p>
+ <p>- постоянная генерация новых идей и воплощение их на практике (инновационность компании).</p>
+ <p>Сетевая модель одинаково применима в качестве модели как внут-риорганизационного</p>
+ <p>сотрудничества между подразделениями, так и со-трудничества между компаниями и группами компаний.</p>
+ <p>Если в западной экономике переход к сетевым организационным формам 
+становится ответом на увеличение нестабильности, то в Росси в силу 
+изначальной нестабильности многие проекты сразу строятся аналогичных 
+принципах. При этом как на Западе, так и в России многие участники 
+проектов (т. е. элементы организационной сети) являются фактически или, 
+по крайней мере, юридически независимыми.</p>
+ <p>Практический опыт реализации проектов на территории России 
+пока­зывает, что применение сетевого подхода является эффективным. Для 
+вне­дрения новых проектов необходимо создание технологии управления 
+ин­новационными проектами, которая бы позволяла учитывать российские 
+особенности с использованием уже существующих подходов к управлению 
+проектами в России и в других странах.</p>
+ <p>Такая технология управления мо­жет быть названа активным 
+проектированием. Она является совокупно­стью действий субъекта с целью 
+создания и управления устойчиво</p>
+ <p>функ­ционирующими социально-экономическими системами, элементы кото­рых способны</p>
+ <p>к целенаправленному (активному) поведению.</p>
+ <p>В современном бизнесе существует ряд глобальных тенденций, 
+по­зволяющих говорить о его «проективизации», т.е. возрастании доли и 
+значения деятельности, связанной с осуществлением проектов. Важнейшими 
+среди них являются: сокращение жизненного цикла изделий и услуг, в 
+особенности сроков разработки и запуска; персонализация спроса и 
+предложения, продуктов и услуг; переход от регулирования и концентрации к
+ координации и распределённости.</p>
+ <p>В целом можно говорить об изменении парадигмы ( основной модели) 
+бизнеса: его начинают рассматривать как совокупность взаимосвязанных 
+проектов. Подобный подход позволяет адекватно и другую особенность 
+современного бизнеса, когда основным стратегическим конкурентным 
+преимуществом становится гибкое поведение в изменчивой внешней среде.</p>
+ <p>В подобных условиях неизбежен отход от жестких организационных структур и управленческих технологий.</p>
+ <p>Предприятия вынуждены вводить параллельно с традиционными описаниями
+ базовых структур специальные «проектные», наряду с штатными должностями
+ сотрудников – специальные классификаторы возможных ролей в проектах, 
+оперативно отслеживать распределение по проектам возобновляемых и 
+невозобновляемых ресурсов, вести финан­совое бюджетирование в разрезе 
+проектов и т. п. При формироваии структуры управления важно помнить о 
+решающей роли человеческого фактора, следует учитывать индивидуальные и 
+групповые интересы и традиции, квалификационные и 
+социально-психологические характеристики руководителей и персонала.</p>
+ <p>Такого рода управленческие задачи должны выполняться постоянно с 
+большой оперативностью, так как проекты, как правило, имеют жёсткую 
+ориентацию на результат и сроковую дисциплину.</p>
+ <p><strong>2.</strong>Контроль и регулирование при реализации проекта.</p>
+ <p>Контроль - систематически протекающий процесс обработки информации, 
+предназначенный для выявления различий между плановыми величинами и 
+величинами, взятыми для сравнения, а также анализа выявленных 
+отклонений.</p>
+ <p>Контроль должен обеспечить:</p>
+ <p>· мониторинг (систематической и планомерное наблюдение за всеми процессами реализации проекта);</p>
+ <p>· выявление отклонений от целей реализации проекта;</p>
+ <p>· прогнозирование последствий сложившейся ситуации;</p>
+ <p>· обоснование необходимости принятия корректирующего воздействия.</p>
+ <p>Различают 3 вида контроля: предварительный, текущий и заключительный.</p>
+ <p>· Система контроля должна обеспечивать оперативную оценку состояния 
+реализации проекта для обоснования и принятия решений по управлению 
+временем, стоимостью, ресурсами и качеством выполняемых работ.</p>
+ <p>· В состав основных задачрегулирования хода реализации проекта 
+входят: контроль за фактическим выполнением работ, выявление и анализ 
+возникающих отклонений от плановых заданий, корректирование и 
+осуществление организационно-технологических, экономических и 
+технических решений, обеспечивающих своевременное и эффективное 
+достижение заданной цели проекта.</p>
+ <p>Мониторинг проекта - механизм осуществления постоянного наблюдения 
+за важнейшими текущими результатами реализации проекта с целью 
+своевременного обнаружения отклонений от календарного плана и бюджета .</p>
+ <p>3. Управление изменениями.</p>
+ <p>Источники изменений могут происходить из внутреннего или внешнего 
+окружения проекта. К внешним источникам изменений относятся 
+политические, экономические социальные, законодательные, 
+технологические, экологические, международные, географические и др. 
+аспекты. Внутренние источники изменений формируются в процессе отношений
+ между участниками проекта.</p>
+ <p>Изменения оказывают существенное влияние на:</p>
+ <p>· ценность и эффективность проекта;</p>
+ <p>· продолжительность и сроки завершения проекта;</p>
+ <p>· стоимость и бюджет проекта;</p>
+ <p>· качество выполнения работ и спецификации требований к результатам;</p>
+ <p>Внесение изменений в проект предполагает:</p>
+ <p>· возникновение дополнительных затрат;</p>
+ <p>· нарушение плановых сроков осуществления проекта;</p>
+ <p>· невозможность достижения требуемого качества или результата проекта.</p>
+ <p>по мере продвижения проекта стоимость вносимых изменений возрастает, а практическая ценность часто убывает.</p>
+ <p>Под управлением изменениями понимается процесс прогнозирования и 
+планирования будущих изменений, регистрация всех потенциальных изменений
+ для оценки их последствий, одобрения или отклонений, а также 
+организация мониторинга и координации исполнителей, реализующих 
+изменения в проекте.</p>
+ <p>4. Обеспечение качества проекта<strong>.</strong></p>
+ <p>Наиболее популярный принцип обеспечения качества - системное управление (TQM). Оно осуществляется по следующей схеме:</p>
+ <p>Проводится обследование производства и подготавливается специальный доклад.</p>
+ <p>На основе обследования и анализа фактического состояния производства
+ осуществляется выбор системы управления качеством и разрабатывается 
+Программа качества.</p>
+ <p>Разрабатывается Руководство по реализации Программы качества, в 
+котором описывается сущность и механизм функционирования системы 
+управления качеством.</p>
+ <p>Обсуждаются детали, сроки и организация программы качества и 
+Руководства, вносятся необходимые исправления и принимаются решения ( в 
+том числе по вопросам аттестации и обучения персонала).</p>
+ <p>Мероприятия из Программы и руководства включаются в общий план проекта.</p>
+ <p>Программа качества и Руководство запускаются в производство.</p>
+ <p>Все работы по обеспечению качества основаны на использовании стандартов ISO серии 9000 и эквивалентных им российских стандартов.</p>
+ <p>Стандарты ISO 9002 и EN 29002 призваны обеспечить качество при производстве и монтаже.</p>
+ <p>Стандарты ISO 9003 и EN 29003 призваны обеспечить качество при контроле конечной продукции и ее испытаниях.</p>
+ <p>Российский эквивалент - ГОСТ 40.9001-88.</p>
+ <p>Российская система строительных норм - «Система нормативных 
+документов в строительстве. Основные положения» (СНиП 10.01-93) 
+включает:</p>
+ <p>федеральные нормативные документы - строительные нормы и правила 
+(СНиП), рекомендательные нормативные документы (РНД), государственные 
+стандарты РФ (ГОСТ);</p>
+ <p>административно-территориальные нормативные документы - территориальные строительные нормы (ТСН), правила и инструкции;</p>
+ <p>производственно-отраслевые нормативные документы 
+(строительно-технологические нормы - СТН, отраслевые стандарты - ОСТ, 
+стандарты предприятий - СТП, технические условия - ТУ).</p>
+ <p>Основными элементами управления качеством инновации считаются:</p>
+ <p>«Философия» системы управления качеством, направленная на наиболее полное удовлетворение требований потребителя.</p>
+ <p>Обеспечение качества - комплекс управленческих мероприятий, 
+направленных на обеспечение всеми участниками инновационного процесса 
+требуемых характеристик качества.</p>
+ <p>Контроль качества - комплекс технических и технологических 
+мероприятий по проверке, анализу и внесению необходимых корректирующих 
+воздействий.</p>
+ <p>&nbsp;</p>
+ <p>5. Управление завершением проекта<strong>.</strong></p>
+ <p>Фаза завершения проекта включает проведение эксплуатационных 
+испытаний, сдачу проекта и закрытие контракта. Завершение проекта может 
+наступить в результате выполнения всех работ по проекту, либо в 
+результате решения о прекращении работы по незавершенному проекту.</p>
+ <p><i>1 этап - проведение эксплуатационных испытаний</i>.</p>
+ <p>Цель проведения эксплуатационных испытаний - получение точных 
+данных, характеризующих уровень результатов, достигнутых в результате 
+выполнения работ по проекту. в ходе эксплуатационных испытаний 
+выявляются фактические эксплуатационные характеристики работы 
+оборудования, которые подтверждают или опровергают правильность 
+выбранной технологии.</p>
+ <p><i>2 этап - сдача проекта и закрытие контракта</i>.</p>
+ <p>Основные мероприятия по закрытию контракта:</p>
+ <p>· проверка финансовой отчетности;</p>
+ <p>· паспортизация;</p>
+ <p>· выявление невыполненных обязательств;</p>
+ <p>· завершение невыполненных обязательств;</p>
+ <p>· гарантийное обслуживание и окончательные расчеты.</p>
+ <p>приемка законченного объекта оформляется актом установленной формы. К
+ акту прилагаются комплекты юридической, технической и технологической 
+документации.</p>
+ <p>&nbsp;</p><center><script async="" src="%D0%A2%D0%B5%D0%BC%D0%B0%205.%20%D0%A3%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5%20%D1%80%D0%B5%D0%B0%D0%BB%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D0%B5%D0%B9%20%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D0%B0.%20%E2%80%94%20%D0%A1%D1%82%D1%83%D0%B4%D0%BE%D0%BF%D0%B5%D0%B4%D0%B8%D1%8F_files/adsbygoogle.js"></script>
+<!-- studrurekomend2 -->
+<ins class="adsbygoogle" style="display:inline-block;width:980px;height:120px" data-ad-client="ca-pub-1201569435861782" data-ad-slot="2853903535"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></center><hr><p class="viewinfo">Дата добавления: <span class="viewinfo2">2014-02-04</span>; просмотров: <span class="viewinfo2">1064</span>; <a href="http://studopedia.ru/pravo.php?n=2&amp;id=100878" rel="nofollow"><span class="red">Опубликованный материал нарушает авторские права?</span></a>.</p><hr><table align="center" border="0" width="100%"><tbody><tr><td align="right" width="50%"><a href="http://studopedia.ru/2_100877_tema--planirovanie-kak-vazhnaya-funktsiya-upravleniya-proektami.html"><span class="green">Тема 4. Планирование как важная функция управления проектами</span></a> &lt;== предыдущая </td> <td align="center"><span class="red">|</span></td><td align="left" width="50%"> следующая ==&gt; <a href="http://studopedia.ru/2_100879_tema--sotsialno-psihologicheskie-aspekti-upravleniya-proektami.html"><span class="green">Тема 6. Социально-психологические аспекты управления проектами</span></a></td></tr></tbody></table><br><noindex>
+<center>
+
+<script async="" src="%D0%A2%D0%B5%D0%BC%D0%B0%205.%20%D0%A3%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5%20%D1%80%D0%B5%D0%B0%D0%BB%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D0%B5%D0%B9%20%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D0%B0.%20%E2%80%94%20%D0%A1%D1%82%D1%83%D0%B4%D0%BE%D0%BF%D0%B5%D0%B4%D0%B8%D1%8F_files/adsbygoogle.js"></script>
+<!-- studru336_2 -->
+<ins class="adsbygoogle" style="display:inline-block;width:336px;height:280px" data-ad-client="ca-pub-1201569435861782" data-ad-slot="6553805935"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+</center>
+</noindex>
+ </i></div><i>
+
+<p class="red">Не нашли то, что искали? Воспользуйтесь поиском google:</p>
+<script>
+  (function() {
+    var cx = '011469088786448071113:inmhhrx4trs';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+        '//cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+<div id="___gcse_0"><div class="gsc-control-cse gsc-control-cse-ru"><div dir="ltr" class="gsc-control-wrapper-cse"><form accept-charset="utf-8" class="gsc-search-box gsc-search-box-tools"><table class="gsc-search-box" cellpadding="0" cellspacing="0"><tbody><tr><td class="gsc-input"><div id="gsc-iw-id1" class="gsc-input-box"><table class="gstl_50 " id="gs_id50" style="width: 100%; padding: 0px;" cellpadding="0" cellspacing="0"><tbody><tr><td class="gsib_a" id="gs_tti50"><input spellcheck="false" dir="ltr" x-webkit-grammar="builtin:search" x-webkit-speech="" id="gsc-i-id1" style="width: 100%; padding: 0px; border: medium none; margin: 0px; height: auto; outline: medium none; background: rgb(255, 255, 255) url(&quot;http://www.google.com/cse/static/ru/google_custom_search_watermark.gif&quot;) no-repeat scroll left center;" title="поиск" name="search" class="gsc-input" size="10" autocomplete="off" lang="ru" type="text"></td><td class="gsib_b"><div dir="ltr" id="gs_st50" class="gsst_b"><a style="display: none;" href="javascript:void(0)" class="gsst_a"><span id="gs_cb50" class="gscb_a">&#215;</span></a></div></td></tr></tbody></table></div><input id="bgresponse" name="bgresponse" type="hidden"></td><td class="gsc-search-button"><input title="поиск" class="gsc-search-button gsc-search-button-v2" src="%D0%A2%D0%B5%D0%BC%D0%B0%205.%20%D0%A3%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5%20%D1%80%D0%B5%D0%B0%D0%BB%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D0%B5%D0%B9%20%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D0%B0.%20%E2%80%94%20%D0%A1%D1%82%D1%83%D0%B4%D0%BE%D0%BF%D0%B5%D0%B4%D0%B8%D1%8F_files/search_box_icon.png" type="image"></td><td class="gsc-clear-button"><div title="удалить результаты" class="gsc-clear-button">&nbsp;</div></td></tr></tbody></table><table class="gsc-branding" cellpadding="0" cellspacing="0"><tbody><tr><td class="gsc-branding-user-defined"></td><td class="gsc-branding-text"><div class="gsc-branding-text">технология</div></td><td class="gsc-branding-img"><img class="gsc-branding-img" src="%D0%A2%D0%B5%D0%BC%D0%B0%205.%20%D0%A3%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5%20%D1%80%D0%B5%D0%B0%D0%BB%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D0%B5%D0%B9%20%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D0%B0.%20%E2%80%94%20%D0%A1%D1%82%D1%83%D0%B4%D0%BE%D0%BF%D0%B5%D0%B4%D0%B8%D1%8F_files/small-logo.png"></td></tr></tbody></table></form><div class="gsc-results-wrapper-overlay"><div tabindex="0" class="gsc-results-close-btn"></div><div class="gsc-tabsAreaInvisible"><div class="gsc-tabHeader gsc-inline-block gsc-tabhActive">Пользовательский поиск</div><span class="gs-spacer"> </span></div><div class="gsc-tabsAreaInvisible"></div><div class="gsc-above-wrapper-area-invisible"><table class="gsc-above-wrapper-area-container" cellpadding="0" cellspacing="0"><tbody><tr><td class="gsc-result-info-container"><div class="gsc-result-info-invisible"></div></td><td class="gsc-orderby-container"><div class="gsc-orderby-invisible"><div class="gsc-orderby-label gsc-inline-block">Упорядочить:</div><div class="gsc-option-menu-container gsc-inline-block"><div class="gsc-selected-option-container gsc-inline-block"><div class="gsc-selected-option">Relevance</div><div class="gsc-option-selector"></div></div><div class="gsc-option-menu-invisible"><div class="gsc-option-menu-item gsc-option-menu-item-highlighted"><div class="gsc-option">Relevance</div></div><div class="gsc-option-menu-item"><div class="gsc-option">Date</div></div></div></div></div></td></tr></tbody></table></div><div class="gsc-adBlockInvisible"></div><div class="gsc-wrapper"><div class="gsc-adBlockInvisible"></div><div class="gsc-resultsbox-invisible"><div class="gsc-resultsRoot gsc-tabData gsc-tabdActive"><table class="gsc-resultsHeader" cellpadding="0" cellspacing="0"><tbody><tr><td class="gsc-twiddleRegionCell"><div class="gsc-twiddle"><div class="gsc-title">Интернет</div></div><div class="gsc-stats"></div><div class="gsc-results-selector gsc-all-results-active"><div title="показать один результат" class="gsc-result-selector gsc-one-result">&nbsp;</div><div title="показать другие результаты" class="gsc-result-selector gsc-more-results">&nbsp;</div><div title="показать все результаты" class="gsc-result-selector gsc-all-results">&nbsp;</div></div></td><td class="gsc-configLabelCell"></td></tr></tbody></table><div><div class="gsc-expansionArea"></div></div></div></div></div></div><div tabindex="0" class="gsc-modal-background-image"></div></div></div></div>
+
+<p class="red">Не хотите "париться"? <a href="http://studopedia.ru/zakaz.php">закажите платную работу!</a></p>
+
+     </i></td>
+  </tr>
+  <tr>
+    <td height="50" bgcolor="#E8E8E8" valign="top" width="160">&nbsp;</td>
+    <td bgcolor="#E8E8E8" valign="top" width="100%"><table border="0" width="100%">
+  <tbody><tr>
+    <td align="left" width="70%">
+
+<p class="sape">© studopedia.ru Не является автором материалов, которые размещены. Но предоставляет возможность бесплатного использования.
+
+</p>
+</td>
+    <td align="right" width="30%">
+
+<!--LiveInternet counter--><script type="text/javascript"><!--
+new Image().src = "//counter.yadro.ru/hit?r"+
+escape(document.referrer)+((typeof(screen)=="undefined")?"":
+";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+";"+Math.random();//--></script><!--/LiveInternet-->
+
+<!-- Rating@Mail.ru counter -->
+<script type="text/javascript">//<![CDATA[
+var _tmr = _tmr || [];
+_tmr.push({id: "2482924",  type: "pageView", start: (new Date()).getTime()});
+(function (d, w) {
+   var ts = d.createElement("script"); ts.type = "text/javascript"; ts.async = true;
+   ts.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//top-fwz1.mail.ru/js/code.js";
+   var f = function () {var s = d.getElementsByTagName("script")[0]; s.parentNode.insertBefore(ts, s);};
+   if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); }
+})(document, window);
+//]]></script><noscript><div style="position:absolute;left:-10000px;">
+<img src="//top-fwz1.mail.ru/counter?id=2482924;js=na" style="border:0;" height="1" width="1" alt="Рейтинг@Mail.ru" />
+</div></noscript>
+<!-- //Rating@Mail.ru counter -->
+
+
+
+</td>
+  </tr>
+</tbody></table></td>
+  </tr>
+</tbody></table>
+
+
+<br><span class="tailgener">Генерация страницы за: 0.018 сек.<span>
+
+
+
+</span></span><table class="gstl_50 gssb_c" style="width: 174px; display: none; top: 7383px; left: 238px; position: absolute;" cellpadding="0" cellspacing="0"><tbody><tr><td class="gssb_f"></td><td style="width: 100%;" class="gssb_e"></td></tr></tbody></table></body></html>
